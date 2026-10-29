@@ -1,4 +1,4 @@
-name: Testar e publicar Cross Mansões TV
+name: Testes e Deploy Cross Mansões TV
 on:
   push:
     branches: [main]
@@ -18,19 +18,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Instalar dependências
+      - name: Dependências
         run: npm install --no-audit --no-fund
-      - name: Instalar Chromium para testes funcionais
+      - name: Navegador Chromium
         run: npx playwright install --with-deps chromium
-      - name: Testes unitários e integridade dos treinos
+      - name: Testes unitários
         run: npm test
-      - name: Testes funcionais em browser
+      - name: Testes de navegação
         run: npm run test:e2e
-      - name: Salvar evidências de falha
+      - name: Evidências de falha
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: falhas-playwright
+          name: playwright-failures
           path: test-results/
           if-no-files-found: ignore
   deploy:
