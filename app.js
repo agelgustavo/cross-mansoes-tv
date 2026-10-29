@@ -1,9 +1,11 @@
 (() => {
   'use strict';
 
-  const VERSION = '3.0.0';
+  const VERSION = '4.0.0';
   const CACHE_KEY = 'mansoes-tv-index-v3';
   const app = document.getElementById('app');
+  const visual = window.MansoesLayout;
+  if (!visual) throw new Error('Layout visual não carregado');
   if (!app) throw new Error('Root #app ausente');
 
   const TYPES = {
@@ -175,97 +177,14 @@
       </main>`;
   }
 
-  function isHeaderLine(line) {
-    return /^(SCORE|TIME CAP|DURAÇÃO|REST|DESCANSO|EVERY |FOR TIME|TABATA|TEAMS OF |BODY BUILDER|OPTIONAL|PREPARAÇÃO|POST-WORKOUT|ROUND|ROUNDS|SETS)/i.test(line);
-  }
-
-  function isMetricLine(line) {
-    return /^[-•]?\s*(\d[\d.,]*(?:\s*m|\s*"|\s*')?)\s+(.+)$/i.test(line);
-  }
-
-  function splitGroups(text) {
-    return String(text)
-      .replace(/\n\s*---PAGE---\s*\n/g, '\n\n')
-      .split(/\n\s*\n/)
-      .map(block => block.split('\n').map(line => line.trim()).filter(Boolean))
-      .filter(block => block.length);
-  }
-
-  function groupScore(group) {
-    return group.reduce((score, line) => {
-      if (isMetricLine(line)) return score + 1;
-      if (isHeaderLine(line)) return score + 0.95;
-      return score + 0.8;
-    }, 0);
-  }
-
-  function paginateGroups(groups, maxScore) {
-    const pages = [];
-    let current = [];
-    let score = 0;
-    groups.forEach(group => {
-      const weight = groupScore(group);
-      if (current.length && score + weight > maxScore) {
-        pages.push(current);
-        current = [group];
-        score = weight;
-      } else {
-        current.push(group);
-        score += weight;
-      }
-    });
-    if (current.length) pages.push(current);
-    return pages;
-  }
-
   function buildPages(workout) {
-    const pages = [];
-    SECTION_ORDER.forEach(([field, label]) => {
-      const rawValue = workout?.[field];
-      const text = Array.isArray(rawValue) ? rawValue.join('\n') : typeof rawValue === 'string' ? rawValue : rawValue && rawValue.text || '';
-      if (!String(text).trim()) return;
-      if (field === 'adaptations') {
-        const cards = splitGroups(text);
-        const perPage = cards.length > 6 ? 4 : 6;
-        const total = Math.ceil(cards.length / perPage) || 1;
-        for (let i = 0; i < total; i++) {
-          pages.push({
-            kind: field,
-            label,
-            blocks: cards.slice(i * perPage, (i + 1) * perPage),
-            page: i + 1,
-            pageTotal: total
-          });
-        }
-      } else {
-        const groups = splitGroups(text);
-        const paged = paginateGroups(groups, field === 'warmup' ? 18.5 : field === 'wod' ? 16.5 : 15);
-        paged.forEach((pageGroups, index) => {
-          pages.push({ kind: field, label, groups: pageGroups, page: index + 1, pageTotal: paged.length });
-        });
-      }
-    });
-    return pages;
+    return visual.makeSlides(workout);
   }
 
-  function renderTextLine(line) {
-    const metric = line.match(/^[-•]?\s*(\d[\d.,]*(?:\s*m|\s*"|\s*')?)\s+(.+)$/i);
-    if (metric) return `<div class="metric-row"><strong>${encode(metric[1])}</strong><span>${encode(metric[2])}</span></div>`;
-    if (isHeaderLine(line)) return `<div class="minor-heading">${encode(line)}</div>`;
-    return `<div class="note-row">${encode(line)}</div>`;
-  }
-
-  function renderTextGroup(group) {
-    return `<section class="info-card">${group.map(renderTextLine).join('')}</section>`;
-  }
-
-  function renderAdaptationBlock(block) {
-    const [title, ...rows] = block;
-    return `<section class="adapt-card"><h3>${encode(title)}</h3><div class="adapt-list">${rows.map(row => {
-      const match = row.match(/^(RX\+|RX|INT|SC|INI):\s*(.*)$/);
-      if (match) return `<div class="adapt-row"><strong>${encode(match[1])}</strong><span>${encode(match[2])}</span></div>`;
-      return `<div class="adapt-note">${encode(row)}</div>`;
-    }).join('')}</div></section>`;
+  function relabelSection(page) {
+    const same = state.pages.filter(item => item.kind === page.kind);
+    const index = same.indexOf(page);
+    return same.length > 1 ? `${page.label} ${index+1}/${same.length}` : page.label;
   }
 
   function slideScreen() {
@@ -273,34 +192,52 @@
       return `<main class="panel error-panel"><h1>${state.error ? 'Não foi possível carregar' : 'Sem treino publicado'}</h1><p class="notice">${encode(state.error || 'Não há treino publicado nesta data.')}</p></main>`;
     }
     if (!state.pages.length) state.pages = buildPages(state.workout);
-    state.slide = Math.max(0, Math.min(state.slide, state.pages.length - 1));
+    if (!state.pages.length) return '<main class="panel error-panel"><h1>Treino sem conteúdo</h1></main>';
+    state.slide = Math.max(0, Math.min(state.slide, state.pages.length-1));
     const page = state.pages[state.slide];
-    const pageLabel = page.pageTotal > 1 ? `${page.label} ${page.page}/${page.pageTotal}` : page.label;
     const type = TYPES[state.program];
-
-    return `
-      <div class="slide-meta">
+    return `<div class="slide-meta">
         <div class="slide-meta-left">
-          <span class="slide-eyebrow">${encode(pageLabel)}</span>
+          <span class="slide-eyebrow">${encode(relabelSection(page))}</span>
           <div class="slide-title-row"><h2>${encode(state.workout.title || type.label)}</h2><span class="mode-chip ${type.chipClass}">${encode(type.label)}</span></div>
         </div>
-        <div class="slide-count">${state.slide + 1} / ${state.pages.length}</div>
+        <div class="slide-count">${state.slide+1} / ${state.pages.length}</div>
       </div>
-      <main class="board ${page.kind === 'adaptations' ? 'board-adapt' : 'board-text'}">
-        ${page.kind === 'adaptations'
-          ? `<div class="adapt-grid">${page.blocks.map(renderAdaptationBlock).join('')}</div>`
-          : `<div class="text-columns">${page.groups.map(renderTextGroup).join('')}</div>`}
-      </main>
-      <nav class="slide-nav">
-        <button type="button" data-action="previous" class="btn btn-outline">◀ Anterior</button>
-        <button type="button" data-action="next" class="btn btn-primary">Próxima ▶</button>
-      </nav>`;
+      <main class="board board-${page.kind}"><div class="board-inner">${visual.section(page)}</div></main>
+      <nav class="slide-nav"><button type="button" data-action="previous" class="btn btn-outline">◀ Anterior</button><button type="button" data-action="next" class="btn btn-primary">Próxima ▶</button></nav>`;
+  }
+
+  // Fit is verified against actual rendered dimensions, not only text length.
+  function enforceFit() {
+    if (state.screen !== 'slides' || !state.workout) return;
+    const board = app.querySelector('.board');
+    const inner = app.querySelector('.board-inner');
+    if (!board || !inner) return;
+    const overflows = () => inner.scrollHeight > inner.clientHeight+3 || inner.scrollWidth > inner.clientWidth+3 ||
+      [...inner.querySelectorAll('.training-card,.movement-tile,.kpi-card')].some(x => x.scrollHeight > x.clientHeight+3 || x.scrollWidth > x.clientWidth+3);
+    if (!overflows()) return;
+    board.classList.add('fit-compact');
+    if (!overflows()) return;
+    board.classList.add('fit-dense');
+    if (!overflows()) return;
+    // When scaling is insufficient, split at card/movement boundaries and re-render.
+    const page=state.pages[state.slide];
+    if (page.items && page.items.length>1) {
+      const middle=Math.ceil(page.items.length/2);
+      const common={...page};
+      state.pages.splice(state.slide,1,{...common,items:page.items.slice(0,middle)},{...common,items:page.items.slice(middle)});
+      render();
+    } else {
+      console.error('[Mansões TV] Um bloco excede a área disponível',page.kind);
+      board.classList.add('fit-warning');
+    }
   }
 
   function render() {
     const body = state.screen === 'calendar' ? calendarScreen() : state.screen === 'program' ? programChooserScreen() : slideScreen();
     app.innerHTML = shell(body);
     tickClock();
+    if(state.screen === 'slides' && state.workout) requestAnimationFrame(enforceFit);
     if (selected) {
       const selector = selected.action === 'day'
         ? `[data-action="day"][data-date="${selected.value}"]`
@@ -394,7 +331,7 @@
         break;
       case 'refresh':
         state.error = '';
-        loadIndex();
+        if(state.screen==='slides' && state.program){openProgram(state.program);}else{loadIndex();}
         break;
       case 'month':
         updateMonth(node.dataset.step);

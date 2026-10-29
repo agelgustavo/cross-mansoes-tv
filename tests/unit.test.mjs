@@ -1,51 +1,61 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-
+import vm from 'node:vm';
 const root = new URL('../', import.meta.url);
-const read = path => readFileSync(new URL(path, root), 'utf8');
-const index = JSON.parse(read('data/index.json'));
-const workout = JSON.parse(read('data/2026-10-29.json'));
-const html = read('index.html');
-const js = read('app.js');
-const css = read('styles.css');
+const read = path => readFileSync(new URL(path,root),'utf8');
+const workouts=JSON.parse(read('data/2026-10-29.json')).programs;
+const index=JSON.parse(read('data/index.json'));
+const context={window:{}};
+vm.runInNewContext(read('layout.js'),context);
+const layout=context.window.MansoesLayout;
 
-test('índice possui datas válidas e treino por modalidade', () => {
-  for (const [day, programs] of Object.entries(index.days)) {
-    assert.match(day, /^\d{4}-\d{2}-\d{2}$/);
-    assert.ok(Array.isArray(programs) && programs.length > 0);
-    const payload = JSON.parse(read(`data/${day}.json`));
-    for (const program of programs) {
-      assert.ok(['crossfit', 'hybrid'].includes(program));
-      assert.ok(payload.programs[program]);
-    }
-  }
+test('dados do dia 29 mantidos integralmente em JSON, incluindo cargas e categorias',()=>{
+  assert.deepEqual(index.days['2026-10-29'],['crossfit','hybrid']);
+  assert.match(workouts.crossfit.warmup,/Alternating Samson Lunges/);
+  assert.match(workouts.crossfit.wod,/Score: tempo do pior round/);
+  assert.match(workouts.crossfit.adaptations,/42,5\/30 kg/);
+  assert.match(workouts.crossfit.adaptations,/10\/7,5 kg/);
+  assert.match(workouts.hybrid.wod,/200 m Burpee Broad Jumps/);
+  assert.match(workouts.hybrid.adaptations,/RX \/ INT \/ SC: 200 m/);
 });
-
-test('dia 29 mantém CrossFit e Hybrid', () => {
-  assert.deepEqual(index.days['2026-10-29'], ['crossfit', 'hybrid']);
-  assert.match(workout.programs.crossfit.warmup, /Samson/);
-  assert.match(workout.programs.crossfit.wod, /ZUKO/);
-  assert.match(workout.programs.hybrid.wod, /2\.000 m Row/);
+test('componentes geram 5 páginas CrossFit com acessório separado e 2 Hybrid',()=>{
+  assert.equal(layout.makeSlides(workouts.crossfit).map(p=>p.kind).join(','),'warmup,skill,wod,adaptations,accessory');
+  assert.equal(layout.makeSlides(workouts.hybrid).map(p=>p.kind).join(','),'wod,adaptations');
 });
-
-test('boot usa app.js externo e versão 3.0.0', () => {
-  assert.match(html, /<script src="\.\/app\.js\?v=/);
-  assert.match(js, /const VERSION = '3\.0\.0'/);
-  assert.match(js, /app\.addEventListener\('click'/);
-  assert.match(js, /document\.addEventListener\('keydown', keyboard\)/);
+test('WOD distingue formato, movimentos, duração e score sem alterar informações',()=>{
+  const wod=layout.makeSlides(workouts.crossfit).find(p=>p.kind==='wod');
+  assert.equal(wod.formats[0],'EVERY 3:00 | 6 SETS');
+  assert.equal(wod.items.length,2);
+  assert.equal(wod.kpis[0].title,'Duração total');
+  assert.equal(wod.kpis[0].value,"18'");
+  assert.equal(wod.kpis[1].value,'tempo do pior round');
 });
-
-test('paginação é automática por grupo e não depende de ---PAGE---', () => {
-  assert.match(js, /function paginateGroups/);
-  assert.match(js, /replace\(/);
-  assert.match(js, /pageTotal/);
+test('Hybrid preserva time cap, score e lista de seis movimentos',()=>{
+  const wod=layout.makeSlides(workouts.hybrid).find(p=>p.kind==='wod');
+  assert.equal(wod.items.length,6);
+  assert.equal(wod.kpis.length,2);
+  assert.equal(wod.kpis[0].value,"60'");
+  assert.equal(wod.items[0].name,'Row');
+  assert.equal(wod.items[0].value,'2.000 m');
 });
-
-test('calendário mostra labels de programas e layout em colunas', () => {
-  assert.match(js, /CrossFit/);
-  assert.match(js, /Hybrid Run/);
-  assert.match(css, /\.day-programs/);
-  assert.match(css, /\.text-columns\{height:100%;column-count:2/);
-  assert.match(css, /\.adapt-grid\{height:100%;display:grid/);
+test('Adaptações mantêm movimento e categorias, sem inventar RX+ no Hybrid',()=>{
+  const cross=layout.makeSlides(workouts.crossfit).find(p=>p.kind==='adaptations');
+  const hybrid=layout.makeSlides(workouts.hybrid).find(p=>p.kind==='adaptations');
+  assert.equal(cross.items.length,2);
+  assert.equal(hybrid.items.length,6);
+  const crossHtml=layout.section(cross),hybridHtml=layout.section(hybrid);
+  for(const label of ['RX+','RX','INT','SC','INI'])assert.ok(crossHtml.includes(label));
+  assert.ok(hybridHtml.includes('RX / INT / SC: 200 m'));
+  assert.ok(!hybridHtml.includes('RX+'));
+});
+test('Aplicação inicia com scripts separados, navegação acessível e identidade do mascote',()=>{
+  const html=read('index.html'),app=read('app.js'),css=read('styles.css');
+  assert.ok(html.indexOf('layout.js') < html.indexOf('app.js'));
+  assert.match(app,/const VERSION = '4\.0\.0'/);
+  assert.match(app,/app\.addEventListener\('click'/);
+  assert.match(app,/function enforceFit/);
+  assert.match(app,/gorilla-icon\.jpg/);
+  assert.match(css,/\.kpi-card/);
+  assert.ok(readFileSync(new URL('assets/gorilla-icon.jpg',root)).length>1000);
 });
