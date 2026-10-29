@@ -10,3 +10,10 @@ test('controle remoto possui navegação e Enter',()=>{for(const k of ['ArrowRig
 test('calendário contém treino em 29 de outubro',()=>{assert.deepEqual(data.days['2026-10-29'],['crossfit','hybrid']);});
 test('ambos os treinos possuem conteúdo correto',()=>{assert.match(w.programs.crossfit.wod,/ZUKO/);assert.match(w.programs.crossfit.warmup,/Samson/);assert.match(w.programs.crossfit.adaptations,/RX\+/);assert.match(w.programs.hybrid.wod,/APPA|200 m Sled Push/);assert.match(w.programs.hybrid.adaptations,/RX:/);});
 test('todos os dias do índice têm arquivo de conteúdo',()=>{for(const day of Object.keys(data.days)){const obj=JSON.parse(readFileSync(new URL('../data/'+day+'.json',import.meta.url),'utf8'));for(const p of data.days[day])assert.ok(obj.programs[p],day+' '+p);}});
+
+test('regressão: função do relógio existe antes de renderizar calendário',()=>{
+ assert.match(html,/function tickClock\(\)/);
+ assert.match(html,/function render\(\)/);
+ assert.ok(html.indexOf('function tickClock(){') < html.indexOf('function render(){'));
+ assert.match(html,/controls\.forEach\(\(el,i\)=>\{/);
+});
