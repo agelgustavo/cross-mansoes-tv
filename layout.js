@@ -54,6 +54,37 @@
     }
     return result;
   }
+
+  // WOD: blocos só existem quando um parágrafo contém outro grupo de movimentos
+  // ou há um marcador explícito (BLOCO 1 / BLOCO A / ROUND 2).
+  // Parágrafos de formato, score, time cap e notas NÃO criam blocos.
+  function extractWodProgram(raw, title) {
+    const result={formats:[],movements:[],notes:[],kpis:[],blocks:[]};
+    const source=text(raw).replace(/\r/g,'').replace(/\n\s*---PAGE---\s*\n/g,'\n\n')
+      .replace(/\n(?=(?:BLOCO|BLOCK|PARTE|PART|ROUND)\s+(?:\d+|[A-Z])\b)/gi,'\n\n');
+    const paragraphs=source.split(/\n\s*\n+/).map(part=>part.split('\n').map(x=>x.trim()).filter(Boolean)).filter(part=>part.length);
+    for (const paragraph of paragraphs) {
+      const block={label:'',movements:[]};
+      for (const line of paragraph) {
+        if (normalized(line)===normalized(title) ||
+          (normalized(title).startsWith(normalized(line)) && line.length>2 && !isFormat(line))) continue;
+        if (/^(?:BLOCO|BLOCK|PARTE|PART|ROUND)\s+(?:\d+|[A-Z])\b/i.test(line)) {
+          block.label=line;
+          continue;
+        }
+        const kpi=metric(line);
+        if(kpi){result.kpis.push({title:kpi[1],value:kpi[2]});continue;}
+        if(isFormat(line)){result.formats.push(line);continue;}
+        const m=amount(line);
+        if(m){const movement={value:m[1],name:m[2]};block.movements.push(movement);result.movements.push(movement);continue;}
+        result.notes.push(line);
+      }
+      if(block.movements.length)result.blocks.push(block);
+      else if(block.label)result.notes.push(block.label);
+    }
+    if(!result.blocks.length && result.movements.length)result.blocks=[{label:'',movements:result.movements}];
+    return result;
+  }
   function splitAccessory(wod) {
     const raw=text(wod).replace(/\r/g,'');
     const marker=/(?:^|\n)OPTIONAL ACCESSORY\s*\n/i;
@@ -74,18 +105,18 @@
         for(let i=0;i<cards.length;i+=4)slides.push({kind,label,items:cards.slice(i,i+4)});
       }else if(kind==='adaptations'){
         const cards=groups(raw);
-        for(let i=0;i<cards.length;i+=6)slides.push({kind,label,items:cards.slice(i,i+6)});
+        for(let i=0;i<cards.length;i+=4)slides.push({kind,label,items:cards.slice(i,i+4)});
       }else if(kind==='rules'){
         const cards=groups(raw);
         for(let i=0;i<cards.length;i+=4)slides.push({kind,label,items:cards.slice(i,i+4)});
       }else {
-        const program=extractProgram(raw,workout.title||'');
+        const program=kind==='wod'?extractWodProgram(raw,workout.title||''):extractProgram(raw,workout.title||'');
         // Very long workouts are divided at movement boundaries, not by arbitrary characters.
         if(program.movements.length>10){
           const batches=[];
           for(let i=0;i<program.movements.length;i+=10)batches.push(program.movements.slice(i,i+10));
-          batches.forEach((batch,i)=>slides.push({kind,label,items:batch,formats:program.formats,notes:i===batches.length-1?program.notes:[],kpis:i===batches.length-1?program.kpis:[]}));
-        }else slides.push({kind,label,items:program.movements,formats:program.formats,notes:program.notes,kpis:program.kpis});
+          batches.forEach((batch,i)=>slides.push({kind,label,items:batch,blocks:kind==='wod'?[{label:'',movements:batch}]:[],formats:program.formats,notes:i===batches.length-1?program.notes:[],kpis:i===batches.length-1?program.kpis:[]}));
+        }else slides.push({kind,label,items:program.movements,blocks:program.blocks||[],formats:program.formats,notes:program.notes,kpis:program.kpis});
       }
     }
     return slides;
@@ -120,12 +151,24 @@
     const kpis=page.kpis||[];
     const movements=page.items||[];
     const notes=page.notes||[];
-    return `<div class="program-layout program-count-${movements.length} ${movements.length<=3?'program-few':''}">
-      ${formats.length?`<div class="format-strip"><span class="format-symbol">${icon('timer')}</span>${formats.map(x=>`<span class="format-item">${esc(x)}</span>`).join('')}</div>`:''}
-      <div class="movement-grid">${movements.map(movementTile).join('')}</div>
-      ${notes.length?`<div class="program-notes">${notes.map(n=>`<span>${esc(n)}</span>`).join('')}</div>`:''}
-      ${kpis.length?`<div class="kpi-grid ${kpis.length===1?'kpi-single':''}">${kpis.map(kpiCard).join('')}</div>`:''}
-    </div>`;
+    const isWod=page.kind==='wod';
+    const blocks=isWod && page.blocks?.length?page.blocks:[{label:'',movements}];
+    const multiple=isWod && blocks.length>1;
+    const tileGrid=items=>'<div class="movement-grid">'+items.map(movementTile).join('')+'</div>';
+    const movementContent=multiple
+      ?'<div class="wod-blocks">'+blocks.map(block=>'<section class="wod-block">'+
+         (block.label?'<div class="wod-block-title">'+esc(block.label)+'</div>':'')+
+         tileGrid(block.movements)+'</section>').join('')+'</div>'
+      :tileGrid(blocks[0].movements||movements);
+    return '<div class="program-layout program-count-'+movements.length+
+      (movements.length<=3?' program-few':'')+
+      (isWod?(multiple?' wod-multi':' wod-single'):'')+'">'+
+      (formats.length?'<div class="format-strip"><span class="format-symbol">'+icon('timer')+'</span>'+
+        formats.map(x=>'<span class="format-item">'+esc(x)+'</span>').join('')+'</div>':'')+
+      movementContent+
+      (notes.length?'<div class="program-notes">'+notes.map(n=>'<span>'+esc(n)+'</span>').join('')+'</div>':'')+
+      (kpis.length?'<div class="kpi-grid '+(kpis.length===1?'kpi-single':'')+'">'+kpis.map(kpiCard).join('')+'</div>':'')+
+      '</div>';
   }
   function section(page){
     if(page.kind==='warmup')return `<div class="warmup-layout items-${page.items.length}">${page.items.map((item,i)=>warmupCard(item,i,page.items.length)).join('')}</div>`;

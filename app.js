@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '4.0.0';
+  const VERSION = '4.1.0';
   const CACHE_KEY = 'mansoes-tv-index-v3';
   const app = document.getElementById('app');
   const visual = window.MansoesLayout;
@@ -220,17 +220,31 @@
     if (!overflows()) return;
     board.classList.add('fit-dense');
     if (!overflows()) return;
-    // When scaling is insufficient, split at card/movement boundaries and re-render.
+    // Sempre tentar uma nova página antes de diminuir a fonte de adaptações.
+    // Para WODs, preservar as fronteiras semânticas dos blocos.
     const page=state.pages[state.slide];
-    if (page.items && page.items.length>1) {
+    const blocks=page.kind==='wod' && Array.isArray(page.blocks)?page.blocks:[];
+    if(blocks.length>1){
+      const middle=Math.ceil(blocks.length/2);
+      const leftBlocks=blocks.slice(0,middle),rightBlocks=blocks.slice(middle);
+      const common={...page};
+      state.pages.splice(state.slide,1,
+        {...common,blocks:leftBlocks,items:leftBlocks.flatMap(b=>b.movements),notes:[],kpis:[]},
+        {...common,blocks:rightBlocks,items:rightBlocks.flatMap(b=>b.movements)});
+      render();return;
+    }
+    if(page.items && page.items.length>1){
       const middle=Math.ceil(page.items.length/2);
       const common={...page};
-      state.pages.splice(state.slide,1,{...common,items:page.items.slice(0,middle)},{...common,items:page.items.slice(middle)});
-      render();
-    } else {
-      console.error('[Mansões TV] Um bloco excede a área disponível',page.kind);
-      board.classList.add('fit-warning');
+      const l=page.items.slice(0,middle),r=page.items.slice(middle);
+      const withBlocks=page.kind==='wod';
+      state.pages.splice(state.slide,1,
+        {...common,items:l,blocks:withBlocks?[{label:blocks[0]?.label||'',movements:l}]:page.blocks,notes:withBlocks?[]:page.notes,kpis:withBlocks?[]:page.kpis},
+        {...common,items:r,blocks:withBlocks?[{label:blocks[0]?.label||'',movements:r}]:page.blocks});
+      render();return;
     }
+    console.error('[Mansões TV] Bloco excede a área disponível; revise a divisão',page.kind);
+    board.classList.add('fit-warning');
   }
 
   function render() {

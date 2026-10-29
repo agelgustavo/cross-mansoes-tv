@@ -248,3 +248,74 @@ button{font:inherit;color:inherit;cursor:pointer}
   .exercise-label,.adapt-row span:last-child{font-size:clamp(15px,1.3vw,26px)}
   .training-card{padding:.7vh .75vw}
 }
+
+
+/* v4.1 — WOD sem blocos explícitos centralizado; blocos semânticos em colunas. */
+.wod-single .movement-grid{
+  width:min(100%,1300px);margin:0 auto;display:flex;flex-direction:column;
+  align-items:stretch;justify-content:center;gap:1.3vh;min-height:0;flex:1
+}
+.wod-single .movement-tile{flex:0 1 auto;min-height:clamp(88px,11vh,180px);grid-template-columns:clamp(46px,5vw,84px) auto 1fr}
+.wod-single .movement-count{font-size:clamp(51px,4.2vw,83px)}
+.wod-single .movement-label{font-size:clamp(28px,2.55vw,49px)}
+.wod-single.program-count-5 .movement-grid,
+.wod-single.program-count-6 .movement-grid,
+.wod-single.program-count-7 .movement-grid,
+.wod-single.program-count-8 .movement-grid,
+.wod-single.program-count-9 .movement-grid,
+.wod-single.program-count-10 .movement-grid{
+  width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-rows:minmax(0,1fr);align-content:stretch;gap:.8vw
+}
+.wod-single.program-count-5 .movement-tile,
+.wod-single.program-count-6 .movement-tile,
+.wod-single.program-count-7 .movement-tile,
+.wod-single.program-count-8 .movement-tile,
+.wod-single.program-count-9 .movement-tile,
+.wod-single.program-count-10 .movement-tile{min-height:0;flex:initial}
+.wod-multi .wod-blocks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1vw;flex:1;min-height:0}
+.wod-block{display:flex;flex-direction:column;min-height:0;min-width:0;border:2px solid color-mix(in srgb,var(--accent) 39%,#303030);padding:.7vh .7vw;background:#090a0ddd;border-radius:5px}
+.wod-block-title{font:900 clamp(22px,1.95vw,38px)/1.1 Impact,'Arial Narrow',Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);padding:.25vh .45vw .65vh}
+.wod-block .movement-grid{display:flex;flex-direction:column;gap:.7vh;flex:1;min-height:0}
+.wod-block .movement-tile{flex:1 1 0;min-height:0;grid-template-columns:clamp(34px,3vw,56px) auto 1fr}
+.wod-block .movement-count{font-size:clamp(38px,3.5vw,65px)}
+.wod-block .movement-label{font-size:clamp(22px,2.0vw,38px)}
+/* Garantia de leitura: 28-34px descrições e 34-42px categorias em Full HD. */
+.adaptation-layout,.adaptation-layout.items-3,.adaptation-layout.items-5,.adaptation-layout.items-6{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-rows:minmax(0,1fr)
+}
+.adaptation-layout.items-3 .adapt-card:last-child{grid-column:1 / -1}
+.adaptation-layout .adapt-card{padding:clamp(10px,1vw,21px)}
+.adaptation-layout .card-heading h3{font-size:clamp(24px,1.75vw,35px)}
+.adaptation-layout .adapt-category,
+.adaptation-layout.items-5 .adapt-category,
+.adaptation-layout.items-6 .adapt-category,
+.board.fit-compact .adapt-category,
+.board.fit-dense .adapt-category{
+  font-size:clamp(34px,2.0vw,42px)
+}
+.adaptation-layout .adapt-row span:last-child,
+.adaptation-layout.items-5 .adapt-row span:last-child,
+.adaptation-layout.items-6 .adapt-row span:last-child,
+.board.fit-compact .adapt-row span:last-child,
+.board.fit-dense .adapt-row span:last-child{
+  font-size:clamp(28px,1.65vw,34px);line-height:1.17
+}
+.adaptation-layout .adapt-row{grid-template-columns:clamp(78px,5.0vw,100px) 1fr;padding:.35vh 0}
+.adaptation-layout .adapt-note{font-size:clamp(25px,1.6vw,32px);line-height:1.17}
+@media(max-height:850px){
+  .adaptation-layout .adapt-category,
+  .board.fit-compact .adapt-category,
+  .board.fit-dense .adapt-category{font-size:clamp(26px,2.25vw,36px)}
+  .adaptation-layout .adapt-row span:last-child,
+  .board.fit-compact .adapt-row span:last-child,
+  .board.fit-dense .adapt-row span:last-child{font-size:clamp(22px,1.7vw,29px)}
+  .adaptation-layout .adapt-note{font-size:clamp(22px,1.65vw,28px)}
+  .adaptation-layout .adapt-row{grid-template-columns:clamp(58px,5.2vw,82px) 1fr}
+  .wod-single .movement-tile{min-height:clamp(68px,9vh,110px)}
+  .wod-single .movement-label{font-size:clamp(24px,2.2vw,36px)}
+  .wod-single .movement-count{font-size:clamp(42px,3.9vw,64px)}
+  .wod-block .movement-label{font-size:clamp(19px,1.8vw,31px)}
+  .wod-block .movement-count{font-size:clamp(32px,3.2vw,52px)}
+}
