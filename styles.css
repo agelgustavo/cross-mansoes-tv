@@ -149,3 +149,102 @@ button{font:inherit;color:inherit;cursor:pointer}
 .calendar{flex:1;min-height:0;align-content:stretch;grid-template-rows:minmax(24px,4.2vh) repeat(var(--weeks,5),minmax(0,1fr));overflow:hidden}
 .day{min-height:0}
 @media(max-height:900px){.day{min-height:0}}
+
+/* v4.0.0 — Mansões Premium TV: treino primeiro, logo/rodapé mínimos. */
+:root{--gold:#f6c66a}
+.screen-slides{grid-template-rows:auto minmax(0,1fr) auto;gap:.55vh}
+.tv-header{min-height:6.1vh;padding-bottom:.4vh}
+.brand-icon{min-width:40px;width:3vw;max-width:58px;border-radius:7px}
+.brand-line{font-size:clamp(10px,.85vw,15px)}
+.brand-sub{font-size:clamp(8px,.57vw,10px)}
+.header-label{font-size:clamp(10px,.78vw,14px)}
+#clock{font-size:clamp(25px,2.5vw,46px)}
+.slide-meta{padding:0 0 .25vh;align-items:center}
+.slide-eyebrow{font-size:clamp(17px,1.25vw,24px);letter-spacing:.14em}
+.slide-title-row h2{font-size:clamp(25px,2.05vw,40px);font-weight:1000}
+.slide-count{font-size:clamp(17px,1.3vw,26px)}
+.board{padding:1.15vh .95vw;border-radius:8px;border-left:5px solid var(--accent);position:relative;background:radial-gradient(ellipse at 0% 0%,color-mix(in srgb,var(--accent) 13%,transparent),transparent 55%),repeating-linear-gradient(135deg,transparent 0,transparent 22px,#ffffff05 23px,transparent 24px),linear-gradient(130deg,#111115,#060607 80%);}
+.board:before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.27;background:repeating-linear-gradient(0deg,transparent 0,transparent 13px,#ffffff04 14px);}
+.board-inner{position:relative;height:100%;min-height:0;max-width:100%;overflow:hidden;z-index:1}
+.training-card{border:1px solid #ffffff24;border-top:3px solid var(--accent);background:linear-gradient(140deg,color-mix(in srgb,var(--accent) 8%,#16161a) 0%,#08090c 78%);box-shadow:inset 0 0 35px #0005;min-height:0;min-width:0;overflow:hidden;border-radius:5px;padding:clamp(11px,1.1vw,23px)}
+.card-heading{display:flex;align-items:center;gap:.65vw;padding-bottom:.75vh;margin-bottom:.65vh;border-bottom:1px solid #ffffff24}
+.card-numeral{font:1000 clamp(15px,1.15vw,24px)/1 Impact,'Arial Narrow',Arial,sans-serif;color:var(--accent);background:color-mix(in srgb,var(--accent) 21%,#000);padding:.3em .5em;flex-shrink:0}
+.card-heading h3{font:900 clamp(20px,1.9vw,36px)/1.08 Impact,'Arial Narrow',Arial,sans-serif;text-transform:uppercase;letter-spacing:.035em;margin:0}
+.card-body{display:flex;flex-direction:column;flex:1;justify-content:space-evenly;min-height:0}
+.warmup-layout{height:100%;min-height:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8vw;grid-auto-rows:minmax(0,1fr)}
+.warmup-layout.items-3{grid-template-rows:repeat(2,minmax(0,1fr))}
+.warmup-layout.items-3 .warmup-card:first-child{grid-row:span 2}
+.warmup-card{display:flex;flex-direction:column}
+.exercise{display:grid;grid-template-columns:clamp(60px,5vw,106px) 1fr;align-items:center;gap:.7vw;border-bottom:1px solid #ffffff1b;padding:.36vh 0;min-height:0}
+.exercise:last-child{border-bottom:none}
+.exercise-count{color:var(--accent);font:1000 clamp(28px,2.9vw,58px)/.95 Impact,'Arial Narrow',Arial,sans-serif;text-align:right;white-space:nowrap}
+.exercise-label{font:900 clamp(20px,1.95vw,38px)/1.05 Impact,'Arial Narrow',Arial,sans-serif;text-transform:uppercase;overflow-wrap:anywhere}
+.warmup-card:not(:first-child) .exercise-label{font-size:clamp(17px,1.55vw,30px)}
+.warmup-card:not(:first-child) .exercise-count{font-size:clamp(24px,2.25vw,44px)}
+.detail-text{font:850 clamp(14px,1.1vw,21px)/1.18 Arial,sans-serif;color:#f7d78c;padding:.3vh .5vw}
+.detail-first{color:var(--gold)}
+/* Adaptation cards remain true tables in a single sport color. */
+.adaptation-layout{height:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:.8vw}
+.adaptation-layout.items-3,.adaptation-layout.items-5,.adaptation-layout.items-6{grid-template-columns:repeat(3,minmax(0,1fr))}
+.adapt-card{height:100%;display:flex;flex-direction:column}
+.adapt-body{display:flex;flex-direction:column;flex:1;justify-content:space-evenly;min-height:0}
+.adapt-row{display:grid;grid-template-columns:clamp(58px,5vw,100px) 1fr;gap:.65vw;align-items:center;padding:.25vh 0;border-bottom:1px solid #ffffff20}
+.adapt-row:last-child{border-bottom:none}
+.adapt-category{color:var(--accent);font:1000 clamp(28px,2.7vw,53px)/.95 Impact,'Arial Narrow',Arial,sans-serif;text-align:right}
+.adapt-row span:last-child{font:850 clamp(18px,1.55vw,30px)/1.14 Arial,sans-serif;overflow-wrap:anywhere}
+.adaptation-layout.items-5 .adapt-category,.adaptation-layout.items-6 .adapt-category{font-size:clamp(21px,1.8vw,35px)}
+.adaptation-layout.items-5 .adapt-row span:last-child,.adaptation-layout.items-6 .adapt-row span:last-child{font-size:clamp(14px,1.2vw,24px)}
+.adapt-note{font:800 clamp(17px,1.35vw,26px)/1.17 Arial,sans-serif;padding:.45vh .2vw}
+/* WOD/Skill cards: format + expressive movements + KPI strip */
+.program-layout{height:100%;display:flex;flex-direction:column;gap:1.1vh;min-height:0}
+.format-strip{display:flex;align-items:center;gap:.9vw;flex-wrap:wrap;flex:0 0 auto;background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 80%,#000),color-mix(in srgb,var(--accent) 35%,#000) 68%,#09090d);border-left:6px solid white;padding:clamp(12px,1.3vh,24px) 1.4vw;min-height:8vh}
+.format-item{font:900 clamp(28px,3.05vw,60px)/1 Impact,'Arial Narrow',Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.format-item+.format-item{border-left:2px solid #ffffff88;padding-left:1vw}
+.format-symbol .movement-icon{height:clamp(30px,3vw,54px);width:clamp(30px,3vw,54px)}
+.movement-grid{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:.7vw;min-height:0}
+.program-few .movement-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.program-layout.program-count-3 .movement-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.movement-tile{border:1px solid #ffffff1c;border-left:3px solid var(--accent);background:linear-gradient(110deg,#101114,#08080a);border-radius:5px;display:grid;grid-template-columns:clamp(35px,4vw,74px) auto 1fr;align-items:center;gap:1vw;padding:.7vh 1.1vw;min-width:0;min-height:0;overflow:hidden}
+.movement-icon{width:clamp(30px,3.3vw,60px);height:clamp(30px,3.3vw,60px);flex:none;color:var(--accent)}
+.movement-count{font:1000 clamp(42px,4.3vw,82px)/.95 Impact,'Arial Narrow',Arial,sans-serif;color:var(--accent);white-space:nowrap}
+.movement-label{font:900 clamp(25px,2.25vw,45px)/1.05 Impact,'Arial Narrow',Arial,sans-serif;text-transform:uppercase;overflow-wrap:anywhere}
+.program-layout.program-count-6 .movement-count{font-size:clamp(36px,3.45vw,68px)}
+.program-layout.program-count-6 .movement-label{font-size:clamp(20px,1.75vw,35px)}
+.program-notes{flex:0 0 auto;display:flex;gap:.7vw;flex-wrap:wrap}
+.program-notes span{padding:.55vh .8vw;background:#1b1b20;border:1px solid #ffffff14;color:#e8e8ea;font-size:clamp(15px,1.25vw,23px);font-weight:750}
+.kpi-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8vw;flex:0 0 auto;min-height:13vh}
+.kpi-grid.kpi-single{grid-template-columns:1fr}
+.kpi-card{border:1px solid color-mix(in srgb,var(--accent) 50%,white 10%);border-left:5px solid var(--accent);background:linear-gradient(105deg,color-mix(in srgb,var(--accent) 13%,#070708),#060608);padding:.75vh 1.1vw;min-height:0;display:flex;align-items:center;justify-content:space-between;gap:1vw;border-radius:5px;overflow:hidden}
+.kpi-heading{display:flex;gap:.65vw;align-items:center;color:var(--accent);font:900 clamp(17px,1.45vw,28px)/1 Impact,'Arial Narrow',Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+.kpi-heading .movement-icon{height:clamp(25px,2vw,40px);width:clamp(25px,2vw,40px)}
+.kpi-value{font:900 clamp(22px,2.5vw,49px)/1.05 Impact,'Arial Narrow',Arial,sans-serif;text-align:right;text-transform:uppercase;overflow-wrap:anywhere}
+.rules-layout{height:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8vw}
+.rules-card{background:linear-gradient(100deg,#4b160a,#150b09);border-left:7px solid #ffb13c;padding:1.8vh 1vw;display:flex;align-items:flex-start;gap:1.2vw;color:white;font-size:clamp(22px,2vw,40px)}
+.rules-card svg{color:#ffbf3c}
+/* Layout-based fallback, then semantic card pagination if there is still overflow. */
+.board.fit-compact .movement-count{font-size:clamp(30px,2.8vw,55px)}
+.board.fit-compact .movement-label{font-size:clamp(17px,1.6vw,32px)}
+.board.fit-compact .exercise-count,.board.fit-compact .adapt-category{font-size:clamp(23px,2.2vw,42px)}
+.board.fit-compact .exercise-label,.board.fit-compact .adapt-row span:last-child{font-size:clamp(15px,1.3vw,26px)}
+.board.fit-compact .format-item{font-size:clamp(21px,2.3vw,45px)}
+.board.fit-dense .movement-count{font-size:clamp(25px,2.3vw,45px)}
+.board.fit-dense .movement-label{font-size:clamp(15px,1.25vw,25px)}
+.board.fit-dense .exercise-count,.board.fit-dense .adapt-category{font-size:clamp(20px,1.85vw,36px)}
+.board.fit-dense .exercise-label,.board.fit-dense .adapt-row span:last-child{font-size:clamp(13px,1.06vw,21px)}
+.board.fit-dense .kpi-value{font-size:clamp(17px,1.8vw,34px)}
+.board.fit-warning{outline:3px solid #fbbf24}
+.hybrid-mode .format-strip{background:linear-gradient(90deg,#1165a8,#0e3557 70%,#09090d)}
+.hybrid-mode .rules-card{background:linear-gradient(90deg,#063453,#061422)}
+@media(max-height:850px){
+  .format-strip{min-height:7vh;padding:.7vh 1.1vw}
+  .format-item{font-size:clamp(23px,2.35vw,43px)}
+  .program-layout{gap:.65vh}
+  .movement-count{font-size:clamp(30px,3.5vw,60px)}
+  .movement-label{font-size:clamp(20px,1.8vw,35px)}
+  .kpi-grid{min-height:11vh}
+  .kpi-value{font-size:clamp(18px,2vw,38px)}
+  .card-heading h3{font-size:clamp(17px,1.5vw,28px)}
+  .exercise-count,.adapt-category{font-size:clamp(22px,2.1vw,40px)}
+  .exercise-label,.adapt-row span:last-child{font-size:clamp(15px,1.3vw,26px)}
+  .training-card{padding:.7vh .75vw}
+}
