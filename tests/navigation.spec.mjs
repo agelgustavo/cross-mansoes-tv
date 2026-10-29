@@ -54,19 +54,20 @@ test('relógio aparece e aguenta troca de telas', async ({ page }) => {
   await page.locator(DAY).click();
   await expect(page.locator('#clock')).toContainText(/^\d\d:\d\d$/);
 });
-test('degrada graciosamente quando índice falha', async ({ page }) => {
+test('preserva dados em cache quando atualização do índice falha', async ({ page }) => {
   await page.route('**/data/index.json?*', route => route.abort());
   await page.reload();
   await expect(page.locator('.calendar')).toBeVisible();
+  await expect(page.locator(DAY).locator('.dot')).toHaveCount(2);
   await page.locator(DAY).click();
-  await expect(page.locator('main')).toContainText('SEM TREINO PUBLICADO');
+  await expect(page.locator('.choice')).toHaveCount(2);
 });
 
 test('uma página por seção, com todo o aquecimento e adaptações', async ({page}) => {
   await page.locator(DAY).click();
   await page.locator('[data-program="crossfit"]').click();
   await expect(page.locator('.count')).toContainText('1 / 4');
-  await expect(page.locator('.slide')).toContainText('ALTERNATING SAMSON LUNGES');
+  await expect(page.locator('.slide')).toContainText(/alternating samson lunges/i);
   await expect(page.locator('.slide')).toContainText(/thrusters \(aumentando a carga gradualmente\)/i);
   await page.getByRole('button',{name:/PRÓXIMA/i}).click();
   await expect(page.locator('.count')).toContainText('2 / 4');
