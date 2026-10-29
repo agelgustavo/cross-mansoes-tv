@@ -16,7 +16,7 @@ test.beforeEach(async({page})=>{
   page.__errors=[];
   page.on('pageerror',e=>page.__errors.push(e.message));
   await page.goto('/');
-  await expect(page.locator('.version')).toContainText('v4.0.0');
+  await expect(page.locator('.version')).toContainText('v4.1.0');
   await expect(page.locator(DAY)).toContainText('Hybrid Run');
 });
 test.afterEach(async({page})=>{expect(page.__errors).toEqual([]);});
@@ -38,11 +38,15 @@ test('CrossFit: todas as seções, score, duração e sem cortes',async({page})=
     if(i<names.length-1)await page.locator('[data-action="next"]').click();
   }
 });
-test('Hybrid Run: remo, corrida, score, time cap e adaptações',async({page})=>{
+test('Hybrid Run: dois blocos, score, time cap e adaptações paginadas',async({page})=>{
   await page.locator(DAY).click();await page.locator('[data-program="hybrid"]').click();
-  await expect(page.locator('.movement-tile')).toHaveCount(6);await expect(page.locator('.kpi-grid')).toContainText("60'");await fit(page);
+  await expect(page.locator('.movement-tile')).toHaveCount(6);
+  await expect(page.locator('.wod-block')).toHaveCount(2);
+  await expect(page.locator('.kpi-grid')).toContainText("60'");await fit(page);
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('.adapt-card')).toHaveCount(6);await fit(page);
+  await expect(page.locator('.adapt-card')).toHaveCount(4);await fit(page);
+  await page.keyboard.press('ArrowRight');
+  await expect(page.locator('.adapt-card')).toHaveCount(2);await fit(page);
   await expect(page.locator('.board')).toContainText('RX / INT / SC: 200 m');
   await page.keyboard.press('Backspace');await expect(page.locator('.calendar')).toBeVisible();
 });
@@ -63,4 +67,28 @@ test('data sem treino e navegação de meses não quebram',async({page})=>{
 });
 test('calendário usa no máximo 5 semanas em outubro de 2026',async({page})=>{
   await expect(page.locator('.calendar .day')).toHaveCount(35);
+});
+
+test('WOD único tem layout centralizado, sem painéis artificiais',async({page})=>{
+  await page.locator(DAY).click();await page.locator('[data-program="crossfit"]').click();
+  await page.locator('[data-action="next"]').click();
+  await page.locator('[data-action="next"]').click();
+  await expect(page.locator('.slide-eyebrow')).toContainText('WOD');
+  await expect(page.locator('.wod-single')).toHaveCount(1);
+  await expect(page.locator('.wod-block')).toHaveCount(0);
+  await expect(page.locator('.movement-tile')).toHaveCount(2);
+  await fit(page);
+});
+test('adaptações têm fontes próprias para leitura à distância',async({page})=>{
+  await page.locator(DAY).click();await page.locator('[data-program="crossfit"]').click();
+  for(let i=0;i<3;i++)await page.locator('[data-action="next"]').click();
+  const sizes=await page.locator('.adapt-row').first().evaluate(el=>{
+    const category=el.querySelector('.adapt-category');
+    const description=el.querySelector('span:last-child');
+    return {category:parseFloat(getComputedStyle(category).fontSize),description:parseFloat(getComputedStyle(description).fontSize)};
+  });
+  const small=page.viewportSize().height<=850;
+  expect(sizes.category).toBeGreaterThanOrEqual(small?26:34);
+  expect(sizes.description).toBeGreaterThanOrEqual(small?22:28);
+  await fit(page);
 });
