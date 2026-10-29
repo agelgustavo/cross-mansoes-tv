@@ -2,13 +2,15 @@ name: Testes e Deploy Cross Mansões TV
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   test:
@@ -24,16 +26,19 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Testes unitários
         run: npm test
-      - name: Testes de navegação
+      - name: Testes funcionais e responsividade
         run: npm run test:e2e
       - name: Evidências de falha
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-failures
-          path: test-results/
+          path: |
+            test-results/
+            playwright-report/
           if-no-files-found: ignore
   deploy:
+    if: github.event_name != 'pull_request'
     needs: test
     runs-on: ubuntu-latest
     environment:
