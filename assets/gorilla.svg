@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 660" role="img" aria-label="Gorila do Mansões">
+<defs><linearGradient id="fur" x1="0" x2="1" y2="1"><stop stop-color="#29272b"/><stop offset=".5" stop-color="#121418"/><stop offset="1" stop-color="#08090b"/></linearGradient><linearGradient id="edge" x1="0" x2="1"><stop stop-color="#f1222f"/><stop offset="1" stop-color="#7b090c"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="8"/></filter></defs>
+<g opacity=".7" fill="none" stroke="#ef2431" stroke-width="8" filter="url(#glow)"><path d="M91 224 15 152 103 122 67 34M443 185 497 91 420 103 465 11M410 399 507 463 453 501"/></g>
+<path d="M85 637Q22 555 57 416q19-69 76-102-55-52-37-136 10-58 47-91L161 36l65 34Q259 59 295 74l66-39 17 61q45 41 48 100 0 67-41 119 80 32 98 128l25 194Z" fill="url(#fur)" stroke="url(#edge)" stroke-width="11"/>
+<path d="M152 130 105 193l30 47-25 49 58 33 28 77h118l38-76 56-37-35-52 26-54-62-56-47-41-42 26-44-27Z" fill="#242428" stroke="#4b4041" stroke-width="7"/>
+<path d="M149 221q22-33 92-17l17 37q-40 0-65 23l-47-4ZM371 221q-22-33-92-17l-17 37q40 0 65 23l47-4Z" fill="#0b0a0c"/>
+<path d="M163 223 234 233l-10 18-45 2Z M357 223l-71 10 10 18 45 2Z" fill="#f2373d"/>
+<path d="M221 273q38-17 78 0l29 52-27 55-83 0-27-55Z" fill="#484447" stroke="#09090a" stroke-width="9"/>
+<path d="m215 309 20-11 12 18-22 8Zm88-11-20 11-12 15 24 1Z" fill="#0a0a0c"/>
+<path d="M190 361q71 23 141 0l-15 47q-59 24-112-2Z" fill="#171618" stroke="#09090a" stroke-width="5"/>
+<path d="M225 382h73" stroke="#a19a9a" stroke-width="6"/>
+<path d="M110 406q-66 82-40 214l98 10 38-146-31-72ZM410 406q66 82 40 214l-98 10-38-146 31-72Z" fill="#1b1a1c" stroke="#5a1e20" stroke-width="8"/>
+<path d="M179 450q81 37 162 0l27 190H153Z" fill="#111013" stroke="#4a2124" stroke-width="6"/>
+<path d="M166 107 197 146 183 192M356 107 323 146l14 46M119 472l49 39-17 72M401 472l-49 39 17 72" stroke="#ed2d38" stroke-width="5" opacity=".6" fill="none"/>
+</svg>
