@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Testar e publicar Cross Mansões TV
 on:
   push:
     branches: [main]
@@ -11,7 +11,30 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar dependências
+        run: npm install --no-audit --no-fund
+      - name: Instalar Chromium para testes funcionais
+        run: npx playwright install --with-deps chromium
+      - name: Testes unitários e integridade dos treinos
+        run: npm test
+      - name: Testes funcionais em browser
+        run: npm run test:e2e
+      - name: Salvar evidências de falha
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: falhas-playwright
+          path: test-results/
+          if-no-files-found: ignore
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     environment:
       name: github-pages
