@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '4.1.0';
+  const VERSION = '4.2.0';
   const CACHE_KEY = 'mansoes-tv-index-v3';
   const app = document.getElementById('app');
   const visual = window.MansoesLayout;
@@ -116,7 +116,7 @@
       </header>
       <section class="screen-area screen-${state.screen}">${inner}</section>
       <footer class="footer">
-        <div class="footer-left">${encode(state.error || 'Setas: navegar · OK: selecionar · Voltar: calendário')}</div>
+        <div class="footer-left">${encode(state.error || '← / →: trocar página · OK: selecionar · Voltar: calendário')}</div>
         <div class="footer-right">
           <span class="version">v${VERSION}</span>
           <button type="button" data-action="home" class="btn btn-outline btn-small">⌂ Calendário</button>
@@ -203,7 +203,7 @@
         </div>
         <div class="slide-count">${state.slide+1} / ${state.pages.length}</div>
       </div>
-      <main class="board board-${page.kind}"><div class="board-inner">${visual.section(page)}</div></main>
+      <main class="board board-${page.kind} themed-board ${/zuko|appa/i.test(state.workout.title || '') ? 'has-art' : ''}"><div class="theme-art" aria-hidden="true"></div><div class="board-inner">${visual.section(page)}</div></main>
       <nav class="slide-nav"><button type="button" data-action="previous" class="btn btn-outline">◀ Anterior</button><button type="button" data-action="next" class="btn btn-primary">Próxima ▶</button></nav>`;
   }
 
@@ -223,7 +223,7 @@
     // Sempre tentar uma nova página antes de diminuir a fonte de adaptações.
     // Para WODs, preservar as fronteiras semânticas dos blocos.
     const page=state.pages[state.slide];
-    const blocks=page.kind==='wod' && Array.isArray(page.blocks)?page.blocks:[];
+    const blocks=Array.isArray(page.blocks)?page.blocks:[];
     if(blocks.length>1){
       const middle=Math.ceil(blocks.length/2);
       const leftBlocks=blocks.slice(0,middle),rightBlocks=blocks.slice(middle);
@@ -237,7 +237,7 @@
       const middle=Math.ceil(page.items.length/2);
       const common={...page};
       const l=page.items.slice(0,middle),r=page.items.slice(middle);
-      const withBlocks=page.kind==='wod';
+      const withBlocks=['wod','skill','accessory'].includes(page.kind);
       state.pages.splice(state.slide,1,
         {...common,items:l,blocks:withBlocks?[{label:blocks[0]?.label||'',movements:l}]:page.blocks,notes:withBlocks?[]:page.notes,kpis:withBlocks?[]:page.kpis},
         {...common,items:r,blocks:withBlocks?[{label:blocks[0]?.label||'',movements:r}]:page.blocks});
@@ -370,7 +370,7 @@
   }
 
   function keyboard(event) {
-    const key = event.key;
+    const key = ({37:'ArrowLeft',38:'ArrowUp',39:'ArrowRight',40:'ArrowDown',13:'Enter',461:'BrowserBack',10009:'BrowserBack'})[event.keyCode] || event.key;
     const accepted = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' ', 'Backspace', 'Escape', 'BrowserBack'];
     if (!accepted.includes(key)) return;
     event.preventDefault();

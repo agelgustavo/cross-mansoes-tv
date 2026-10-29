@@ -16,7 +16,7 @@ test.beforeEach(async({page})=>{
   page.__errors=[];
   page.on('pageerror',e=>page.__errors.push(e.message));
   await page.goto('/');
-  await expect(page.locator('.version')).toContainText('v4.1.0');
+  await expect(page.locator('.version')).toContainText('v4.2.0');
   await expect(page.locator(DAY)).toContainText('Hybrid Run');
 });
 test.afterEach(async({page})=>{expect(page.__errors).toEqual([]);});
@@ -91,4 +91,16 @@ test('adaptações têm fontes próprias para leitura à distância',async({page
   expect(sizes.category).toBeGreaterThanOrEqual(small?26:34);
   expect(sizes.description).toBeGreaterThanOrEqual(small?22:28);
   await fit(page);
+});
+
+test('controle antigo troca página sem clique e respeita limites',async({page})=>{
+  await page.locator(DAY).click();await page.locator('[data-program="crossfit"]').click();
+  await page.locator('[data-action="home"]').focus();
+  const initial=await page.locator('.slide-count').textContent();
+  await page.evaluate(()=>document.dispatchEvent(new KeyboardEvent('keydown',{keyCode:37,bubbles:true})));
+  await expect(page.locator('.slide-count')).toHaveText(initial);
+  await page.evaluate(()=>document.dispatchEvent(new KeyboardEvent('keydown',{keyCode:39,bubbles:true})));
+  await expect(page.locator('.slide-count')).not.toHaveText(initial);
+  await page.evaluate(()=>document.dispatchEvent(new KeyboardEvent('keydown',{keyCode:37,bubbles:true})));
+  await expect(page.locator('.slide-count')).toHaveText(initial);
 });

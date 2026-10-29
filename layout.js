@@ -110,7 +110,7 @@
         const cards=groups(raw);
         for(let i=0;i<cards.length;i+=4)slides.push({kind,label,items:cards.slice(i,i+4)});
       }else {
-        const program=kind==='wod'?extractWodProgram(raw,workout.title||''):extractProgram(raw,workout.title||'');
+        const program=extractWodProgram(raw,workout.title||'');
         // Very long workouts are divided at movement boundaries, not by arbitrary characters.
         if(program.movements.length>10){
           const batches=[];
@@ -151,7 +151,7 @@
     const kpis=page.kpis||[];
     const movements=page.items||[];
     const notes=page.notes||[];
-    const isWod=page.kind==='wod';
+    const isWod=['wod','skill','accessory'].includes(page.kind);
     const blocks=isWod && page.blocks?.length?page.blocks:[{label:'',movements}];
     const multiple=isWod && blocks.length>1;
     const tileGrid=items=>'<div class="movement-grid">'+items.map(movementTile).join('')+'</div>';
