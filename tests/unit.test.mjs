@@ -41,3 +41,10 @@ test('navegação possui teclado e relógio resiliente', () => {
   assert.match(js, /America\/Sao_Paulo/);
   assert.match(js, /setInterval\(tickClock/);
 });
+
+test('uma página por seção e ícone do gorila enviado', () => {
+  assert.ok(js.includes("---PAGE---"));
+  assert.match(js, /result.push\(\{ label, kind: field, text \}\)/);
+  assert.match(js, /gorilla-icon\.jpg/);
+  assert.ok(readFileSync(new URL('assets/gorilla-icon.jpg',root)).length > 1000);
+});

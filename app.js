@@ -4,7 +4,7 @@
  */
 (() => {
   'use strict';
-  const VERSION = '2.0.0';
+  const VERSION = '2.1.0';
   const app = document.getElementById('app');
   if (!app) throw new Error('Root #app ausente');
   const TYPES = {
@@ -32,13 +32,10 @@
     const result = [];
     for (const [field, label] of [['warmup', 'AQUECIMENTO'], ['skill', 'SKILL / STRENGTH'], ['wod', 'WOD'], ['adaptations', 'ADAPTAÇÕES']]) {
       const value = workout[field];
-      const text = Array.isArray(value) ? value.join('\n') : typeof value === 'string' ? value : value && value.text || '';
-      if (!String(text).trim()) continue;
-      const chunks = text.split(/\n\s*---PAGE---\s*\n/).filter(x => x.trim());
-      chunks.forEach((chunk, index) => result.push({
-        label: chunks.length > 1 ? `${label} ${index + 1}/${chunks.length}` : label,
-        kind: field, text: chunk.trim()
-      }));
+      let text = Array.isArray(value) ? value.join('\n') : typeof value === 'string' ? value : value && value.text || '';
+      text = String(text).replace(/\n\s*---PAGE---\s*\n/g, '\n\n').trim();
+      if (!text) continue;
+      result.push({ label, kind: field, text });
     }
     return result;
   }
@@ -91,7 +88,7 @@
     document.documentElement.style.setProperty('--accent', type ? type.accent : '#ef303b');
     document.body.classList.toggle('hybrid-mode', state.program === 'hybrid');
     return `<header class="tv-header">
-      <div class="brand"><img src="./assets/gorilla.svg" alt=""><span>CROSS <b>MANSÕES</b><small>CROSSTRAINING</small></span></div>
+      <div class="brand"><img src="./assets/gorilla-icon.jpg" alt="Gorila Mansões" class="brand-icon"><span>CROSS <b>MANSÕES</b><small>CROSSTRAINING</small></span></div>
       <div class="top-meta"><span class="screen-state">${encode(state.screen === 'calendar' ? 'CALENDÁRIO' : state.date ? dateLabel(state.date) : '')}</span><div id="clock" aria-label="Relógio de Brasília">--:--</div></div>
     </header>${inner}<footer class="footer"><div class="footer-left">${encode(state.error || footer || '← → Navegar · OK Selecionar · Voltar Calendário')}</div>
       <div class="nav"><span class="version">v${VERSION}</span><button type="button" data-action="home">⌂ Calendário</button><button type="button" data-action="refresh">↻ Atualizar</button></div></footer>`;
