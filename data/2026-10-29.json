@@ -1,0 +1,16 @@
+{
+  "programs": {
+    "crossfit": {
+      "title": "Zuko • 29/10",
+      "warmup": "2 ROUNDS\n30\" Easy Burpees\n8 Alternating Samson Lunges\n10 Air Squats\n8 Scap Push-Ups\n6 Hand-Release Push-Ups\n\n---PAGE---\n\n2 ROUNDS | EMPTY BARBELL\n5 Burpees\n5 Front Squats\n5 Strict Press\n5 Push Press\n5 Thrusters\n\n---PAGE---\n\nPREPARAÇÃO ESPECÍFICA | 2–3 SETS\n4 Burpees em ritmo de WOD\n3 Thrusters (aumentando a carga gradualmente)\nDescanso: 30\"–45\" entre sets",
+      "skill": "BODY BUILDER | POST-WORKOUT STRENGTH\n\n3–4 SETS\n8 Strict Press (Moderate-Heavy)\n12 Hammer Curls (Moderate)\n24 Standing Banded Tricep Extensions\n\nDescanso: 1:1 entre sets\nScore: No Measure",
+      "wod": "ZUKO\nEVERY 3:00 | 6 SETS\n12 Burpees\n12 Thrusters\n\nDuração total: 18'\nScore: tempo do pior round\n\n---PAGE---\n\nOPTIONAL ACCESSORY\nTABATA | 8 SETS (4:00 TOTAL)\n20\" Bent-Over Plate Rows\n10\" Rest\n\nScore: total de repetições",
+      "adaptations": "BURPEES\nRX+: 15 Burpees\nRX: 12 Burpees\nINT: 10 Burpees\nSC: 8 Burpees\nINI: 6 Up-Downs\n\n---PAGE---\n\nTHRUSTERS\nRX+: 15 reps (42,5/30 kg)\nRX: 12 reps (42,5/30 kg)\nINT: 12 reps (35/25 kg)\nSC: 10 DB Thrusters (15/10 kg)\nINI: 10 DB Thrusters (10/7,5 kg)"
+    },
+    "hybrid": {
+      "title": "APPA • Duplas",
+      "wod": "TEAMS OF 2 | FOR TIME\n\n2.000 m Row\n200 m Sled Push (PSE 7–8)\n200 Wall Balls\n\n---PAGE---\n\n2.000 m Run\n200 m DB Walking Lunges (PSE 5–6)\n200 m Burpee Broad Jumps\n\nTime Cap: 60'\nScore: tempo total da dupla",
+      "adaptations": "ROW\nRX: 2.000 m | INT: 1.500 m | SC: 1.000 m\n\nSLED PUSH | PSE 7–8\nRX / INT / SC: 200 m\n\nWALL BALLS\nRX: 200 | INT: 150 | SC: 100\n\n---PAGE---\n\nRUN\nRX: 2.000 m | INT: 1.500 m | SC: 1.000 m\n\nDB WALKING LUNGES | PSE 5–6\nRX / INT / SC: 200 m\n\nBURPEE BROAD JUMPS\nRX: 200 m | INT: 150 m | SC: 100 m"
+    }
+  }
+}
