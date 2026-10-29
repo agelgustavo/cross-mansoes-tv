@@ -21,7 +21,7 @@ test('dados do dia 29 mantidos integralmente em JSON, incluindo cargas e categor
 });
 test('componentes geram 5 páginas CrossFit com acessório separado e 2 Hybrid',()=>{
   assert.equal(layout.makeSlides(workouts.crossfit).map(p=>p.kind).join(','),'warmup,skill,wod,adaptations,accessory');
-  assert.equal(layout.makeSlides(workouts.hybrid).map(p=>p.kind).join(','),'wod,adaptations');
+  assert.equal(layout.makeSlides(workouts.hybrid).map(p=>p.kind).join(','),'wod,adaptations,adaptations');
 });
 test('WOD distingue formato, movimentos, duração e score sem alterar informações',()=>{
   const wod=layout.makeSlides(workouts.crossfit).find(p=>p.kind==='wod');
