@@ -1,0 +1,34 @@
+{
+  "programs": {
+    "crossfit": {
+      "title": "Roxanne / Azula — Halloween Edition",
+      "imageSlides": [
+        {
+          "label": "AQUECIMENTO",
+          "src": "./assets/2026-10-30/aquecimento.jpg",
+          "alt": "CrossFit 30/10 — AQUECIMENTO"
+        },
+        {
+          "label": "WOD",
+          "src": "./assets/2026-10-30/wod.jpg",
+          "alt": "CrossFit 30/10 — WOD"
+        },
+        {
+          "label": "ADAPTAÇÕES 1/2",
+          "src": "./assets/2026-10-30/adaptacoes-1.jpg",
+          "alt": "CrossFit 30/10 — ADAPTAÇÕES 1/2"
+        },
+        {
+          "label": "ADAPTAÇÕES 2/2",
+          "src": "./assets/2026-10-30/adaptacoes-2.jpg",
+          "alt": "CrossFit 30/10 — ADAPTAÇÕES 2/2"
+        },
+        {
+          "label": "PÓS-TREINO",
+          "src": "./assets/2026-10-30/pos-treino.jpg",
+          "alt": "CrossFit 30/10 — PÓS-TREINO"
+        }
+      ]
+    }
+  }
+}

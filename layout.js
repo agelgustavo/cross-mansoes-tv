@@ -94,6 +94,13 @@
   }
   function makeSlides(workout) {
     if (!workout) return [];
+    if (Array.isArray(workout.imageSlides) && workout.imageSlides.length) {
+      return workout.imageSlides.map((item,i)=>({
+        kind:'image',label:item.label||'PÁGINA '+(i+1),
+        src:item.src,alt:item.alt||item.label||'Treino do dia',
+        items:[]
+      }));
+    }
     const content=splitAccessory(workout.wod);
     const extra=text(workout.accessory).trim();
     const slides=[];
@@ -171,6 +178,13 @@
       '</div>';
   }
   function section(page){
+    if (page.kind==='image') {
+      // Imagem autorizada do usuário: não duplicar conteúdo em textos sobrepostos.
+      const src=String(page.src||'');
+      if (!/^\.\/assets\/2026-10-30\/[a-z0-9-]+\.jpg$/.test(src))
+        return '<div class="image-slide-error">Imagem inválida</div>';
+      return '<figure class="image-slide"><img src="'+esc(src)+'" alt="'+esc(page.alt)+'" loading="eager" decoding="sync"></figure>';
+    }
     if(page.kind==='warmup')return `<div class="warmup-layout items-${page.items.length}">${page.items.map((item,i)=>warmupCard(item,i,page.items.length)).join('')}</div>`;
     if(page.kind==='adaptations')return `<div class="adaptation-layout items-${page.items.length}">${page.items.map(adaptationCard).join('')}</div>`;
     if(page.kind==='rules')return `<div class="rules-layout">${page.items.map((item,i)=>`<section class="rules-card">${icon('warning')}<div>${item.map(x=>`<p>${esc(x)}</p>`).join('')}</div></section>`).join('')}</div>`;
