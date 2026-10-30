@@ -337,3 +337,10 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* Preserve illustration proportions while framing each character. */
 .has-art .theme-art{background-size:auto 100%;background-position:16.666% center}
 .hybrid-mode .has-art .theme-art{background-position:83.333% center}
+
+/* Poster image slides supplied by Mansões: fullscreen inside the workout board */
+.board-image{padding:0;background:#030303;border:0;overflow:hidden}
+.board-image .board-inner{height:100%;width:100%}
+.image-slide{margin:0;height:100%;width:100%;display:flex;justify-content:center;align-items:center;overflow:hidden}
+.image-slide img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.image-slide-error{height:100%;display:grid;place-items:center;font-size:clamp(24px,3vw,48px);color:#fff}
