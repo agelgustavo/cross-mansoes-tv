@@ -205,6 +205,7 @@
     const page = state.pages[state.slide];
     const type = TYPES[state.program];
     if(page.kind === 'poster') return `<main class="poster-stage">
+      <img class="workout-backdrop" src="${encode(page.src)}" alt="" aria-hidden="true">
       <img class="workout-poster" src="${encode(page.src)}" alt="${encode(page.label + ': ' + page.text)}">
       <p class="poster-error" hidden>Não foi possível carregar a arte. Use Atualizar para tentar novamente.</p>
       </main><nav class="poster-controls" aria-label="Navegação do treino">
