@@ -37,3 +37,6 @@ Arte `assets/tv-characters.png` criada com imagegen integrado. Prompt: painel du
 
 ## Publicação autorizada
 O proprietário autorizou em 29/10/2026 publicar automaticamente as próximas alterações deste aplicativo após os testes obrigatórios, sem nova confirmação. Verificar o resultado do deploy antes de anunciar publicação.
+
+## v5 — pôster inteiro na TV
+Cada página é uma imagem horizontal completa (personagem, cenário, títulos e dados), não um personagem ao lado de componentes HTML. Exibir com object-fit: contain, preservando a arte inteira. Os controles são sobrepostos e aparecem ao focar ou passar o ponteiro; esquerda/direita sempre trocam a página sem OK. Pré-carregar a próxima arte. Mostrar erro recuperável quando a imagem falhar. Manter os dados originais em JSON e uma transcrição acessível por imagem. Aquecimento longo pode ocupar várias imagens. Revisar visualmente todos os exercícios, cargas, categorias, tempos e scores antes do deploy.

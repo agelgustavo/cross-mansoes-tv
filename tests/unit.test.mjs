@@ -53,7 +53,7 @@ test('Adaptações mantêm movimento e categorias, sem inventar RX+ no Hybrid',(
 test('Aplicação inicia com scripts separados, navegação acessível e identidade do mascote',()=>{
   const html=read('index.html'),app=read('app.js'),css=read('styles.css');
   assert.ok(html.indexOf('layout.js') < html.indexOf('app.js'));
-  assert.match(app,/const VERSION = '4\.2\.0'/);
+  assert.match(app,/const VERSION = '5\.0\.0'/);
   assert.match(app,/app\.addEventListener\('click'/);
   assert.match(app,/function enforceFit/);
   assert.match(app,/gorilla-icon\.jpg/);

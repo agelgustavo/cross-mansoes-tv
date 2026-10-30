@@ -243,3 +243,6 @@ O HTML de TV deve respeitar este padrão visual, sem sacrificar a eficiência:
 - Nunca inferir ou alterar dados faltantes sem confirmação; se necessário, sinalizar ausência.
 - A hierarquia de conteúdo prevalece sobre decoração e referências visuais.
 - Este documento é o padrão geral de **todas as artes do Mansões Crosstraining**, tanto individuais quanto semanais e HTML.
+
+## Atualização do proprietário — TV como visualizador de artes
+A orientação mais recente substitui a regra anterior de textos exclusivamente em HTML para as telas de treino: usar imagens horizontais completas, incluindo títulos, exercícios e números, como pôsteres. O HTML exibe a imagem inteira sem cortes e oferece navegação direta por setas e botões. Conferir cada texto da arte contra os dados JSON antes de publicar. Manter fallback HTML para treinos ainda sem arte.

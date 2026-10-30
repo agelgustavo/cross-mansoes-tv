@@ -15,8 +15,9 @@ async function fit(page){
 test.beforeEach(async({page})=>{
   page.__errors=[];
   page.on('pageerror',e=>page.__errors.push(e.message));
+  await page.route('**/data/2026-10-29.json*',async route=>{const r=await route.fetch();const d=await r.json();for(const p of Object.values(d.programs))delete p.posters;await route.fulfill({json:d});});
   await page.goto('/');
-  await expect(page.locator('.version')).toContainText('v4.2.0');
+  await expect(page.locator('.version')).toContainText('v5.0.0');
   await expect(page.locator(DAY)).toContainText('Hybrid Run');
 });
 test.afterEach(async({page})=>{expect(page.__errors).toEqual([]);});

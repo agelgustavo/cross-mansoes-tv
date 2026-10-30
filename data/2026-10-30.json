@@ -1,0 +1,34 @@
+{
+  "programs": {
+    "crossfit": {
+      "title": "Azula | Nightmare Before Halloween",
+      "posters": [
+        {
+          "src": "./assets/posters/2026-10-30-crossfit-1.jpg",
+          "label": "Aquecimento — Roxanne",
+          "text": "Aquecimento — Roxanne"
+        },
+        {
+          "src": "./assets/posters/2026-10-30-crossfit-2.jpg",
+          "label": "WOD — Azula",
+          "text": "WOD — Azula"
+        },
+        {
+          "src": "./assets/posters/2026-10-30-crossfit-3.jpg",
+          "label": "Adaptações 1/2",
+          "text": "Adaptações 1/2"
+        },
+        {
+          "src": "./assets/posters/2026-10-30-crossfit-4.jpg",
+          "label": "Adaptações 2/2 e regras",
+          "text": "Adaptações 2/2 e regras"
+        },
+        {
+          "src": "./assets/posters/2026-10-30-crossfit-5.jpg",
+          "label": "Pós-treino — Core e Accessory",
+          "text": "Pós-treino — Core e Accessory"
+        }
+      ]
+    }
+  }
+}

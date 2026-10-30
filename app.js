@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '4.2.0';
+  const VERSION = '5.0.0';
   const CACHE_KEY = 'mansoes-tv-index-v3';
   const app = document.getElementById('app');
   const visual = window.MansoesLayout;
@@ -103,6 +103,7 @@
     const currentType = TYPES[state.program];
     document.documentElement.style.setProperty('--accent', currentType ? currentType.accent : '#ef303b');
     document.body.classList.toggle('hybrid-mode', state.program === 'hybrid');
+    document.body.classList.toggle('poster-mode', state.screen === 'slides' && state.pages[state.slide]?.kind === 'poster');
     return `
       <header class="tv-header">
         <div class="brand-mini">
@@ -178,7 +179,7 @@
   }
 
   function buildPages(workout) {
-    return visual.makeSlides(workout);
+    return Array.isArray(workout?.posters) && workout.posters.length ? workout.posters.map(p => ({...p, kind:'poster'})) : visual.makeSlides(workout);
   }
 
   function relabelSection(page) {
@@ -196,6 +197,16 @@
     state.slide = Math.max(0, Math.min(state.slide, state.pages.length-1));
     const page = state.pages[state.slide];
     const type = TYPES[state.program];
+    if(page.kind === 'poster') return `<main class="poster-stage">
+      <img class="workout-poster" src="${encode(page.src)}" alt="${encode(page.label + ': ' + page.text)}">
+      <p class="poster-error" hidden>Não foi possível carregar a arte. Use Atualizar para tentar novamente.</p>
+      </main><nav class="poster-controls" aria-label="Navegação do treino">
+      <button data-action="previous" class="btn btn-outline">◀ Anterior</button>
+      <span class="slide-count">${state.slide+1} / ${state.pages.length}</span>
+      <span class="poster-label">${encode(page.label)}</span>
+      <button data-action="home" class="btn btn-outline">Calendário</button>
+      <button data-action="refresh" class="btn btn-outline">Atualizar</button>
+      <button data-action="next" class="btn btn-primary">Próxima ▶</button></nav>`;
     return `<div class="slide-meta">
         <div class="slide-meta-left">
           <span class="slide-eyebrow">${encode(relabelSection(page))}</span>
@@ -251,6 +262,12 @@
     const body = state.screen === 'calendar' ? calendarScreen() : state.screen === 'program' ? programChooserScreen() : slideScreen();
     app.innerHTML = shell(body);
     tickClock();
+    const poster=app.querySelector('.workout-poster');
+    if(poster){
+      poster.addEventListener('error',()=>{app.querySelector('.poster-error').hidden=false;});
+      const next=state.pages[state.slide+1];
+      if(next?.src){const preload=new Image();preload.src=next.src;}
+    }
     if(state.screen === 'slides' && state.workout) requestAnimationFrame(enforceFit);
     if (selected) {
       const selector = selected.action === 'day'
