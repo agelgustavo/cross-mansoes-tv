@@ -102,8 +102,10 @@
 
   function shell(inner) {
     const currentType = TYPES[state.program];
+    const hasSlides = state.screen === 'slides' && state.workout && state.pages.length > 0;
     document.documentElement.style.setProperty('--accent', currentType ? currentType.accent : '#ef303b');
     document.body.classList.toggle('hybrid-mode', state.program === 'hybrid');
+    document.body.classList.toggle('workout-mode', Boolean(hasSlides));
     document.body.classList.toggle('poster-mode', state.screen === 'slides' && state.pages[state.slide]?.kind === 'poster');
     return `
       <header class="tv-header">
@@ -117,14 +119,14 @@
         </div>
       </header>
       <section class="screen-area screen-${state.screen}">${inner}</section>
-      <footer class="footer">
+      ${hasSlides ? '' : `<footer class="footer">
         <div class="footer-left">${encode(state.error || '← / →: trocar página · OK: selecionar · Voltar: calendário')}</div>
         <div class="footer-right">
           <span class="version">v${VERSION}</span>
           <button type="button" data-action="home" class="btn btn-outline btn-small">⌂ Calendário</button>
           <button type="button" data-action="refresh" class="btn btn-ghost btn-small">↻ Atualizar</button>
         </div>
-      </footer>`;
+      </footer>`}`;
   }
 
   function programChips(programs) {
@@ -208,22 +210,26 @@
       <img class="workout-backdrop" src="${encode(page.src)}" alt="" aria-hidden="true">
       <img class="workout-poster" src="${encode(page.src)}" alt="${encode(page.label + ': ' + page.text)}">
       <p class="poster-error" hidden>Não foi possível carregar a arte. Use Atualizar para tentar novamente.</p>
-      </main><nav class="poster-controls" aria-label="Navegação do treino">
-      <div class="page-buttons"><button data-action="previous" class="btn btn-outline">◀ Anterior</button><button data-action="next" class="btn btn-primary">Próxima ▶</button></div>
-      <span class="slide-count">${state.slide+1} / ${state.pages.length}</span>
-      <span class="poster-label">${encode(page.label)}</span>
-      <button data-action="home" class="btn btn-outline">Calendário</button>
-      <button data-action="refresh" class="btn btn-outline">Atualizar</button>
-      ${switchButton()}</nav>`;
-    return `<div class="slide-meta">
+      </main>${workoutControls(page)}`;
+    return `<div class="html-stage"><div class="slide-meta">
         <div class="slide-meta-left">
           <span class="slide-eyebrow">${encode(relabelSection(page))}</span>
           <div class="slide-title-row"><h2>${encode(state.workout.title || type.label)}</h2><span class="mode-chip ${type.chipClass}">${encode(type.label)}</span></div>
         </div>
-        <div class="slide-count">${state.slide+1} / ${state.pages.length}</div>
+
       </div>
       <main class="board board-${page.kind} themed-board ${/zuko|appa/i.test(state.workout.title || '') ? 'has-art' : ''}"><div class="theme-art" aria-hidden="true"></div><div class="board-inner">${visual.section(page)}</div></main>
-      <nav class="slide-nav"><div class="page-buttons"><button type="button" data-action="previous" class="btn btn-outline">◀ Anterior</button><button type="button" data-action="next" class="btn btn-primary">Próxima ▶</button></div>${switchButton()}</nav>`;
+      </div>${workoutControls(page)}`;
+  }
+
+  function workoutControls(page) {
+    return `<nav class="poster-controls" aria-label="Navegação do treino">
+      <div class="page-buttons"><button data-action="previous" class="btn btn-outline">◀ Anterior</button><button data-action="next" class="btn btn-primary">Próxima ▶</button></div>
+      <span class="slide-count">${state.slide+1} / ${state.pages.length}</span>
+      <span class="poster-label">${encode(page.label || relabelSection(page))}</span>
+      <button data-action="home" class="btn btn-outline">Calendário</button>
+      <button data-action="refresh" class="btn btn-outline">Atualizar</button>
+      ${switchButton()}</nav>`;
   }
 
   // Fit is verified against actual rendered dimensions, not only text length.

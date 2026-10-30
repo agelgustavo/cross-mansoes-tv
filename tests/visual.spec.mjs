@@ -64,3 +64,22 @@ test('alternador sempre visível no rodapé, indisponível sem treino',async({pa
  const box=await button.boundingBox();expect(box.x+box.width).toBeLessThanOrEqual(page.viewportSize().width);expect(box.y+box.height).toBeLessThanOrEqual(page.viewportSize().height);
  await page.screenshot({path:`output/switch-footer-${page.viewportSize().width}.png`});
 });
+
+test('cabeçalho e controles fixos iguais em arte e HTML',async({page})=>{
+ await page.goto('/');await page.locator('.day[data-date="2026-10-30"]').click();
+ const header=await page.locator('.tv-header').boundingBox();
+ const footer=await page.locator('.poster-controls').boundingBox();
+ const actions=await page.locator('.poster-controls button').evaluateAll(nodes=>nodes.map(n=>n.dataset.action));
+ await page.locator('.poster-controls [data-action="home"]').click();
+ await page.locator('.day[data-date="2026-10-29"]').click();await page.locator('[data-program="crossfit"]').click();
+ for(const mode of ['CrossFit','Hybrid Run']){
+  await expect(page.locator('.mode-chip')).toHaveText(mode);
+  expect(await page.locator('.tv-header').boundingBox()).toEqual(header);
+  expect(await page.locator('.poster-controls').boundingBox()).toEqual(footer);
+  expect(await page.locator('.poster-controls button').evaluateAll(nodes=>nodes.map(n=>n.dataset.action))).toEqual(actions);
+  await page.screenshot({path:`output/shared-${mode}-${page.viewportSize().width}.png`});
+  await page.keyboard.press('ArrowRight');
+  expect(await page.locator('.poster-controls').boundingBox()).toEqual(footer);
+  if(mode==='CrossFit')await page.locator('[data-action="switch-program"]').click();
+ }
+});

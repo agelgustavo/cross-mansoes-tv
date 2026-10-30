@@ -14,3 +14,6 @@ A identidade é **preto/vermelho/branco** para CrossFit e **preto/azul/branco** 
 
 ## Atualização do proprietário — TV como visualizador de artes
 A orientação mais recente substitui a regra anterior de textos exclusivamente em HTML para as telas de treino: usar imagens horizontais completas, incluindo títulos, exercícios e números, como pôsteres. O HTML exibe a imagem inteira sem cortes e oferece navegação direta por setas e botões. Conferir cada texto da arte contra os dados JSON antes de publicar. Manter fallback HTML para treinos ainda sem arte.
+
+## Cabeçalho e rodapé únicos
+Todos os treinos, em imagem ou HTML, devem usar o mesmo cabeçalho e rodapé fixos e sempre visíveis. Apenas a área central muda; preservar relógio, data, logo, navegação e troca de modalidade.
