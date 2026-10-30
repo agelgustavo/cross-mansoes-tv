@@ -4,27 +4,22 @@
       "title": "Azula | Nightmare Before Halloween",
       "posters": [
         {
-          "src": "./assets/posters/2026-10-30-crossfit-1.jpg",
+          "src": "./assets/posters/2026-10-30-v2-1.png",
           "label": "Aquecimento — Roxanne",
           "text": "Aquecimento — Roxanne"
         },
         {
-          "src": "./assets/posters/2026-10-30-crossfit-2.jpg",
+          "src": "./assets/posters/2026-10-30-v2-2.png",
           "label": "WOD — Azula",
           "text": "WOD — Azula"
         },
         {
-          "src": "./assets/posters/2026-10-30-crossfit-3.jpg",
-          "label": "Adaptações 1/2",
-          "text": "Adaptações 1/2"
+          "src": "./assets/posters/2026-10-30-v2-3.png",
+          "label": "Adaptações e regras",
+          "text": "Adaptações e regras"
         },
         {
-          "src": "./assets/posters/2026-10-30-crossfit-4.jpg",
-          "label": "Adaptações 2/2 e regras",
-          "text": "Adaptações 2/2 e regras"
-        },
-        {
-          "src": "./assets/posters/2026-10-30-crossfit-5.jpg",
+          "src": "./assets/posters/2026-10-30-v2-4.png",
           "label": "Pós-treino — Core e Accessory",
           "text": "Pós-treino — Core e Accessory"
         }

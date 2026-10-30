@@ -190,8 +190,9 @@
   }
 
   function switchButton() {
-    const other=(state.days[state.date]||[]).find(p=>p!==state.program);
-    return other ? `<button type="button" data-action="switch-program" data-program="${other}" class="btn btn-outline switch-program">Ir para ${encode(TYPES[other].label)} ⇄</button>` : '';
+    const other=state.program==='crossfit'?'hybrid':'crossfit';
+    const available=(state.days[state.date]||[]).includes(other);
+    return `<button type="button" data-action="switch-program" data-program="${other}" class="btn btn-outline switch-program" ${available?'':'disabled'}><span>⇄ ${encode(TYPES[other].label)}</span><small>${available?'Alternar modalidade':'Sem treino nesta data'}</small></button>`;
   }
 
   function slideScreen() {
@@ -359,7 +360,7 @@
   }
 
   function action(node) {
-    if (!node) return;
+    if (!node || node.disabled) return;
     switch (node.dataset.action) {
       case 'switch-program':
         openProgram(node.dataset.program);
@@ -421,7 +422,7 @@
       return;
     }
 
-    const buttons = [...app.querySelectorAll('button[data-action]')];
+    const buttons = [...app.querySelectorAll('button[data-action]:not(:disabled)')];
     if (!buttons.length) return;
 
     const current = app.contains(document.activeElement) && document.activeElement.dataset?.action ? document.activeElement : null;

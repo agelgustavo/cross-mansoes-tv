@@ -397,3 +397,9 @@ body.poster-mode #app{grid-template-rows:44px minmax(0,1fr)}
 .poster-controls{justify-content:flex-start;gap:12px}
 .poster-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 @media(max-height:740px){.calendar{gap:5px;grid-template-rows:22px repeat(var(--weeks),minmax(0,1fr))}.day{padding:4px 6px;gap:2px}.day .n{font-size:20px}.day .chip{font-size:12px;padding:1px 4px}.day-programs{gap:2px}.toolbar{padding:6px 0}}
+
+.switch-program{display:flex;flex-direction:column;gap:2px;line-height:1.1;border-color:#2f9bf2;background:#102337;min-width:170px}
+.switch-program small{font-size:10px;letter-spacing:0;text-transform:none;font-weight:500}
+.switch-program:disabled{cursor:default;color:#b9c2cf;background:#171d25;border-color:#526075;opacity:1}
+.switch-program:disabled:hover{transform:none}
+.poster-controls .switch-program{height:42px;padding:3px 12px;box-sizing:border-box;line-height:1.1}

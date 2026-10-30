@@ -7,7 +7,7 @@ test('artes completas, navegação direta e imagens carregadas',async({page},inf
 
  await expect(page.locator('.workout-poster')).toBeVisible();
  const total=Number((await page.locator('.slide-count').textContent()).split('/')[1]);
- expect(total).toBe(5);
+ expect(total).toBe(4);
  for(let n=0;n<total;n++){
  const img=page.locator('.workout-poster');
  await expect(img).toHaveJSProperty('complete',true);
@@ -28,10 +28,10 @@ test('controle com nomes antigos e apenas keyup, sem avanço duplicado',async({p
  await page.goto('/');await page.locator('.day[data-date="2026-10-30"]').click();
  await expect(page.locator('.poster-controls [data-action="next"]')).toBeFocused();
  await page.evaluate(()=>window.dispatchEvent(new KeyboardEvent('keyup',{key:'Right',cancelable:true})));
- await expect(page.locator('.slide-count')).toHaveText('2 / 5');
- await page.keyboard.press('ArrowRight');await expect(page.locator('.slide-count')).toHaveText('3 / 5');
+ await expect(page.locator('.slide-count')).toHaveText('2 / 4');
+ await page.keyboard.press('ArrowRight');await expect(page.locator('.slide-count')).toHaveText('3 / 4');
  await page.evaluate(()=>window.dispatchEvent(new KeyboardEvent('keyup',{key:'Left',cancelable:true})));
- await expect(page.locator('.slide-count')).toHaveText('2 / 5');
+ await expect(page.locator('.slide-count')).toHaveText('2 / 4');
 });
 test('calendário cabe na tela e usa logo oficial',async({page},info)=>{
  await page.goto('/');await expect(page.locator('.day[data-date="2026-10-30"]')).toContainText('CrossFit');
@@ -55,4 +55,12 @@ test('células exibem duas modalidades em 1280x720 e seis semanas',async({page})
  await page.locator('[data-action="month"][data-step="-1"]').click();await page.locator('[data-action="month"][data-step="-1"]').click();
  await expect(page.locator('.calendar .day')).toHaveCount(42);
  const grid=await page.locator('.calendar').boundingBox();expect(grid.y+grid.height).toBeLessThanOrEqual(720);
+});
+
+test('alternador sempre visível no rodapé, indisponível sem treino',async({page})=>{
+ await page.goto('/');await page.locator('.day[data-date="2026-10-30"]').click();
+ const button=page.locator('.poster-controls [data-action="switch-program"]');
+ await expect(button).toBeVisible();await expect(button).toBeDisabled();await expect(button).toContainText('Hybrid Run');await expect(button).toContainText('Sem treino nesta data');
+ const box=await button.boundingBox();expect(box.x+box.width).toBeLessThanOrEqual(page.viewportSize().width);expect(box.y+box.height).toBeLessThanOrEqual(page.viewportSize().height);
+ await page.screenshot({path:`output/switch-footer-${page.viewportSize().width}.png`});
 });
