@@ -107,7 +107,7 @@
     return `
       <header class="tv-header">
         <div class="brand-mini">
-          <img src="./assets/gorilla-icon.jpg" alt="Gorila Mansões" class="brand-icon">
+          <img src="./assets/simbolo_mansoes_vermelho.png" alt="Gorila Mansões" class="brand-icon">
           <div class="brand-copy"><span class="brand-line">Mansões Crosstraining</span><span class="brand-sub">Painel de treino</span></div>
         </div>
         <div class="header-meta">
@@ -269,6 +269,7 @@
       if(next?.src){const preload=new Image();preload.src=next.src;}
     }
     if(state.screen === 'slides' && state.workout) requestAnimationFrame(enforceFit);
+    if(state.screen==='slides' && state.pages.length && !app.querySelector(`[data-action="${selected?.action}"]`)) selected={action:'next',value:''};
     if (selected) {
       const selector = selected.action === 'day'
         ? `[data-action="day"][data-date="${selected.value}"]`
@@ -386,11 +387,22 @@
     try { node.focus({ preventScroll: true }); } catch { node.focus(); }
   }
 
+  const heldKeys = new Set();
   function keyboard(event) {
-    const key = ({37:'ArrowLeft',38:'ArrowUp',39:'ArrowRight',40:'ArrowDown',13:'Enter',461:'BrowserBack',10009:'BrowserBack'})[event.keyCode] || event.key;
+    const aliases={Left:'ArrowLeft',Right:'ArrowRight',Up:'ArrowUp',Down:'ArrowDown',OK:'Enter',Select:'Enter'};
+    const raw=event.key && event.key!=='Unidentified'?event.key:(event.code || event.keyIdentifier);
+    const key = aliases[raw] || raw || ({37:'ArrowLeft',38:'ArrowUp',39:'ArrowRight',40:'ArrowDown',13:'Enter',461:'BrowserBack',10009:'BrowserBack'})[event.keyCode || event.which];
     const accepted = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' ', 'Backspace', 'Escape', 'BrowserBack'];
     if (!accepted.includes(key)) return;
     event.preventDefault();
+    event.stopPropagation();
+    if(event.type==='keyup'){
+      if(heldKeys.delete(key)) return;
+      if(key!=='ArrowLeft' && key!=='ArrowRight') return;
+    }else{
+      if(heldKeys.has(key) && event.repeat) return;
+      heldKeys.add(key);
+    }
 
     if (['Backspace', 'Escape', 'BrowserBack'].includes(key)) {
       goHome();
@@ -434,7 +446,9 @@
     action(node);
   });
 
-  document.addEventListener('keydown', keyboard);
+  window.addEventListener('keydown', keyboard, true);
+  window.addEventListener('keyup', keyboard, true);
+  window.addEventListener('blur',()=>heldKeys.clear());
   setInterval(tickClock, 15_000);
   window.addEventListener('online', loadIndex);
 

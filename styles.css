@@ -360,3 +360,24 @@ body.poster-mode #app{display:grid;grid-template-rows:64px minmax(0,1fr);gap:0;o
 .poster-mode .screen-slides{display:grid;grid-template-rows:minmax(0,1fr) 54px;gap:0;min-height:0}
 .poster-stage{position:relative;inset:auto;min-height:0;overflow:hidden}
 .poster-controls{position:relative;inset:auto;opacity:1;transition:none;background:#08090b;border-top:1px solid #ef303b;min-height:0}
+
+/* Compact branded header and a calendar that fits five or six weeks. */
+body.poster-mode #app{grid-template-rows:44px minmax(0,1fr)}
+.tv-header,.poster-mode .tv-header{min-height:44px;padding:3px 16px}
+.brand-icon,.poster-mode .brand-icon{width:34px;min-width:34px;height:34px;object-fit:contain;background:transparent;border:0;border-radius:0;padding:0;box-shadow:none}
+.brand-sub{display:none}
+.brand-line{font-size:12px}
+#clock,.poster-mode #clock{font-size:27px}
+.header-label,.poster-mode .header-label{font-size:14px;letter-spacing:.05em}
+.calendar{flex:1;grid-template-rows:30px repeat(var(--weeks),minmax(0,1fr));gap:8px;align-content:stretch}
+.day{min-height:0;border-radius:8px;padding:12px;background:#121318;border:1px solid #30313b;box-shadow:none}
+.day.today{border:2px solid var(--accent);background:#271216}
+.day.today .n:after{content:' HOJE';font-size:12px;color:var(--accent);vertical-align:middle}
+.day.outside{opacity:.35}
+.day:focus{background:#292b35;outline:3px solid white;outline-offset:-3px;box-shadow:0 0 0 2px var(--accent)}
+.day-programs{flex-direction:column;gap:5px}
+.chip{font-size:clamp(12px,1vw,18px);border-radius:4px}
+.published{font-size:10px;border:0;background:none;color:#9ca2ad;padding:0}
+.toolbar{justify-content:space-between;padding:12px 0}
+.toolbar strong{font-size:clamp(24px,2.1vw,40px)}
+.weekday{text-align:center;font-size:13px;padding:4px}

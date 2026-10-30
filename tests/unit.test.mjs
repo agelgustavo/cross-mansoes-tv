@@ -56,7 +56,7 @@ test('Aplicação inicia com scripts separados, navegação acessível e identid
   assert.match(app,/const VERSION = '5\.0\.0'/);
   assert.match(app,/app\.addEventListener\('click'/);
   assert.match(app,/function enforceFit/);
-  assert.match(app,/gorilla-icon\.jpg/);
+  assert.match(app,/simbolo_mansoes_vermelho\.png/);
   assert.match(css,/\.kpi-card/);
   assert.ok(readFileSync(new URL('assets/gorilla-icon.jpg',root)).length>1000);
 });
