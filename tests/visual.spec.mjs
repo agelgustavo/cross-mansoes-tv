@@ -39,3 +39,20 @@ test('calendário cabe na tela e usa logo oficial',async({page},info)=>{
  const r=await page.locator('.calendar').boundingBox();expect(r.y+r.height).toBeLessThan(page.viewportSize().height);
  await page.screenshot({path:`output/calendar-${info.project.name}.png`});
 });
+
+test('alternar aulas mantém a página de cada modalidade',async({page})=>{
+ await page.goto('/');await page.locator('.day[data-date="2026-10-29"]').click();await page.locator('[data-program="crossfit"]').click();
+ await page.keyboard.press('ArrowRight');const before=await page.locator('.slide-count').textContent();
+ await page.locator('[data-action="switch-program"]').click();await expect(page.locator('.mode-chip')).toHaveText('Hybrid Run');
+ await page.locator('[data-action="switch-program"]').click();await expect(page.locator('.mode-chip')).toHaveText('CrossFit');
+ await expect(page.locator('.slide-count')).toHaveText(before);
+ const prev=await page.locator('[data-action="previous"]').boundingBox(),next=await page.locator('[data-action="next"]').boundingBox();expect(next.x-prev.x-prev.width).toBeLessThanOrEqual(8);
+});
+test('células exibem duas modalidades em 1280x720 e seis semanas',async({page})=>{
+ await page.setViewportSize({width:1280,height:720});await page.goto('/');
+ const day=page.locator('.day[data-date="2026-10-29"]');await expect(day).toContainText('Hybrid Run');
+ const box=await day.boundingBox();for(const chip of await day.locator('.chip').all()){const r=await chip.boundingBox();expect(r.y+r.height).toBeLessThanOrEqual(box.y+box.height);expect(r.x+r.width).toBeLessThanOrEqual(box.x+box.width);}
+ await page.locator('[data-action="month"][data-step="-1"]').click();await page.locator('[data-action="month"][data-step="-1"]').click();
+ await expect(page.locator('.calendar .day')).toHaveCount(42);
+ const grid=await page.locator('.calendar').boundingBox();expect(grid.y+grid.height).toBeLessThanOrEqual(720);
+});

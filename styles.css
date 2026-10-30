@@ -381,3 +381,19 @@ body.poster-mode #app{grid-template-rows:44px minmax(0,1fr)}
 .toolbar{justify-content:space-between;padding:12px 0}
 .toolbar strong{font-size:clamp(24px,2.1vw,40px)}
 .weekday{text-align:center;font-size:13px;padding:4px}
+
+/* Compact cells keep both modalities visible on TV browser layouts. */
+.day{padding:6px 8px;display:grid;grid-template-rows:auto minmax(0,1fr);gap:4px;align-content:start}
+.day-top{align-items:center;min-width:0}
+.day .n{font-size:clamp(20px,1.7vw,30px)}
+.day.today .n:after{font-size:9px;letter-spacing:0}
+.day .published{display:none}
+.day-programs{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:3px;min-height:0;width:100%}
+.day .chip{flex:none;max-width:100%;font-size:clamp(12px,1vw,18px);line-height:1.15;padding:2px 5px;white-space:nowrap;letter-spacing:0}
+.day .emptyhint{font-size:11px}
+.page-buttons{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.slide-nav{justify-content:flex-start;gap:12px}
+.switch-program{margin-left:auto;white-space:nowrap;flex-shrink:0}
+.poster-controls{justify-content:flex-start;gap:12px}
+.poster-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+@media(max-height:740px){.calendar{gap:5px;grid-template-rows:22px repeat(var(--weeks),minmax(0,1fr))}.day{padding:4px 6px;gap:2px}.day .n{font-size:20px}.day .chip{font-size:12px;padding:1px 4px}.day-programs{gap:2px}.toolbar{padding:6px 0}}

@@ -35,6 +35,7 @@
   };
 
   let selected = null;
+  const sessions = new Map();
 
   const encode = value => String(value ?? '').replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -188,6 +189,11 @@
     return same.length > 1 ? `${page.label} ${index+1}/${same.length}` : page.label;
   }
 
+  function switchButton() {
+    const other=(state.days[state.date]||[]).find(p=>p!==state.program);
+    return other ? `<button type="button" data-action="switch-program" data-program="${other}" class="btn btn-outline switch-program">Ir para ${encode(TYPES[other].label)} ⇄</button>` : '';
+  }
+
   function slideScreen() {
     if (!state.workout) {
       return `<main class="panel error-panel"><h1>${state.error ? 'Não foi possível carregar' : 'Sem treino publicado'}</h1><p class="notice">${encode(state.error || 'Não há treino publicado nesta data.')}</p></main>`;
@@ -201,12 +207,12 @@
       <img class="workout-poster" src="${encode(page.src)}" alt="${encode(page.label + ': ' + page.text)}">
       <p class="poster-error" hidden>Não foi possível carregar a arte. Use Atualizar para tentar novamente.</p>
       </main><nav class="poster-controls" aria-label="Navegação do treino">
-      <button data-action="previous" class="btn btn-outline">◀ Anterior</button>
+      <div class="page-buttons"><button data-action="previous" class="btn btn-outline">◀ Anterior</button><button data-action="next" class="btn btn-primary">Próxima ▶</button></div>
       <span class="slide-count">${state.slide+1} / ${state.pages.length}</span>
       <span class="poster-label">${encode(page.label)}</span>
       <button data-action="home" class="btn btn-outline">Calendário</button>
       <button data-action="refresh" class="btn btn-outline">Atualizar</button>
-      <button data-action="next" class="btn btn-primary">Próxima ▶</button></nav>`;
+      ${switchButton()}</nav>`;
     return `<div class="slide-meta">
         <div class="slide-meta-left">
           <span class="slide-eyebrow">${encode(relabelSection(page))}</span>
@@ -215,7 +221,7 @@
         <div class="slide-count">${state.slide+1} / ${state.pages.length}</div>
       </div>
       <main class="board board-${page.kind} themed-board ${/zuko|appa/i.test(state.workout.title || '') ? 'has-art' : ''}"><div class="theme-art" aria-hidden="true"></div><div class="board-inner">${visual.section(page)}</div></main>
-      <nav class="slide-nav"><button type="button" data-action="previous" class="btn btn-outline">◀ Anterior</button><button type="button" data-action="next" class="btn btn-primary">Próxima ▶</button></nav>`;
+      <nav class="slide-nav"><div class="page-buttons"><button type="button" data-action="previous" class="btn btn-outline">◀ Anterior</button><button type="button" data-action="next" class="btn btn-primary">Próxima ▶</button></div>${switchButton()}</nav>`;
   }
 
   // Fit is verified against actual rendered dimensions, not only text length.
@@ -296,7 +302,10 @@
 
   async function openProgram(program) {
     if (!(program in TYPES)) return;
+    if(state.workout && state.program) sessions.set(`${state.date}/${state.program}`,{workout:state.workout,pages:state.pages,slide:state.slide});
     const req = ++state.requestId;
+    const saved=sessions.get(`${state.date}/${program}`);
+    if(saved){state.program=program;state.screen='slides';Object.assign(state,saved);state.error='';selected={action:'next',value:''};render();return;}
     state.program = program;
     state.screen = 'slides';
     state.workout = null;
@@ -352,6 +361,9 @@
   function action(node) {
     if (!node) return;
     switch (node.dataset.action) {
+      case 'switch-program':
+        openProgram(node.dataset.program);
+        break;
       case 'day':
         openDay(node.dataset.date);
         break;
@@ -363,7 +375,7 @@
         break;
       case 'refresh':
         state.error = '';
-        if(state.screen==='slides' && state.program){openProgram(state.program);}else{loadIndex();}
+        if(state.screen==='slides' && state.program){sessions.delete(`${state.date}/${state.program}`);state.workout=null;openProgram(state.program);}else{loadIndex();}
         break;
       case 'month':
         updateMonth(node.dataset.step);
