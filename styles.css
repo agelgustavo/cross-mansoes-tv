@@ -350,3 +350,13 @@ body.poster-mode #app{padding:0;display:block;height:100dvh;background:#000}
 .poster-controls .slide-count,.poster-label{font-size:clamp(14px,1vw,22px)}
 .poster-error{position:absolute;background:#111;padding:2em;font-size:28px;color:white}
 @media (prefers-reduced-motion:reduce){.poster-controls{transition:none}}
+
+/* Persistent TV header and page controls; artwork stays unobscured. */
+body.poster-mode #app{display:grid;grid-template-rows:64px minmax(0,1fr);gap:0;overflow:hidden}
+.poster-mode .tv-header{display:flex;min-height:0;padding:6px 20px;margin:0;background:#08090b}
+.poster-mode .brand-icon{width:46px;min-width:46px;height:46px}
+.poster-mode #clock{font-size:36px}
+.poster-mode .header-label{font-size:18px}
+.poster-mode .screen-slides{display:grid;grid-template-rows:minmax(0,1fr) 54px;gap:0;min-height:0}
+.poster-stage{position:relative;inset:auto;min-height:0;overflow:hidden}
+.poster-controls{position:relative;inset:auto;opacity:1;transition:none;background:#08090b;border-top:1px solid #ef303b;min-height:0}

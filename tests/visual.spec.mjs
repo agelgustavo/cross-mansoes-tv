@@ -12,7 +12,7 @@ test('artes completas, navegação direta e imagens carregadas',async({page},inf
  const img=page.locator('.workout-poster');
  await expect(img).toHaveJSProperty('complete',true);
  expect(await img.evaluate(i=>i.naturalWidth)).toBeGreaterThan(1000);
- const rect=await img.boundingBox();expect(rect.width).toBe(page.viewportSize().width);expect(rect.height).toBe(page.viewportSize().height);
+ const rect=await img.boundingBox();expect(rect.width).toBe(page.viewportSize().width);expect(rect.height).toBe(page.viewportSize().height-118);await expect(page.locator('.tv-header')).toBeVisible();await expect(page.locator('.poster-controls')).toHaveCSS('opacity','1');
  expect(await img.evaluate(i=>getComputedStyle(i).objectFit)).toBe('contain');
  await page.screenshot({path:`output/${info.project.name}-${mode}-${n}.png`});
  await page.keyboard.press('ArrowRight');
