@@ -67,6 +67,8 @@ test('alternador sempre visível no rodapé, indisponível sem treino',async({pa
 
 test('cabeçalho e controles fixos iguais em arte e HTML',async({page})=>{
  await page.goto('/');await page.locator('.day[data-date="2026-10-30"]').click();
+ await expect(page.locator('.workout-poster')).toBeVisible();
+ await expect(page.locator('.tv-header')).toBeVisible();
  const header=await page.locator('.tv-header').boundingBox();
  const footer=await page.locator('.poster-controls').boundingBox();
  const actions=await page.locator('.poster-controls button').evaluateAll(nodes=>nodes.map(n=>n.dataset.action));

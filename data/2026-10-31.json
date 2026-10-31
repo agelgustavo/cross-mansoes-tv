@@ -1,0 +1,24 @@
+{
+  "programs": {
+    "crossfit": {
+      "title": "Trick or Treat",
+      "posters": [
+        {
+          "src": "./assets/posters/2026-10-31-crossfit-1.png",
+          "label": "WOD — Trick or Treat",
+          "text": "TEAMS OF 3 | 6 ROUNDS FOR TIME\n200 m Run\n50 Wall Balls (Ping-Pong, Sync 2)\n18 Gymnastics Complexes (Sync 1)\n2 Toes-to-Bar + 1 Bar Muscle-Up\n18 LPO (Sync 1)\nÍMPARES (1, 3, 5): Snatch\nPARES (2, 4, 6): Clean & Jerk\nA CADA 5 MINUTOS: 100 m TEAM CARRY\nDois atletas carregam o terceiro integrante\nTIME CAP: 60’\nSCORE: Tempo total ou rounds + reps"
+        },
+        {
+          "src": "./assets/posters/2026-10-31-crossfit-2.png",
+          "label": "Adaptações — Trick or Treat",
+          "text": "RUN\nRX+: 200 m\nRX: 200 m\nINT: 200 m\nSC: 150 m\nINI: 100 m\n\nWALL BALLS (PING-PONG, SYNC 2)\nRX+: 50 reps (20 lb)\nRX: 50 reps (20 lb)\nINT: 50 reps (20 lb)\nSC: 40 reps (20 lb)\nINI: 30 reps (20 lb)\nBola de 20 lb para todos, masculino e feminino.\n\nGYMNASTICS COMPLEX (SYNC 1)\nRX+: 18 complexos (3 TTB + 1 BMU)\nRX: 18 complexos (2 TTB + 1 BMU)\nINT: 15 complexos (2 TTB + 1 Chest-to-Bar)\nSC: 12 complexos (2 Hanging Knee Raises + 1 Jumping Pull-Up)\nINI: 10 complexos (2 Sit-Ups + 1 Ring Row)\n\nLPO (SYNC 1)\nÍmpares: Snatch | Pares: Clean & Jerk\nRX+: 18 reps (70/49 kg)\nRX: 18 reps (60/42 kg)\nINT: 18 reps (50/35 kg)\nSC: 18 reps (40/28 kg)\nINI: 18 reps (30/20 kg)\n\nTEAM CARRY (A CADA 5’)\nRX+: 100 m\nRX: 100 m\nINT: 100 m\nSC: 100 m\nINI: 100 m"
+        },
+        {
+          "src": "./assets/posters/2026-10-31-crossfit-3.png",
+          "label": "Regras de execução — Trick or Treat",
+          "text": "1. RUN: os três atletas correm juntos.\n2. WALL BALLS (PING-PONG, SYNC 2): dois atletas executam simultaneamente. Cada repetição sincronizada conta uma repetição para o trio. O terceiro pode substituir qualquer um dos dois.\n3. GYMNASTICS COMPLEX (SYNC 1): somente um atleta trabalha por vez. Cada complexo deve ser completado pelo mesmo atleta.\n4. LPO (SYNC 1): somente um atleta trabalha por vez; repetições divididas livremente entre o trio.\n5. SNATCH E CLEAN & JERK: podem ser Power ou Squat; Squat não é obrigatório.\n6. TEAM CARRY: a cada 5 minutos, dois atletas carregam o terceiro por 100 m, revezando quem é transportado.\n7. O RELÓGIO NÃO PARA durante o Team Carry. Retomar o WOD de onde parou.\n8. MESMA CARGA DE BARRA nos seis rounds."
+        }
+      ]
+    }
+  }
+}
