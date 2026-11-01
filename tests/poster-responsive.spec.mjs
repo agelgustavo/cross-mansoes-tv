@@ -1,4 +1,5 @@
 import {test,expect} from '@playwright/test';
+test.beforeEach(async({page})=>{await page.clock.setFixedTime(new Date('2026-10-31T12:00:00Z'));});
 for(const [width,height] of [[1920,1080],[3840,2160],[2048,1280],[3440,1440],[390,844],[844,390]]){
  test(`artwork layers fill ${width}x${height} without cropping`,async({page},info)=>{
   await page.setViewportSize({width,height});

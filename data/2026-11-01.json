@@ -1,0 +1,21 @@
+{
+  "programs": {
+    "hybrid": {
+      "title": "Momo",
+      "wod": "FOR TIME\n1.000 m Run\n300 m KB/DB Farmer Carry (PSE 8-9)\n60/42 Cal Bike\n300 m KB/DB Farmer Carry (PSE 8-9)\n1.000 m Run\n30 Strict Pull-Ups\n1.000 m Row\n60 Wall Balls\n1.000 m Run\nTime Cap: 60’\nScore: Tempo total",
+      "adaptations": "RUN\nRX+: 1.000 m\nRX: 1.000 m\nINT: 800 m\nSC: 600 m\nINI: 600 m\n\nKB/DB FARMER CARRY | PSE 8-9\nRX+: 300 m\nRX: 300 m\nINT: 300 m\nSC: 300 m\nINI: 300 m\n\nBIKE\nRX+: 60/42 Cal\nRX: 60/42 Cal\nINT: 50/35 Cal\nSC: 40/28 Cal\nINI: 40/28 Cal\n\nSTRICT PULL-UPS\nRX+: 30 Strict Pull-Ups\nRX: 30 Strict Pull-Ups\nINT: 20 Strict Pull-Ups\nSC: 30 Ring Rows\nINI: 30 Ring Rows\n\nROW\nRX+: 1.000 m\nRX: 1.000 m\nINT: 1.000 m\nSC: 1.000 m\nINI: 1.000 m\n\nWALL BALLS\nRX+: 60 reps\nRX: 60 reps\nINT: 60 reps\nSC: 60 reps\nINI: 60 reps",
+      "posters": [
+        {
+          "src": "./assets/posters/2026-11-01-hybrid-1.png",
+          "label": "WOD — Momo",
+          "text": "FOR TIME\n1.000 m Run\n300 m KB/DB Farmer Carry (PSE 8-9)\n60/42 Cal Bike\n300 m KB/DB Farmer Carry (PSE 8-9)\n1.000 m Run\n30 Strict Pull-Ups\n1.000 m Row\n60 Wall Balls\n1.000 m Run\nTime Cap: 60’\nScore: Tempo total"
+        },
+        {
+          "src": "./assets/posters/2026-11-01-hybrid-2.png",
+          "label": "Adaptações — Momo",
+          "text": "RUN\nRX+: 1.000 m\nRX: 1.000 m\nINT: 800 m\nSC: 600 m\nINI: 600 m\n\nKB/DB FARMER CARRY | PSE 8-9\nRX+: 300 m\nRX: 300 m\nINT: 300 m\nSC: 300 m\nINI: 300 m\n\nBIKE\nRX+: 60/42 Cal\nRX: 60/42 Cal\nINT: 50/35 Cal\nSC: 40/28 Cal\nINI: 40/28 Cal\n\nSTRICT PULL-UPS\nRX+: 30 Strict Pull-Ups\nRX: 30 Strict Pull-Ups\nINT: 20 Strict Pull-Ups\nSC: 30 Ring Rows\nINI: 30 Ring Rows\n\nROW\nRX+: 1.000 m\nRX: 1.000 m\nINT: 1.000 m\nSC: 1.000 m\nINI: 1.000 m\n\nWALL BALLS\nRX+: 60 reps\nRX: 60 reps\nINT: 60 reps\nSC: 60 reps\nINI: 60 reps"
+        }
+      ]
+    }
+  }
+}
