@@ -1,5 +1,28 @@
 {
   "version": 1,
-  "environment": "homolog",
-  "workouts": {}
+  "environment": "production",
+  "workouts": {
+    "2026-11-02/crossfit": {
+      "date": "2026-11-02",
+      "mode": "crossfit",
+      "title": "Mission 23",
+      "revision": "mission23-20261101",
+      "approvedAt": "2026-11-01T22:53:26.325Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "mission23-1",
+          "title": "WOD — Mission 23",
+          "text": "TEAMS OF 2 | FOR TIME\n23 MOVIMENTOS | 23 REPETIÇÕES POR ATLETA\n1. 23 Push-Ups, cada\n2. 23 Air Squats, cada\n3. 23 Kettlebell Swings, cada\n4. 23 Pull-Ups, cada\n5. 23 Deadlifts, cada\n6. 23 Push Presses, cada\n7. 23 Box Jumps, cada\n8. 23 Burpees, cada\n9. 23 Goblet Squats, cada\n10. 23 Barbell Lunges, cada\n11. 23 Toes-to-Bar, cada\n12. 23 Hang Power Cleans, cada\n13. 23 Thrusters, cada\n14. 23 Box Jump Overs, cada\n15. 23 Hand Release Push-Ups, cada\n16. 23 Kettlebell High Pulls, cada\n17. 23 Barbell Reverse Lunges, cada\n18. 23 Chest-to-Bar Pull-Ups, cada\n19. 23 Front Squats, cada\n20. 23 Power Snatches, cada\n21. 23 Burpee Box Jump Overs, cada\n22. 23 Handstand Push-Ups, cada\n23. 23 Bar Muscle-Ups, cada\nTime Cap: 65’\nScore: Tempo total da dupla ou movimentos + reps caso atinja o Time Cap.",
+          "path": "media/8da7768984f8fce0c97b155972184b88b3ad1aca4a5ec06c2632b6dbf09142e6.png"
+        },
+        {
+          "id": "mission23-2",
+          "title": "Adaptações — Mission 23",
+          "text": "BARBELL — Todos os movimentos com barra\nRX: 50/35 kg (M/F)\nINT: 40/28 kg (M/F)\nSC: 30/20 kg (M/F)\n\nKETTLEBELL — Todos os movimentos com KTB\nRX: 24/16 kg (M/F)\nINT: 20/12 kg (M/F)\nSC: 16/12 kg (M/F)\n\nBOX — Todos os movimentos de caixa\nRX: Caixa normal (60/50 cm, M/F)\nINT: Caixa normal (60/50 cm, M/F)\nSC: Caixa baixa (50/40 cm, M/F)\n\nHANDSTAND PUSH-UPS\nRX: 23 HSPU\nINT: 23 HSPU com AbMat\nSC: 23 Box Pike Push-Ups\n\nBAR MUSCLE-UPS\nRX: 23 Bar Muscle-Ups\nINT: 23 Chest-to-Bar Pull-Ups\nSC: 23 Pull-Ups ou Jumping Pull-Ups",
+          "path": "media/458cccd95ad19b52247fb82b8e7758e7f1b0f3a030ce373b00ace89a5e4411c7.png"
+        }
+      ]
+    }
+  }
 }
