@@ -66,7 +66,7 @@ def process(job,root):
     if hashlib.sha256(content).hexdigest()!=source.split('/')[1].split('.')[0]:raise ValueError('Integridade do arquivo inválida.')
     inputs=root/'input';inputs.mkdir();path=inputs/('source.'+source.rsplit('.',1)[1]);path.write_bytes(content)
     # Only two folders enter the converter. No GitHub/OpenAI token, network or repository mounts.
-    result=subprocess.run(['docker','run','--rm','--network','none','--memory','1536m','--cpus','2','--pids-limit','512','--read-only','--cap-drop','ALL','--security-opt','no-new-privileges','--tmpfs','/tmp:rw,size=512m','-v',str(inputs)+':/input:ro','-v',str(output)+':/output:rw','mansoes-converter','/input/'+path.name,'/output'],capture_output=True,text=True,timeout=240)
+    result=subprocess.run(['docker','run','--rm','--user',f'{os.getuid()}:{os.getgid()}','--network','none','--memory','1536m','--cpus','2','--pids-limit','512','--read-only','--cap-drop','ALL','--security-opt','no-new-privileges','--tmpfs','/tmp:rw,size=512m','-v',str(inputs)+':/input:ro','-v',str(output)+':/output:rw','mansoes-converter','/input/'+path.name,'/output'],capture_output=True,text=True,timeout=240)
     if result.returncode:raise ValueError('Não foi possível converter o arquivo. Verifique se está íntegro e sem senha; você também pode exportá-lo como PDF.')
     paths=sorted(output.glob('[0-9]*.png'),key=lambda p:int(p.stem))
     if not 0<len(paths)<=30:raise ValueError('O resultado deve ter de 1 a 30 páginas.')

@@ -46,7 +46,7 @@ jobs:
         run: docker build -t mansoes-converter scripts/content
       - name: Validar formatos, páginas, dados e isolamento
         run: >-
-          docker run --rm --network none --memory 1536m --cpus 2
+          docker run --rm --user "$(id -u):$(id -g)" --network none --memory 1536m --cpus 2
           --pids-limit 512 --read-only --cap-drop ALL
           --security-opt no-new-privileges --tmpfs /tmp:rw,size=512m
           -v "$PWD/scripts/content/test_converter.py:/app/test_converter.py:ro"
