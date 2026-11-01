@@ -1,7 +1,8 @@
+import { CONFIG } from "./config.js";
 let dbPromise;
 function db() {
   return (dbPromise ||= new Promise((resolve, reject) => {
-    const req = indexedDB.open("mansoes-homolog-drafts", 1);
+    const req = indexedDB.open(`mansoes-${CONFIG.environment}-drafts`, 1);
     req.onupgradeneeded = () => req.result.createObjectStore("drafts");
     req.onsuccess = () => resolve(req.result);
     req.onerror = () => reject(req.error);

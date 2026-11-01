@@ -102,10 +102,12 @@ test("HTML de títulos sempre escapado", () =>
   ));
 test("homologação tem branch, cache e rotas próprios; nenhuma chave persistida", () => {
   const config = readFileSync("homolog/config.js", "utf8"),
-    app = readFileSync("homolog/app.js", "utf8"),
+    app = readFileSync("app.js", "utf8"),
     editor = readFileSync("homolog/editor.js", "utf8");
-  assert.match(config, /workout-content-homolog/);
-  assert.match(app, /mansoes-tv-homolog-v1/);
+  assert.match(config, /workout-content-\$\{environment\}/);
+  assert.match(app, /mansoes-tv-\$\{SITE.environment\}-v1/);
   assert.doesNotMatch(editor, /localStorage\.setItem.*token/);
   assert.doesNotMatch(editor, /sessionStorage/);
 });
+
+test('aprovação preserva a identidade do catálogo de produção',()=>{const next=approve({environment:'production',workouts:{}},draft(),'r-prod','coach');assert.equal(next.environment,'production');});

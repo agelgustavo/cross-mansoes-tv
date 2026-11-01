@@ -1,4 +1,4 @@
-import {test,expect} from '@playwright/test';
+import {test,expect} from './fixtures.mjs';
 test.beforeEach(async({page})=>{await page.clock.setFixedTime(new Date('2026-10-31T12:00:00Z'));});
 const DAY='.day[data-date="2026-10-29"]';
 async function fit(page){

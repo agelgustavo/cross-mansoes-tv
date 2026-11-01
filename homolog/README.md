@@ -2,15 +2,15 @@
 
 Endereço: https://agelgustavo.github.io/cross-mansoes-tv/homolog/
 
-A raiz continua sendo produção. O código da TV de homologação é uma cópia isolada; o conteúdo aprovado está na branch `workout-content-homolog`, que não dispara o deploy de Pages.
+Produção e homologação usam o mesmo visualizador e editor. Os catálogos, rascunhos e caches ficam separados nas branches `workout-content-production` e `workout-content-homolog`; alterações de conteúdo não disparam deploy de Pages. Promoção autorizada pelo proprietário em 01/11/2026.
 
 ## Uso
 
-1. No calendário de homologação, use o `+` do dia.
+1. No calendário do ambiente desejado, use o `+` do dia.
 2. Escolha CrossFit ou Hybrid Run. Adicione páginas, títulos livres e arquivos. Mude a ordem com as setas.
 3. A imagem é exibida imediatamente. Documentos passam por uma fila; use **Usar resultado na prévia** quando terminar.
 4. **Salvar rascunho** guarda no GitHub sem disponibilizar na TV. Uma cópia local também é guardada em IndexedDB.
-5. Confira as páginas no painel lateral ou **Preview**, marque a confirmação e aprove. Apenas `/homolog` passa a ler o novo conteúdo.
+5. Confira as páginas no painel lateral ou **Preview**, marque a confirmação e aprove. Apenas o ambiente em que você está editando passa a ler o novo conteúdo.
 6. Na TV, volte ao calendário ou use Atualizar. O calendário também atualiza a cada minuto; uma aula aberta não muda sozinha.
 
 ## Acesso para edição (uma conexão por aba)

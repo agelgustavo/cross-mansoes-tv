@@ -250,7 +250,7 @@ async function connect(event) {
     $("connection").textContent = `${user} · Sair`;
     $("connect-dialog").close();
     message(
-      "Conectado. Os arquivos e rascunhos ficam na biblioteca de homologação.",
+      `Conectado. Os arquivos e rascunhos ficam na biblioteca de ${CONFIG.label}.`,
     );
     const remote = await store.read(`drafts/${date}-${draft.mode}.json`);
     if (remote.data) {
@@ -524,7 +524,7 @@ $("approve").onclick = () => {
     await save();
     const { data, sha } = await store.read("catalog.json");
     const revision = crypto.randomUUID();
-    const next = approve(data || { workouts: {} }, draft, revision, store.user);
+    const next = approve(data || { environment: CONFIG.environment, workouts: {} }, draft, revision, store.user);
     await store.write("catalog.json", next, sha);
     draft.publishedRevision = revision;
     await localPut(keyOf(date, draft.mode), draft);
@@ -532,14 +532,14 @@ $("approve").onclick = () => {
       await save();
     } catch {
       message(
-        "Aprovado na homologação, mas a cópia do rascunho não foi atualizada. Reabra o cadastro antes da próxima edição.",
+        `Aprovado em ${CONFIG.label}, mas a cópia do rascunho não foi atualizada. Reabra o cadastro antes da próxima edição.`,
         true,
       );
       return;
     }
     $("reviewed").checked = false;
     message(
-      "Aprovado e disponível na TV de homologação. Produção não foi alterada.",
+      `Aprovado e disponível na TV de ${CONFIG.label}.${CONFIG.environment === "homolog" ? " Produção não foi alterada." : ""}`,
     );
   });
 };

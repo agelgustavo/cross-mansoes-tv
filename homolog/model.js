@@ -66,7 +66,7 @@ export function approve(catalog, draft, revision, actor) {
   return {
     ...catalog,
     version: 1,
-    environment: "homolog",
+    environment: catalog.environment || "homolog",
     workouts: {
       ...catalog.workouts,
       [key]: {
@@ -97,7 +97,7 @@ export function catalogWorkout(catalog, date, mode, url) {
     posters: w.pages.map((p) => ({
       src: url(p.path),
       label: p.title,
-      text: p.title,
+      text: p.text || p.title,
     })),
   };
 }

@@ -1,10 +1,12 @@
 import { GitHubStore } from "./github.js";
 import { mergeDays, catalogWorkout } from "./model.js";
-import { rawURL } from "./config.js";
+import { rawURL, CONFIG } from "./config.js";
+window.MansoesConfig = CONFIG;
+const cacheKey = `${CONFIG.environment}-catalog`;
 const store = new GitHubStore();
 let catalog = { workouts: {} };
 async function base(path) {
-  const r = await fetch("../data/" + path + "?v=" + Date.now(), {
+  const r = await fetch(CONFIG.siteURL + "data/" + path + "?v=" + Date.now(), {
     cache: "no-store",
   });
   if (r.status === 404) return { programs: {} };
@@ -12,7 +14,7 @@ async function base(path) {
   const d = await r.json();
   for (const w of Object.values(d.programs || {}))
     for (const p of w.posters || [])
-      p.src = new URL("../" + p.src, location.href).href;
+      p.src = new URL(p.src, CONFIG.siteURL).href;
   return d;
 }
 window.HomologContent = {
@@ -20,11 +22,11 @@ window.HomologContent = {
     const initial = await base("index.json");
     try {
       catalog = (await store.read("catalog.json")).data || { workouts: {} };
-      localStorage.setItem("homolog-catalog", JSON.stringify(catalog));
+      localStorage.setItem(cacheKey, JSON.stringify(catalog));
     } catch {
       try {
         catalog =
-          JSON.parse(localStorage.getItem("homolog-catalog")) || catalog;
+          JSON.parse(localStorage.getItem(cacheKey)) || catalog;
       } catch {}
     }
     return mergeDays(initial, catalog);

@@ -53,8 +53,8 @@ test('Adaptações mantêm movimento e categorias, sem inventar RX+ no Hybrid',(
 test('Aplicação inicia com scripts separados, navegação acessível e identidade do mascote',()=>{
   const html=read('index.html'),app=read('app.js'),css=read('styles.css');
   assert.ok(html.indexOf('layout.js') < html.indexOf('app.js'));
-  assert.match(app,/const VERSION = '5\.0\.0'/);
-  assert.match(app,/app\.addEventListener\('click'/);
+  assert.match(app,/const VERSION = ['"]5\.0\.0['"]/);
+  assert.match(app,/app\.addEventListener\(['"]click['"]/);
   assert.match(app,/function enforceFit/);
   assert.match(app,/simbolo_mansoes_vermelho\.png/);
   assert.match(css,/\.kpi-card/);
@@ -90,5 +90,5 @@ test('adaptações paginam no máximo 4 movimentos por tela',()=>{
  assert.equal(pages.length,2);
  assert.equal(pages.map(p=>p.items.length).join(','),'4,2');
  const css=read('styles.css');
- assert.match(css,/font-size:clamp\(28px,1\.65vw,34px\)/);
+ assert.match(css,/font-size:\s*clamp\(28px,\s*1\.65vw,\s*34px\)/);
 });

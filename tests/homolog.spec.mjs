@@ -1,13 +1,13 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures.mjs";
 import { readFileSync } from "node:fs";
 const image = readFileSync("assets/simbolo_mansoes_azul.png");
 const root = "https://api.github.com/repos/agelgustavo/cross-mansoes-tv";
-async function mock(page) {
+async function mock(page, environment = "homolog") {
   const files = new Map([
     [
       "catalog.json",
       {
-        data: { version: 1, environment: "homolog", workouts: {} },
+        data: { version: 1, environment, workouts: {} },
         sha: "catalog-0",
       },
     ],
@@ -17,7 +17,7 @@ async function mock(page) {
   const writes = [];
   await page.route("https://raw.githubusercontent.com/**", async (route) => {
     const path = new URL(route.request().url()).pathname.split(
-      "/workout-content-homolog/",
+      `/workout-content-${environment}/`,
     )[1];
     const f = files.get(path);
     if (!f) return route.fulfill({ status: 404, body: "Not found" });
@@ -48,7 +48,7 @@ async function mock(page) {
         });
       }
       const body = request.postDataJSON();
-      if (body.branch !== "workout-content-homolog")
+      if (body.branch !== `workout-content-${environment}`)
         throw Error("Production write");
       if ((existing?.sha || null) !== (body.sha || null))
         return route.fulfill({ status: 409, json: { message: "conflict" } });
@@ -75,8 +75,8 @@ async function connect(page) {
   await page.locator("#connect-form button[type=submit]").click();
   await expect(page.locator("#connect-dialog")).not.toBeVisible();
 }
-async function editor(page) {
-  await page.goto("/homolog/editor.html?date=2026-11-02");
+async function editor(page, base = "/homolog/") {
+  await page.goto(base + "editor.html?date=2026-11-02");
   await expect(page.locator("#page-title")).toBeVisible();
 }
 test.beforeEach(async ({ page }) => {
@@ -218,9 +218,9 @@ test("IA sem chave é explícita; textos podem ser salvos, não inventa resultad
   await page.locator("#save").click();
   await expect(page.locator("#message")).toContainText("Rascunho salvo");
 });
-test("produção não ganha editor nem botão de cadastro", async ({ page }) => {
+test("produção ganha o editor promovido, com identificação correta", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator(".add-workout")).toHaveCount(0);
+  await expect(page.locator(".add-workout").first()).toBeVisible();
   await expect(page.locator(".brand-sub")).not.toContainText("Homologação");
 });
 test("documento multipágina aguarda aceite, preserva ordem e pode ser aprovado", async ({
@@ -303,4 +303,9 @@ test("carregamento lento bloqueia edição até a data e o rascunho estarem pron
   await expect(page.locator("#workout-title")).toBeEnabled();
   await page.locator("#page-title").fill("Aquecimento");
   await expect(page.locator("#preview-title")).toHaveText("Aquecimento");
+});
+
+test('produção aprova na biblioteca de produção e não mistura rascunho de homologação',async({page,context})=>{
+ const {files}=await mock(page,'production');await editor(page,'/');await expect(page.locator('.env')).toHaveText('PRODUÇÃO');await connect(page);await page.locator('#page-title').fill('WOD produção');await page.locator('#file').setInputFiles({name:'wod.png',mimeType:'image/png',buffer:image});await page.locator('#save').click();await expect(page.locator('#message')).toContainText('Rascunho salvo');await page.locator('#reviewed').check();await page.locator('#approve').click();await expect(page.locator('#message')).toContainText('TV de produção');expect(files.get('catalog.json').data.workouts['2026-11-02/crossfit'].pages[0].title).toBe('WOD produção');
+ const homolog=await context.newPage();const other=await mock(homolog);await editor(homolog);await expect(homolog.locator('#page-title')).toHaveValue('');expect(Object.keys(other.files.get('catalog.json').data.workouts)).toHaveLength(0);await homolog.close();
 });

@@ -1,4 +1,4 @@
-import {test,expect} from '@playwright/test';
+import {test,expect} from './fixtures.mjs';
 test.beforeEach(async({page})=>{await page.clock.setFixedTime(new Date('2026-10-31T12:00:00Z'));});
 test('artes completas, navegação direta e imagens carregadas',async({page},info)=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -36,7 +36,7 @@ test('controle com nomes antigos e apenas keyup, sem avanço duplicado',async({p
 });
 test('calendário cabe na tela e usa logo oficial',async({page},info)=>{
  await page.goto('/');await expect(page.locator('.day[data-date="2026-10-30"]')).toContainText('CrossFit');
- await expect(page.locator('.brand-icon')).toHaveAttribute('src','./assets/simbolo_mansoes_vermelho.png');
+ await expect(page.locator('.brand-icon')).toHaveAttribute('src',new URL('./assets/simbolo_mansoes_vermelho.png',page.url()).href);
  const r=await page.locator('.calendar').boundingBox();expect(r.y+r.height).toBeLessThan(page.viewportSize().height);
  await page.screenshot({path:`output/calendar-${info.project.name}.png`});
 });

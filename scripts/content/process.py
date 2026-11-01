@@ -2,7 +2,9 @@
 import os,json,re,base64,hashlib,time,urllib.request,urllib.error,subprocess,tempfile
 from pathlib import Path
 REPO=os.environ.get('GITHUB_REPOSITORY','agelgustavo/cross-mansoes-tv')
-BRANCH='workout-content-homolog'
+ENVIRONMENT=os.environ.get('CONTENT_ENV','homolog')
+if ENVIRONMENT not in {'homolog','production'}:raise ValueError('Ambiente inválido.')
+BRANCH='workout-content-'+ENVIRONMENT
 TOKEN=os.environ.get('GH_TOKEN','')
 
 def api(path,method='GET',data=None):
@@ -20,7 +22,7 @@ def put(path,data):
     # Content API serializes against the file SHA, avoiding lost updates.
     for attempt in range(5):
         _,sha=read(path)
-        body={'message':'content(homolog): '+path,'branch':BRANCH,'content':base64.b64encode((json.dumps(data,ensure_ascii=False,indent=2)+'\n').encode()).decode()}
+        body={'message':'content('+ENVIRONMENT+'): '+path,'branch':BRANCH,'content':base64.b64encode((json.dumps(data,ensure_ascii=False,indent=2)+'\n').encode()).decode()}
         if sha:body['sha']=sha
         try:return api('/contents/'+path,'PUT',body)
         except urllib.error.HTTPError as e:
@@ -32,7 +34,7 @@ def upload(path,data):
     except urllib.error.HTTPError as e:
         if e.code!=404:raise
     for attempt in range(5):
-        try:return api('/contents/'+path,'PUT',{'message':'content(homolog): arquivo convertido','branch':BRANCH,'content':base64.b64encode(data).decode()})
+        try:return api('/contents/'+path,'PUT',{'message':'content('+ENVIRONMENT+'): arquivo convertido','branch':BRANCH,'content':base64.b64encode(data).decode()})
         except urllib.error.HTTPError as e:
             if e.code not in {409,422} or attempt==4:raise
             time.sleep(2**attempt)

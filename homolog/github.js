@@ -100,7 +100,7 @@ export class GitHubStore {
     return this.request(this.repo(`/contents/${path}`), {
       method: "PUT",
       body: JSON.stringify({
-        message: `content(homolog): ${path}`,
+        message: `content(${CONFIG.environment}): ${path}`,
         branch: CONFIG.branch,
         content: toBase64(bytes),
         ...(sha ? { sha } : {}),
@@ -122,7 +122,7 @@ export class GitHubStore {
         await this.request(this.repo(`/contents/${path}`), {
           method: "PUT",
           body: JSON.stringify({
-            message: "content(homolog): adicionar arquivo à biblioteca",
+            message: `content(${CONFIG.environment}): adicionar arquivo à biblioteca`,
             branch: CONFIG.branch,
             content: toBase64(new Uint8Array(await blob.arrayBuffer())),
           }),
@@ -145,7 +145,7 @@ export class GitHubStore {
         method: "POST",
         body: JSON.stringify({
           ref: CONFIG.codeBranch,
-          inputs: { job_id: id },
+          inputs: { job_id: id, environment: CONFIG.environment },
         }),
       },
     );

@@ -1,4 +1,4 @@
-import {test,expect} from '@playwright/test';
+import {test,expect} from './fixtures.mjs';
 test.beforeEach(async({page})=>{await page.clock.setFixedTime(new Date('2026-10-31T12:00:00Z'));});
 test('01/11 Hybrid: WOD e adaptações completos com navegação na TV',async({page},info)=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -9,7 +9,7 @@ test('01/11 Hybrid: WOD e adaptações completos com navegação na TV',async({p
  for(let i=1;i<=2;i++){
   await expect(page.locator('.slide-count')).toHaveText(`${i} / 2`);
   const img=page.locator('.workout-poster');
-  await expect(img).toHaveAttribute('src',`./assets/posters/2026-11-01-hybrid-${i}.png`);
+  await expect(img).toHaveAttribute('src',new URL(`./assets/posters/2026-11-01-hybrid-${i}.png`,page.url()).href);
   await expect.poll(()=>img.evaluate(e=>e.complete&&e.naturalWidth>0)).toBe(true);
   expect(await img.evaluate(e=>{
    const r=e.getBoundingClientRect(),h=document.querySelector('.tv-header').getBoundingClientRect(),f=document.querySelector('.poster-controls').getBoundingClientRect();

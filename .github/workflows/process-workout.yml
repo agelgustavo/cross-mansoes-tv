@@ -1,8 +1,14 @@
-name: Preparar conteúdo de homologação
-run-name: Conteúdo ${{ inputs.job_id }}
+name: Preparar conteúdo de treino
+run-name: Conteúdo ${{ inputs.environment }} — ${{ inputs.job_id }}
 on:
   workflow_dispatch:
     inputs:
+      environment:
+        description: Ambiente de destino
+        required: true
+        default: homolog
+        type: choice
+        options: [homolog, production]
       job_id:
         description: Identificador do pedido salvo na biblioteca
         required: true
@@ -10,7 +16,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: content-homolog-${{ inputs.job_id }}
+  group: content-${{ inputs.environment }}-${{ inputs.job_id }}
   cancel-in-progress: false
 jobs:
   prepare:
@@ -27,5 +33,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          CONTENT_ENV: ${{ inputs.environment }}
           JOB_ID: ${{ inputs.job_id }}
         run: python3 scripts/content/process.py
