@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090b0e" />
+    <title>Adicionar treino · Mansões</title>
+    <link rel="stylesheet" href="./editor.css" />
+    <script type="module" src="./editor.js"></script>
+  </head>
+  <body>
+    <header class="editor-header">
+      <a class="brand" href="./"
+        ><img src="../assets/simbolo_mansoes_vermelho.png" alt="Mansões" /><span
+          >MANSÕES <small>ESTÚDIO DE TREINOS</small></span
+        ></a
+      ><span class="env">HOMOLOGAÇÃO</span
+      ><button id="connection">Conectar GitHub</button>
+    </header>
+    <main>
+      <div class="heading">
+        <div>
+          <a href="./" class="back">← Calendário</a>
+          <p class="eyebrow" id="date-label"></p>
+          <h1>Adicionar treino</h1>
+          <p class="muted">
+            Monte, confira e aprove. Só o que você aprovar aparece na TV de
+            homologação.
+          </p>
+        </div>
+        <button id="preview-button">↗ Preview</button>
+      </div>
+      <div id="message" role="status" aria-live="polite"></div>
+      <div class="workspace">
+        <section class="composer" aria-label="Cadastro do treino">
+          <fieldset id="fields" disabled>
+            <label
+              >Modalidade<select id="mode">
+                <option value="crossfit">CrossFit</option>
+                <option value="hybrid">Hybrid Run</option>
+              </select></label
+            ><label
+              >Nome do treino <span class="optional">opcional</span
+              ><input
+                id="workout-title"
+                maxlength="120"
+                placeholder="Ex.: Momo, Halloween, treino do dia"
+            /></label>
+            <div class="section-head">
+              <h2>Páginas</h2>
+              <button id="add-page" type="button">+ Adicionar</button>
+            </div>
+            <ol id="pages" aria-label="Ordem das páginas"></ol>
+            <div id="page-fields" hidden>
+              <label
+                >Título da página<input
+                  id="page-title"
+                  maxlength="120"
+                  placeholder="Aquecimento, WOD, pós-treino…"
+              /></label>
+              <div class="order">
+                <button
+                  id="move-up"
+                  type="button"
+                  aria-label="Mover página para cima"
+                >
+                  ↑</button
+                ><button
+                  id="move-down"
+                  type="button"
+                  aria-label="Mover página para baixo"
+                >
+                  ↓</button
+                ><button id="remove-page" type="button" class="danger">
+                  Remover página
+                </button>
+              </div>
+              <div class="tabs" role="tablist">
+                <button
+                  id="upload-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  Enviar arquivo</button
+                ><button
+                  id="ai-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Criar com IA
+                </button>
+              </div>
+              <div id="upload-panel" role="tabpanel">
+                <label class="dropzone" id="dropzone"
+                  ><strong>＋ Escolher arquivo</strong
+                  ><span>ou arraste para cá</span
+                  ><input
+                    type="file"
+                    id="file"
+                    accept="image/*,.pdf,.html,.htm,.doc,.docx,.odt,.rtf,.txt,.md,.ppt,.pptx,.odp,.xls,.xlsx,.ods"
+                /></label>
+                <p class="hint">
+                  Imagem, HTML, PDF ou documento · até 25 MB.<br />Documentos
+                  com várias páginas viram páginas separadas para conferir.
+                </p>
+                <button type="button" id="library-button" class="text-button">
+                  Escolher da biblioteca
+                </button>
+              </div>
+              <div id="ai-panel" role="tabpanel" hidden>
+                <label
+                  >Treino do dia<textarea
+                    id="workout-text"
+                    rows="7"
+                    placeholder="Cole os exercícios, cargas, repetições, tempos e adaptações exatamente como devem aparecer."
+                  ></textarea></label
+                ><label
+                  >Como você quer a arte?<textarea
+                    id="prompt"
+                    rows="4"
+                    placeholder="Tema, personagem, distribuição das informações…"
+                  ></textarea>
+                </label>
+                <p class="hint">
+                  A identidade Mansões e a modalidade são incluídas
+                  automaticamente. Gera a página selecionada; revise todos os
+                  números antes de aprovar.
+                </p>
+                <p class="ai-notice">
+                  IA requer a chave OpenAI configurada pelo proprietário no
+                  GitHub. Você pode salvar este texto como rascunho enquanto
+                  isso.
+                </p>
+                <button type="button" id="check-ai" class="text-button">
+                  Verificar ativação da IA</button
+                ><button type="button" id="generate">
+                  Gerar arte para avaliação
+                </button>
+              </div>
+            </div>
+          </fieldset>
+          <div id="jobs"></div>
+          <div class="save-actions">
+            <button id="save">Salvar rascunho</button
+            ><span id="draft-state" class="hint"
+              >Rascunho neste dispositivo</span
+            >
+          </div>
+        </section>
+        <section class="preview-column" aria-label="Prévia em tempo real">
+          <div class="preview-heading">
+            <div>
+              <span class="eyebrow">PRÉVIA AO VIVO</span>
+              <h2 id="preview-title">Sua página aparece aqui</h2>
+            </div>
+            <span id="preview-mode" class="mode-badge">CROSSFIT</span>
+          </div>
+          <div class="tv-shell">
+            <div class="tv-top">
+              <span>MANSÕES CROSSTRAINING</span><span id="preview-date"></span>
+            </div>
+            <div class="stage" id="stage">
+              <div class="empty-preview">
+                <span>＋</span>
+                <h3>Comece com uma página</h3>
+                <p>Envie um arquivo ou prepare uma arte com IA.</p>
+              </div>
+            </div>
+            <div class="tv-bottom">
+              <button id="preview-prev" aria-label="Página anterior">◀</button
+              ><span id="preview-count">0 / 0</span
+              ><span id="preview-caption"></span
+              ><button id="preview-next" aria-label="Próxima página">▶</button>
+            </div>
+          </div>
+          <p class="hint">
+            Prévia sem cortes. Títulos e ordem acompanham suas alterações
+            imediatamente. A conversão de documentos e a geração de imagens
+            levam alguns minutos.
+          </p>
+          <div class="approval">
+            <div>
+              <h2>Pronto para a TV?</h2>
+              <p class="muted">
+                Confira todas as páginas, principalmente exercícios, números e
+                legibilidade.
+              </p>
+            </div>
+            <label class="check"
+              ><input type="checkbox" id="reviewed" />Revisei todas as páginas e
+              os dados do treino.</label
+            ><button id="approve" class="primary" disabled>
+              Aprovar e disponibilizar em homologação</button
+            ><small>O ambiente de produção continua separado.</small>
+          </div>
+        </section>
+      </div>
+    </main>
+    <dialog id="connect-dialog">
+      <form id="connect-form">
+        <h2>Conectar para editar</h2>
+        <p>
+          Use um token de acesso do GitHub restrito ao repositório
+          <strong>cross-mansoes-tv</strong>, com Contents e Actions em leitura e
+          escrita.
+        </p>
+        <p class="hint">
+          O token fica somente na memória desta aba. Não é salvo no navegador
+          nem enviado com arquivos. Nunca use a chave OpenAI neste campo.
+        </p>
+        <a
+          href="https://github.com/settings/personal-access-tokens/new"
+          target="_blank"
+          rel="noopener"
+          >Criar token no GitHub ↗</a
+        ><label
+          >Token do GitHub<input
+            id="github-token"
+            type="password"
+            autocomplete="off"
+            required
+        /></label>
+        <p id="connect-error" role="alert"></p>
+        <div class="dialog-actions">
+          <button type="button" id="close-connect">Cancelar</button
+          ><button class="primary" type="submit">Conectar</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="preview-dialog" class="full-preview">
+      <button id="close-preview">Fechar preview ×</button>
+      <div id="large-preview"></div>
+    </dialog>
+    <dialog id="library-dialog">
+      <h2>Biblioteca de imagens</h2>
+      <p class="hint">
+        Arquivos compartilhados por todos os treinos de homologação.
+      </p>
+      <div id="library-grid"></div>
+      <button id="close-library">Fechar</button>
+    </dialog>
+    <dialog id="remove-dialog">
+      <h2>Remover esta página?</h2>
+      <p>A imagem continuará disponível na biblioteca.</p>
+      <button id="cancel-remove">Cancelar</button
+      ><button id="confirm-remove" class="danger">Remover</button>
+    </dialog>
+  </body>
+</html>

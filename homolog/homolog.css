@@ -1,0 +1,41 @@
+.day-cell {
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+}
+.day-cell .day {
+  width: 100%;
+  height: 100%;
+  padding-right: 34px;
+}
+.add-workout {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 32px;
+  height: 32px;
+  background: #16191e;
+  border: 1px solid #ffffff35;
+  color: #fff;
+  border-radius: 50%;
+  font: 24px Arial;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.day-cell:hover .add-workout,
+.day-cell:focus-within .add-workout {
+  opacity: 1;
+}
+.add-workout:focus-visible {
+  outline: 3px solid #fff;
+  opacity: 1;
+}
+.brand-sub {
+  color: #fbbf24 !important;
+}
+.day-cell.outside {
+  opacity: 0.5;
+}
+.day-cell .day.outside {
+  opacity: 1;
+}

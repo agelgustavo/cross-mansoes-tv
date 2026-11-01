@@ -1,0 +1,31 @@
+name: Preparar conteúdo de homologação
+run-name: Conteúdo ${{ inputs.job_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: Identificador do pedido salvo na biblioteca
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: content-homolog-${{ inputs.job_id }}
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Preparar conversor isolado
+        run: docker build -t mansoes-converter scripts/content
+      - name: Converter ou gerar rascunho (nunca publicar)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          JOB_ID: ${{ inputs.job_id }}
+        run: python3 scripts/content/process.py
