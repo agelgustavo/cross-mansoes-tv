@@ -91,6 +91,40 @@
           "path": "media/ac03ee084ab0fc2b60fccfc07531628087d0da1ae788c720d90db539e3cda8e6.png"
         }
       ]
+    },
+    "2026-11-04/crossfit": {
+      "date": "2026-11-04",
+      "mode": "crossfit",
+      "title": "Murphing Crash",
+      "revision": "20261104-crossfit",
+      "approvedAt": "2026-11-02T23:06:59.190309+00:00",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261104-crossfit-1",
+          "title": "WOD — Murphing Crash",
+          "text": "FOR TIME\n1.600 m Run\n50 Strict Pull-Ups\n100 Push-Ups\n800 m Run\nApós completar a primeira corrida, dividir as 50 Strict Pull-Ups e os 100 Push-Ups como preferirem.\nTIME CAP: 36’\nSCORE: Tempo total",
+          "path": "media/38cf84e21607aeaf3de5e05f43562da42ab34a9bc3e5bfc25af23c20174c7be9.png"
+        },
+        {
+          "id": "20261104-crossfit-2",
+          "title": "Adaptações",
+          "text": "RUN\nRX+: 1.600 m\nRX: 1.600 m\nINT: 1.600 m\nSC: 1.200 m\nINI: 800 m (sugestão)\nSTRICT PULL-UPS\nRX+: 50 Strict Pull-Ups (colete 9 kg opcional)\nRX: 50 Strict Pull-Ups\nINT: 50 Strict Pull-Ups\nSC: 50 Ring Rows\nINI: 40 Ring Rows (mais vertical, sugestão)\nPUSH-UPS\nRX+: 100 Push-Ups (colete 9 kg opcional)\nRX: 100 Push-Ups\nINT: 100 Push-Ups\nSC: 100 Box, Bar ou Knee Push-Ups\nINI: 80 Incline Push-Ups (mãos na caixa, sugestão)",
+          "path": "media/d731871e0000bd424ef6479e89b1414ab868678524b3d369b0c1d13680c883a3.png"
+        },
+        {
+          "id": "20261104-crossfit-3",
+          "title": "Strength / Skill — Pós-treino",
+          "text": "STRENGTH / SKILL — POST WORKOUT\n3–5 SETS\n3–5 REPS\n5 s RING HOLD + 3 s DESCENT\nSaltar até a posição superior, sustentar por 5 segundos e descer em 3 segundos até o fundo do dip. Ao chegar embaixo, saltar e reiniciar.\nREST: 1:00 ENTRE SETS",
+          "path": "media/2f0dd22b989537d3239314c3ad361e7c637b84330b96b20a86053f2d387735da.png"
+        },
+        {
+          "id": "20261104-crossfit-4",
+          "title": "Acessório opcional",
+          "text": "OPTIONAL ACCESSORY\n3–4 SETS\n8 Double DB Z-Press (Heavy)\n15 DB Front Raise (Heavy)\nREST: 1:30 ENTRE SETS\nSCORE: No Measure",
+          "path": "media/6f54ddc6282f854ad9d9112715ba9074b8e6e335a233331f7f9a0f036e9986b8.png"
+        }
+      ]
     }
   }
 }
