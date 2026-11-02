@@ -125,6 +125,74 @@
           "path": "media/6f54ddc6282f854ad9d9112715ba9074b8e6e335a233331f7f9a0f036e9986b8.png"
         }
       ]
+    },
+    "2026-11-05/crossfit": {
+      "date": "2026-11-05",
+      "mode": "crossfit",
+      "title": "Coco Bandicoot",
+      "revision": "20261105-crossfit",
+      "approvedAt": "2026-11-02T23:43:15.832655+00:00",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261105-crossfit-1",
+          "title": "Aquecimento",
+          "text": "3 ROUNDS\n1:00 Jump Rope (mix in doubles)\n10 Box Step-Ups\n10 Glute Bridges\n8 Air Squats\n5 Empty Bar Back Squats from the rack",
+          "path": "media/31656ac9db2e41e9254ddb110b240315e46be943390c99ab42b64a5b517cc766.png"
+        },
+        {
+          "id": "20261105-crossfit-2",
+          "title": "Strength — Deadlifts",
+          "text": "3 SETS\n12 DEADLIFTS\nStart Mod-Heavy and Build to Heavy\nREST: As Needed Between Sets\nSCORE: Heaviest Weight",
+          "path": "media/eb6231d75240ee616fdb63c9325ff9ef6e780d63730973751731f15d88643e2b.png"
+        },
+        {
+          "id": "20261105-crossfit-3",
+          "title": "WOD — Coco Bandicoot",
+          "text": "WOD — TEAMS OF 2\nFOR TIME | 10 SETS EACH | 1:1\n50 DOUBLE UNDERS\n5 BACK SQUATS (TEAM CHOICE)\nUm atleta por vez. A dupla utiliza a mesma carga nos Back Squats.\nTIME CAP: 30’\nSCORE: Carga (kg) + Tempo total da dupla\nExemplo: 100 kg | 27:35",
+          "path": "media/9e0f0d394ce9a387c55e8a878379276a67637ff8cbe4857b96e59ae7290319be.png"
+        },
+        {
+          "id": "20261105-crossfit-4",
+          "title": "Adaptações",
+          "text": "DOUBLE UNDERS\nRX+: 50 Double Unders\nRX: 50 Double Unders\nINT: 40 Double Unders\nSC: 40 Single Unders\nINI: 30 Single Unders\nBACK SQUATS\nRX+: 5 Back Squats Unbroken (AHAP, carga da dupla)\nRX: 5 Back Squats (carga da dupla)\nINT: 5 Back Squats (carga da dupla)\nSC: 5 DB Goblet Squats (carga da dupla)\nINI: 5 Goblet Squats (carga da dupla)\nSCORE: Carga utilizada + tempo total dos 20 sets\nEXEMPLO: 100 kg | 27:35",
+          "path": "media/f0499e415021ccc002987c9769c19b964c95d0b498f765b152e313c83036a056.png"
+        },
+        {
+          "id": "20261105-crossfit-5",
+          "title": "Acessório opcional",
+          "text": "3 SETS\n10/10 Single-Leg DB Bulgarian Split Squats @ Moderate\n20 Banded Hamstring Curls\nREST: 1:00 ENTRE SETS\nTABATA – 8 SETS (4:00 TOTAL)\n20 s Hip Extensions ou Supermans\n10 s Rest\nNO ADDITIONAL REST BETWEEN SETS\nSCORE: No Measure",
+          "path": "media/e76ccf1994c6ad5689c087f71140b0722f2db670135eb3362603c44464837e95.png"
+        }
+      ]
+    },
+    "2026-11-05/hybrid": {
+      "date": "2026-11-05",
+      "mode": "hybrid",
+      "title": "I Want Coco Gelado!",
+      "revision": "20261105-hybrid",
+      "approvedAt": "2026-11-02T23:43:15.833170+00:00",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261105-hybrid-6",
+          "title": "Aquecimento",
+          "text": "AQUECIMENTO | 10’\n4’ | TÉCNICA DE REMO\n200 m Row leve\n10 remadas com pausa na posição de ataque\n100 m Row focando na técnica\n3’ | ATIVAÇÃO\n10 m Double KTB Farmer Carry (leve)\n3 Burpee Broad Jumps\n100 m Run em dupla\n3’ | PREPARAÇÃO ESPECÍFICA\n100 m Row (ritmo de WOD)\n20 m Double KTB Farmer Carry (carga do WOD)\n5 m Burpee Broad Jump",
+          "path": "media/dc6a728d2b11f518a4e577593ec1d87da39ce473cb7950d7a959a40a68998d72.png"
+        },
+        {
+          "id": "20261105-hybrid-7",
+          "title": "WOD — I Want Coco Gelado!",
+          "text": "FOR TIME | DUPLAS\n2.000 m Row\n400 m Double KTB Farmer Carry (PSE 8–9)\n100 m Burpee Broad Jump\n400 m Double KTB Farmer Carry (PSE 8–9)\n1.000 m Run (Sync 2)\nTIME CAP: 45’\nSCORE: Tempo total da dupla",
+          "path": "media/0c5b0f16c37dd9568cd656f7d2a892241a1cf1835d323721d66045d1aa74b4f6.png"
+        },
+        {
+          "id": "20261105-hybrid-8",
+          "title": "Adaptações",
+          "text": "RUN\nRX: 2.000 m\nINT: 1.600 m\nSC: 1.200 m\nDOUBLE KTB FARMER CARRY\nRX: 400 m (24/16 kg em cada mão)\nINT: 300 m (20/12 kg em cada mão)\nSC: 200 m (16/12 kg em cada mão)\nBURPEE BROAD JUMP\nRX: 100 m\nINT: 80 m\nSC: 60 m\nRUN (SYNC 2)\nRX: 1.000 m\nINT: 800 m\nSC: 600 m\nFarmer Carry realizado duas vezes no WOD",
+          "path": "media/76f1eae0e4469856a575e71468dd7f61deb4214c0082ff468df91775a92d5806.png"
+        }
+      ]
     }
   }
 }
