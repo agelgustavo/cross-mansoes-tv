@@ -23,6 +23,74 @@
           "path": "media/458cccd95ad19b52247fb82b8e7758e7f1b0f3a030ce373b00ace89a5e4411c7.png"
         }
       ]
+    },
+    "2026-11-03/crossfit": {
+      "date": "2026-11-03",
+      "mode": "crossfit",
+      "title": "Crash Bandicoot",
+      "revision": "20261103-crossfit",
+      "approvedAt": "2026-11-02T22:39:18.206675+00:00",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261103-crossfit-0",
+          "title": "Aquecimento",
+          "text": "400 m Easy Run\n2 ROUNDS\n8 Alternating Spiderman Lunges + Reach\n10 Air Squats\n8 Scapular Push-Ups\n5 Broad Jumps (reset between reps)\n1–2 ROUNDS COM BARRA VAZIA\n8 Deadlifts\n8 Hang Muscle Cleans\n8 Strict Press or Push Press\n8 Hang Power Cleans\n8 Push Jerks or Push Press",
+          "path": "media/2cc957b7fe5450a86006588f03516e84f6735320fda6ea9e1d032ddbb247ab4a.png"
+        },
+        {
+          "id": "20261103-crossfit-1",
+          "title": "Skill — Power Clean & Jerk",
+          "text": "EVERY 1:00 (8 SETS)\n2 Power Clean and Jerks\n1 REP = 1 Power Clean + 1 Jerk\nStart Moderate and Build to Moderate-Heavy\nSCORE: Weight",
+          "path": "media/78faed82f99a6b691f5cceaf0fa630f3a5cba0ac1b214c1de940729f8a0fb70a.png"
+        },
+        {
+          "id": "20261103-crossfit-2",
+          "title": "WOD — Crash Bandicoot",
+          "text": "RUN & POWER CLEAN\nFOR TIME\n400 – 300 – 200 – 300 – 400 m RUN\nAPÓS CADA CORRIDA: 7 POWER CLEANS\nTIME CAP: 25’\nSCORE: Tempo total",
+          "path": "media/716ebc9842f1f4beaaa8a9efa929f148fdec750b4b2131274bbc9ec3e96cb111.png"
+        },
+        {
+          "id": "20261103-crossfit-3",
+          "title": "Adaptações",
+          "text": "RUN\nRX+: 400-300-200-300-400 m\nRX: 400-300-200-300-400 m\nINT: 400-300-200-300-400 m\nSC: 300-200-100-200-300 m\nINI: 200-150-100-150-200 m\nDistâncias iguais para homens e mulheres\nPOWER CLEAN\nRX+: 7 reps (92,5/60 kg)\nRX: 7 reps (85/57,5 kg)\nINT: 7 reps (70/47,5 kg)\nSC: 7 DB Power Cleans (leve)\nINI: 7 DB Hang Power Cleans (leve)\nUSE EVA OBRIGATORIAMENTE",
+          "path": "media/8f032d166e49d18d3c78b6e33c4d27112978246540464d85a85d433e7cc578bb.png"
+        },
+        {
+          "id": "20261103-crossfit-4",
+          "title": "Acessório opcional",
+          "text": "OPTIONAL ACCESSORY\n2–3 SETS\n10 Strict Toes-to-Bar OU\n10 Strict Hanging Knee Raises\n20 s L-Sit Hold, L-Hang Hold OU Tuck Hold\nREST 1:30 ENTRE SETS\nSCORE: No Measure",
+          "path": "media/d5c349c66aa9ce316e4254a4e8e300c3cc62c261774046acfe93cfde6cf29460.png"
+        }
+      ]
+    },
+    "2026-11-03/hybrid": {
+      "date": "2026-11-03",
+      "mode": "hybrid",
+      "title": "Run Crash, Run!",
+      "revision": "20261103-hybrid",
+      "approvedAt": "2026-11-02T22:39:18.206719+00:00",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261103-hybrid-5",
+          "title": "Aquecimento",
+          "text": "AQUECIMENTO | 7’\n2’ | ATIVAÇÃO\n100 m Run\n8 Air Squats\n6 Alternating Lunges\n2’ | PREPARAÇÃO MUSCULAR\n8 Wall Balls (leve)\n10 m KTB Walking Lunges\n3’ | PREPARAÇÃO ESPECÍFICA\n2 × 10 m Sled Push (carga progressiva)\nAjustar a carga do WOD",
+          "path": "media/64353fb9a6ef129905f4e568f69b1fc482e3b7e21a0ab2a2cad622f6a6974641.png"
+        },
+        {
+          "id": "20261103-hybrid-6",
+          "title": "WOD — Run Crash, Run!",
+          "text": "2 SETS DE 3 ROUNDS\n200 m Run\n20 Wall Balls\n200 m Run\n20 m KTB Walking Lunges (PSE 8)\n100 m Run\n10 m Sled Push (PSE 8)\nREST: 1’ entre os sets\nTIME CAP: 50’\nSCORE: Tempo total",
+          "path": "media/3f6da34d648dab17f60552f37ec7d65effe6db9832f261b00013dbc78d569682.png"
+        },
+        {
+          "id": "20261103-hybrid-7",
+          "title": "Adaptações",
+          "text": "RUN | 1ª, 2ª E 3ª CORRIDAS DE CADA ROUND\nRX: 200 / 200 / 100 m\nINT: 200 / 150 / 100 m\nSC: 150 / 100 / 100 m\nWALL BALLS\nRX: 20 reps (20/14 lb)\nINT: 16 reps (20/14 lb)\nSC: 12 reps (14/10 lb)\nKTB WALKING LUNGES\nRX: 20 m (24/16 kg)\nINT: 15 m (20/12 kg)\nSC: 10 m (16/12 kg)\nSLED PUSH\nRX: 10 m (PSE 8)\nINT: 10 m (PSE 7–8)\nSC: 10 m (PSE 6–7)",
+          "path": "media/ac03ee084ab0fc2b60fccfc07531628087d0da1ae788c720d90db539e3cda8e6.png"
+        }
+      ]
     }
   }
 }
