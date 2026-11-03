@@ -193,6 +193,52 @@
           "path": "media/76f1eae0e4469856a575e71468dd7f61deb4214c0082ff468df91775a92d5806.png"
         }
       ]
+    },
+    "2026-11-06/crossfit": {
+      "date": "2026-11-06",
+      "mode": "crossfit",
+      "title": "Crunch Bandicoot",
+      "revision": "20261106-crossfit-v1",
+      "approvedAt": "2026-11-03T00:23:43.611Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261106-crossfit-0",
+          "title": "Aquecimento",
+          "text": "2 ROUNDS\n:20 Hollow Hold\n8 Scap Push Ups\n8 PVC Pass Throughs\n6 PVC Good Mornings\n5 Empty Bar Hang Power Snatches\n5 Empty Bar Snatch Grip Push Press",
+          "path": "media/b6aaffd3f7136d98ff20604b964b51f91110074b.png"
+        },
+        {
+          "id": "20261106-crossfit-1",
+          "title": "Strength / Skill — Hang Power Snatch",
+          "text": "EVERY 1:30 (6 SETS)\n5 Hang Power Snatch\n5 Snatch Grip Push Press\nStart Light and Build to Moderate\nSCORE: Heaviest Set",
+          "path": "media/8b0b8e68f11f413123f6a6e8c82506a203251b8f.png"
+        },
+        {
+          "id": "20261106-crossfit-2",
+          "title": "WOD — Crunch Bandicoot",
+          "text": "FOR TIME\n20 Alternating DB Snatches\n30 Toes-to-Bar\n20 Alternating DB Snatches\n30 Burpees to Bar\n20 Alternating DB Snatches\n30 Burpees to Bar\n20 Alternating DB Snatches\n30 Toes-to-Bar\n20 Alternating DB Snatches\nTIME CAP: 22'\nSCORE: Tempo total",
+          "path": "media/f70bf77dff13223de2ef4752bd9838ea6f3106ba.png"
+        },
+        {
+          "id": "20261106-crossfit-3",
+          "title": "Adaptações",
+          "text": "ALTERNATING DB SNATCH\nRX+: 20 reps Unbroken (22,5/15 kg)\nRX: 20 reps (22,5/15 kg)\nINT: 20 reps (15/10 kg)\nSC: 10 reps (carga leve)\nINI: 10 reps (10/7,5 kg, sugestão)\nTOES-TO-BAR\nRX+: 30 TTB Unbroken\nRX: 30 TTB\nINT: 25 TTB\nSC: 20 Hanging Knee Raises\nINI: 15 Hanging Knee Raises ou Lying Knee Raises (sugestão)\nBURPEE TO BAR\nRX+: 30 Burpees to Bar\nRX: 30 Burpees to Bar\nINT: 25 Burpees to Bar\nSC: 20 Up-Downs\nINI: 15 Up-Downs (sugestão)",
+          "path": "media/89b3b0d872728e998fab563766146afc474a6f0e.png"
+        },
+        {
+          "id": "20261106-crossfit-4",
+          "title": "Regras RX+ e segurança",
+          "text": "PENALIDADE RX+: 10 Burpees to Bar a cada quebra\nTodos os sets de DB Snatch devem ser unbroken.\nO Dumbbell não pode parar de se movimentar após o início da série.\nTodos os sets de 30 TTB devem ser unbroken.\nO atleta não pode soltar a barra durante a série de TTB.\nCada quebra de DB Snatch ou TTB exige imediatamente 10 Burpees to Bar antes de continuar.\nA penalidade não substitui as repetições previstas no WOD.\nCada nova quebra gera outra penalidade.\nTODAS AS CATEGORIAS: EVA obrigatório; proibido soltar/arremessar Dumbbell no chão; punição determinada pelo coach.",
+          "path": "media/ae357c08e94828a7e9e69832814ccc2fef1f7fc6.png"
+        },
+        {
+          "id": "20261106-crossfit-5",
+          "title": "Acessório opcional",
+          "text": "FOR COMPLETION\n100 Empty Barbell Curls\nA cada quebra: 10 Push-Ups\nNO MEASURE",
+          "path": "media/e73c419622229d0d1282168bafa10b8b72b0be68.png"
+        }
+      ]
     }
   }
 }
