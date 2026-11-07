@@ -239,6 +239,28 @@
           "path": "media/e73c419622229d0d1282168bafa10b8b72b0be68.png"
         }
       ]
+    },
+    "2026-11-07/crossfit": {
+      "date": "2026-11-07",
+      "mode": "crossfit",
+      "title": "Polar e Pura",
+      "revision": "20261107-crossfit-polar-pura",
+      "approvedAt": "2026-11-07T00:52:36.512Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261107-crossfit-0",
+          "title": "WOD",
+          "text": "TEAMS OF 3 | FOR TIME\nBLOCO 1\n600 m Run\n50 Pull-Ups\n50 Box Jumps\n50 Thrusters\n\nBLOCO 2\n600 m Run\n50 Chest-to-Bar Pull-Ups\n50 Box Jump Overs\n50 Clean & Jerks\n\nBLOCO 3\n600 m Run\n50 Bar Muscle-Ups\n50 Burpee Box Jump Overs\n50 Shoulder-to-Overheads\n\nTIME CAP: 50’\nSCORE: Tempo total do trio ou movimentos + reps ao atingir o cap.",
+          "path": "media/b27030a98798450fc740a0ae645ecc58ff94997694dc598aa8bba7132b3c8112.png"
+        },
+        {
+          "id": "20261107-crossfit-1",
+          "title": "Adaptações",
+          "text": "MOVIMENTO | RX+ | RX | INT | SC | INI\nRun | 600 m | 600 m | 600 m | 500 m | 400 m\nPull-Ups | 50 | 50 | 50 | 40 Jumping | 30 Ring Rows\nBox Jumps | 50 (75/60 cm) | 50 (60/50 cm) | 50 (60/50 cm) | 40 Step-Ups | 30 Step-Ups\nThrusters | 50 (70/49 kg) | 50 (60/42 kg) | 50 (50/35 kg) | 40 (40/28 kg) | 30 (30/20 kg)\nChest-to-Bar Pull-Ups | 50 | 50 | 50 Pull-Ups | 40 Jumping | 30 Ring Rows\nBox Jump Overs | 50 (75/60 cm) | 50 (60/50 cm) | 50 (60/50 cm) | 40 Step-Overs | 30 Step-Overs\nClean & Jerks | 50 (70/49 kg) | 50 (60/42 kg) | 50 (50/35 kg) | 40 (40/28 kg) | 30 (30/20 kg)\nBar Muscle-Ups | 50 | 50 | 25 BMU ou 50 C2B | 40 Pull-Ups | 30 Ring Rows\nBurpee Box Jump Overs | 50 (75/60 cm) | 50 (60/50 cm) | 50 (60/50 cm) | 40 Up-Down + Step-Over | 30 Up-Down + Step-Over\nShoulder-to-Overheads | 50 (70/49 kg) | 50 (60/42 kg) | 50 (50/35 kg) | 40 (40/28 kg) | 30 (30/20 kg)",
+          "path": "media/67e00cab708bb250e5010a948d3ed509e746413e692b96f47bb8c0ad1bbe5951.png"
+        }
+      ]
     }
   }
 }
