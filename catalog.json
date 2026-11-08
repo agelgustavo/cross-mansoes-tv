@@ -261,6 +261,28 @@
           "path": "media/67e00cab708bb250e5010a948d3ed509e746413e692b96f47bb8c0ad1bbe5951.png"
         }
       ]
+    },
+    "2026-11-08/hybrid": {
+      "date": "2026-11-08",
+      "mode": "hybrid",
+      "title": "Tawna Bandicoot",
+      "revision": "20261108-hybrid-tawna-bandicoot",
+      "approvedAt": "2026-11-08T01:06:07.256Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261108-hybrid-0",
+          "title": "WOD",
+          "text": "WORKOUT | TRIOS\n1.600 m Run\n160 KTB Swings | PSE 6–7\n120 Push-ups\n1.200 m Run\n100 Wall Balls\n1.000 m Run\n80 Burpees | Sync 3\n80 cal Ergo OU 800 m Run em relay\nColegas em prancha nas duas opções do relay",
+          "path": "media/ee6480e2b8aedf225a359264bbefc2639632355251411230378682dd27f5c7d3.png"
+        },
+        {
+          "id": "20261108-hybrid-1",
+          "title": "Adaptações",
+          "text": "RUN | 1ª / 2ª / 3ª CORRIDA\nRX: 1.600 / 1.200 / 1.000 m\nINT: 1.200 / 1.000 / 800 m\nSC: 1.000 / 800 / 600 m\n\nKTB SWINGS | PSE 6–7\nRX: 160 reps | INT: 120 reps | SC: 100 reps\n\nPUSH-UPS\nRX: 120 reps | INT: 100 reps | SC: 80 reps\n\nBURPEES | SYNC 3\nRX: 80 reps | INT: 60 reps | SC: 50 reps\n\nSEM ALTERAÇÃO: 100 WALL BALLS | 80 CAL ERG OU 800 m RUN (RELAY)",
+          "path": "media/ef72062afeed83ce4a5670860200aa04df0beb483165cda661cd84b7e37704b0.png"
+        }
+      ]
     }
   }
 }
