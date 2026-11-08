@@ -283,6 +283,40 @@
           "path": "media/ef72062afeed83ce4a5670860200aa04df0beb483165cda661cd84b7e37704b0.png"
         }
       ]
+    },
+    "2026-11-09/crossfit": {
+      "date": "2026-11-09",
+      "mode": "crossfit",
+      "title": "Power Snatch | 9-7-5",
+      "revision": "20261109-crossfit-gorila-v1",
+      "approvedAt": "2026-11-08T23:08:48.933Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261109-crossfit-0",
+          "title": "Aquecimento",
+          "text": "2 ROUNDS\n8 Alternating Spiderman Lunges\n10 Air Squats\n8 PVC Pass Throughs\n5 Scapular Pull-Ups\n\nTHEN INTO 2 ROUNDS (PVC OR EMPTY BARBELL)\n5 Snatch Grip Deadlifts\n5 Snatch High Pulls\n5 Muscle Snatches\n5 Hang Power Snatches\n5 Power Snatches",
+          "path": "media/b3cb66986428826d1fb5be665a0f464b8df1ae7bdd631ecda542905f493e6a62.jpg"
+        },
+        {
+          "id": "20261109-crossfit-1",
+          "title": "Strength / Skill — Power Snatch",
+          "text": "10 SETS | EVERY 1:30\n2 Power Snatch (Singles)\nStart Moderate and Build to Moderate-Heavy\nSCORE: Weight",
+          "path": "media/170885b3024e08c89da2cdfb7d7d06ed83a8acb8e7c837846fd6a7ef508dc2e6.jpg"
+        },
+        {
+          "id": "20261109-crossfit-2",
+          "title": "WOD — 9-7-5",
+          "text": "FOR TIME\n9-7-5 Power Snatch\n9-7-5 Burpee Bar Muscle-Up\nTIME CAP: 12’\nSCORE: Tempo total",
+          "path": "media/c7965c8750c7b4d651a27873360008eae70e26c00b4f9e7a1403e24c344c047f.jpg"
+        },
+        {
+          "id": "20261109-crossfit-3",
+          "title": "Adaptações",
+          "text": "POWER SNATCH\nRX+: 70/47,5 kg\nRX: 60/42,5 kg\nINT: 52,5/35 kg\nSC: 12-10-8 Alternating DB Snatches (15/10 kg)\nINI: 12-10-8 Alternating DB Snatches (10/7,5 kg)\n\nBURPEE BAR MUSCLE-UP\nRX+: 9-7-5 Burpee BMU\nRX: 9-7-5 Burpee BMU\nINT: 9-7-5 Burpee Chest-to-Bar ou 7-5-3 Burpee BMU\nSC: 12-10-8 Up-Down + Jumping Pull-Up\nINI: 12-10-8 Up-Down + Ring Row",
+          "path": "media/0e265aff0fce9f6c47dfb8b2baad956b8bd17b134b4d45e387bf786630a1ef11.jpg"
+        }
+      ]
     }
   }
 }
