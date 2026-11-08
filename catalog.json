@@ -317,6 +317,46 @@
           "path": "media/0e265aff0fce9f6c47dfb8b2baad956b8bd17b134b4d45e387bf786630a1ef11.jpg"
         }
       ]
+    },
+    "2026-11-10/crossfit": {
+      "date": "2026-11-10",
+      "mode": "crossfit",
+      "title": "Fiona",
+      "revision": "20261110-crossfit-fiona-v1",
+      "approvedAt": "2026-11-08T23:48:01.742Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261110-crossfit-0",
+          "title": "Aquecimento",
+          "text": "200 m Run\n\nTHEN INTO...\n3 ROUNDS\n5 Inchworms\n:20 Hollow Rock\n5 Kip Swings\n3-5 Toes-to-Bar",
+          "path": "media/ca5c8bbea5d25bdce184262361a534878bc7e56edb63d0f8d74d5510ed84a484.jpg"
+        },
+        {
+          "id": "20261110-crossfit-1",
+          "title": "Strength / Skill — Strict Press & Bent Over Row (Pós-WOD)",
+          "text": "TABATA (8 sets, 4:00 total)\n:20 Max Strict Press (20/15 kg Barbell)\n:10 Rest\n\nREST 2:00\n\nTABATA (8 sets, 4:00 total)\n:20 Max Bent Over Row (20/15 kg Barbell)\n:10 Rest\nSCORE: Total Reps",
+          "path": "media/6319a4c5d4caa1c755227e72ab64dbf231c0e2f80c3f59d733fdce32c37b3024.jpg"
+        },
+        {
+          "id": "20261110-crossfit-2",
+          "title": "WOD — Fiona",
+          "text": "FOR TIME\nBLOCO 1\n800 m Run\n50 Toes-to-Bar\n40 Hang DB Clean & Jerks\n\nBLOCO 2\n600 m Run\n40 Toes-to-Bar\n30 Hang DB Clean & Jerks\n\nTIME CAP: 26’\nSCORE: Tempo total",
+          "path": "media/e672abd5d8bd4b222d803958a5bcd5b4f128cb79da804b05143b84fcdb76fe9d.jpg"
+        },
+        {
+          "id": "20261110-crossfit-3",
+          "title": "Adaptações",
+          "text": "RUN\nRX+: 800 m / 600 m\nRX: 800 m / 600 m\nINT: 800 m / 600 m\nSC: 600 m / 400 m\nINI: 400 m / 300 m\n\nTOES-TO-BAR\nRX+: 50 / 40 Toes-to-Bar\nRX: 50 / 40 Toes-to-Bar\nINT: 40 / 30 Toes-to-Bar\nSC: 50 Sit-Ups / 40 Hanging Knee Raises\nINI: 40 Sit-Ups / 30 Hanging Knee Raises\n\nHANG DB CLEAN & JERK\n1 Dumbbell, alternando os braços.\nRX+: 40 / 30 reps (24/18 kg)\nRX: 40 / 30 reps (22,5/15 kg)\nINT: 40 / 30 reps (20/12,5 kg)\nSC: 40 / 30 reps (15/10 kg)\nINI: 40 / 30 reps (10/7,5 kg)",
+          "path": "media/743ef8ccde8b57a604f4ee93334f862d25b02b7d9d86d1478cb77d14bde0918b.jpg"
+        },
+        {
+          "id": "20261110-crossfit-4",
+          "title": "Acessório opcional",
+          "text": "OPTIONAL ACCESSORY\n3–4 SETS\n12–15 Incline DB Prone Rear Delt Flyes @ RPE 7–8\n12–15 DB Leaning Lateral Raises (each side) @ RPE 7–8\nREST 1:00 BETWEEN SETS\nSCORE: No Measure",
+          "path": "media/10ebd7b77a51464c2bcdd9819b89b73549e1063d91b0b91ae0e97a30398f49b0.jpg"
+        }
+      ]
     }
   }
 }
