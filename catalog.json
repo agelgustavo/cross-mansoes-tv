@@ -397,6 +397,46 @@
           "path": "media/a7d7975aa7327f25965f76e83da9c9542b636d21b5d902d0835e2e9557d77d9f.jpg"
         }
       ]
+    },
+    "2026-11-13/crossfit": {
+      "date": "2026-11-13",
+      "mode": "crossfit",
+      "title": "Three Blind Mice",
+      "revision": "20261113-crossfit-three-blind-mice-v1",
+      "approvedAt": "2026-11-09T20:29:36.648Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261113-crossfit-aquecimento",
+          "title": "Aquecimento",
+          "text": "3 Rounds\n1:00 Ergs\n10 Glute Bridges\n10 PVC Good Mornings\n10 Wall Balls\n5 Empty Bar Deadlifts",
+          "path": "media/8640f2acdd3e8c1598378f594d21ecce47aa25e1bd1766198c67c22f413688e4.jpg"
+        },
+        {
+          "id": "20261113-crossfit-forca",
+          "title": "Técnica / Força",
+          "text": "3 sets de 10 Deadlifts\nComece moderado-pesado e progrida até pesado\nDescanso conforme necessário\nScore: maior carga",
+          "path": "media/9d43e4418376f3d0c076cac80217f8baf55de51e0af8416f94af45914cd70175.jpg"
+        },
+        {
+          "id": "20261113-crossfit-wod",
+          "title": "WOD",
+          "text": "AMRAP 18'\n13 Deadlifts\n17 Wall Balls\n400 m Run\nScore: Rounds + Reps",
+          "path": "media/52b946b2dc8c4705557187a1f93b4656d7b03d2ba28250a772bbbf1f123898d5.jpg"
+        },
+        {
+          "id": "20261113-crossfit-adaptacoes",
+          "title": "Adaptações",
+          "text": "Deadlift\nRX+: 100/70 kg\nRX: 84/56 kg\nINT: 70/47,5 kg\nSC: 50/35 kg\nINI: 30/20 kg\n\nWall Ball\nRX+: 17 reps (30/20 lb)\nRX: 17 reps (20/14 lb)\nINT: 17 reps (20/14 lb)\nSC: 17 reps (14/10 lb)\nINI: 17 reps (10/6 lb)\n\nRun\nRX+: 400 m\nRX: 400 m\nINT: 400 m\nSC: 300 m\nINI: 200 m",
+          "path": "media/c22f815202539a2be0d50ae4094e75f31403372a8713e61802742d3cdbc2ba57.jpg"
+        },
+        {
+          "id": "20261113-crossfit-acessorios",
+          "title": "Acessórios opcionais",
+          "text": "3–4 sets\n10–12 Chest-Supported DB Rows @ RPE 7–8\n15 Banded Face Pulls\nRest 1:00–1:30 entre sets\nNo Measure",
+          "path": "media/2b8a9c6740cc9509a0f53da7680afc54d499934464b869eb94e942279e79c09c.jpg"
+        }
+      ]
     }
   }
 }
