@@ -437,6 +437,46 @@
           "path": "media/2b8a9c6740cc9509a0f53da7680afc54d499934464b869eb94e942279e79c09c.jpg"
         }
       ]
+    },
+    "2026-11-11/crossfit": {
+      "date": "2026-11-11",
+      "mode": "crossfit",
+      "title": "Rope Climb",
+      "revision": "20261111-crossfit-burro",
+      "approvedAt": "2026-11-09T21:21:17.919Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261111-crossfit-0",
+          "title": "Aquecimento",
+          "path": "media/46756a45158e94dd49fd49453fde7ce2c0a9796c039894355ec3128addae397a.png",
+          "text": "3 Rounds\n100 m Easy Run\n6 Scapular Pull-Ups\n10 Air Squats\n6 Push-Ups\n3 a 5 Pull-Ups (adaptação do WOD)"
+        },
+        {
+          "id": "20261111-crossfit-1",
+          "title": "Skill — Rope Climb",
+          "path": "media/bf9ecdd33fccbbda04935a3367bcf615e3e784dfb0b7cf05de2e5b1be5ecb7db.png",
+          "text": "Quem faz?\n21-15-9 Handstand Push-Ups\n9-6-3 Rope Climbs\nTime Cap 15′\nScore: Tempo total\nHSPU: RX+ / RX Strict com AbMat; INT com AbMat.\nRope: RX+ 6-4-2 Legless; RX 9-6-3; INT 6-4-2.\nQuem não faz? Prática com o coach!"
+        },
+        {
+          "id": "20261111-crossfit-2",
+          "title": "WOD — AMRAP Intervals",
+          "path": "media/914b0dd23d3f4837cf4ca2e9675cf310428ffa02e3c4c44044a85dc3c1e129bf.png",
+          "text": "3′ + 3′ + 3′ + 4′\n200 m Run\n10 Pull-Ups\n20 Air Squats\nMax Push-Ups no tempo restante.\nRest 1′ entre blocos.\nScore: Total de Push-Ups.\nDuração total 16′."
+        },
+        {
+          "id": "20261111-crossfit-3",
+          "title": "Adaptações",
+          "path": "media/0acbd80105e519935b01e97fa52ef078fc16ecb91e78446a858178b8fc00f8a2.png",
+          "text": "Run: RX+ RX INT 200 m | SC INI 100 m\nPull-Ups: RX+ 10 Strict | RX 10 | INT 8 | SC 6 Jumping | INI 10 Ring Rows\nAir Squats: RX+ RX INT 20 | SC 16 | INI 12\nPush-Ups: RX+ RX INT Max | SC Max Box | INI Max Incline"
+        },
+        {
+          "id": "20261111-crossfit-4",
+          "title": "Acessório opcional",
+          "path": "media/d2657b23ee139404a64afe75a3439ec90b9c2636bec8fcba32c99c816196c484.png",
+          "text": "3-4 Sets\n12 Dual Dumbbell Bicep Curls (Moderate)\n15 Banded Overhead Tricep Extensions\nRest 1:00 Between Sets\nNo Measure."
+        }
+      ]
     }
   }
 }
