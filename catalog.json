@@ -499,6 +499,28 @@
           "path": "media/d7837e2ab0a501673295821077d72df67f9f20e6185185bc82bbd42fbde28cdc.jpg"
         }
       ]
+    },
+    "2026-11-12/hybrid": {
+      "date": "2026-11-12",
+      "mode": "hybrid",
+      "title": "Big Bad Wolf",
+      "revision": "20261109-big-bad-wolf-v1",
+      "approvedAt": "2026-11-09T22:05:55.418Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261112-hybrid-wod",
+          "title": "WOD — Big Bad Wolf",
+          "text": "FOR TIME\n1.000 m Row ou 45/36 Cal Bike\n300 m Double KTB Farmer Carry | PSE 9-10\n200 m Burpee Broad Jump\n100 m Walking Lunges\n600 m Run\n100 m Walking Lunges\n200 m Burpee Broad Jump\n300 m Double KTB Farmer Carry | PSE 9-10\nTIME CAP: 60'\nSCORE: Tempo total",
+          "path": "media/f03144e459cf44f5b90ccff075ca64fd0576d9b7002fec51c63246cb7b4ec154.jpg"
+        },
+        {
+          "id": "20261112-hybrid-adaptacoes",
+          "title": "Adaptações — Big Bad Wolf",
+          "text": "ROW OU BIKE\nRX: 1.000 m Row ou 45/36 Cal Bike\nINT: 800 m Row ou 30/24 Cal Bike\nSC: 600 m Row ou 15/12 Cal Bike\nDOUBLE KTB FARMER CARRY\nRX: 300 m (PSE 9-10)\nINT: 300 m (carga moderada)\nSC: 300 m (carga leve)\nBURPEE BROAD JUMP\nRX: 200 m\nINT: 150 m\nSC: 100 m\nWALKING LUNGES\nRX: 100 m\nINT: 70 m\nSC: 50 m\nRUN\nRX: 600 m\nINT: 500 m\nSC: 400 m",
+          "path": "media/ccf8e46e7978890cb65ca33aafa19767455cfaa419e1610284ba4228ffab185b.jpg"
+        }
+      ]
     }
   }
 }
