@@ -193,6 +193,46 @@
           "path": "media/76f1eae0e4469856a575e71468dd7f61deb4214c0082ff468df91775a92d5806.png"
         }
       ]
+    },
+    "2026-11-12/crossfit": {
+      "date": "2026-11-12",
+      "mode": "crossfit",
+      "title": "Puss in Boots & Gingerbread Man",
+      "revision": "20261112-crossfit-puss-gingerbread-v1",
+      "approvedAt": "2026-11-09T20:20:36.401Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261112-crossfit-aquecimento",
+          "title": "Aquecimento",
+          "text": "2 min ERG\n3 rounds\n10 PVC Good Mornings\n10 PVC Back Squats\n10 Alternating Spiderman Lunges + Reach\n10 Glute Bridges\n5 Burpee Broad Jumps",
+          "path": "media/0443b4468cf2f66c825077c65a09629c531333c3b481215ae730a4e7c57eed63.jpg"
+        },
+        {
+          "id": "20261112-crossfit-forca",
+          "title": "Técnica / Força",
+          "text": "Heavy Single Hang Power Clean\nON A 10:00 CLOCK\nBuild up to Mod-Heavy Single Hang Power Clean\nScore: Weight",
+          "path": "media/2292d824e15826ab16b38af19cd713349416fd267b4ad53042249302fe78fd99.jpg"
+        },
+        {
+          "id": "20261112-crossfit-wod",
+          "title": "WOD — Puss in Boots & Gingerbread Man",
+          "text": "TEAMS OF 2 | FOR TIME\n4 Rounds\n30 Hang Power Cleans\n15 Synchro Bar Facing Burpees\nTime Cap: 18'\nScore: Tempo total da dupla",
+          "path": "media/e20f084ac73fdc5fc6050aba0d6212b224fc7eac267880a8f4c1cbd1795701ee.jpg"
+        },
+        {
+          "id": "20261112-crossfit-adaptacoes",
+          "title": "Adaptações",
+          "text": "Hang Power Clean\nRX+: 80/55 kg\nRX: 70/47,5 kg\nINT: 60/42,5 kg\nSC: 43/35 kg\nINI: 20 DB Hang Power Cleans (10/7,5 kg)\n\nSynchro Bar Facing Burpees\nRX+: 15 Synchro Bar Facing Burpees\nRX: 15 Synchro Bar Facing Burpees\nINT: 15 Synchro Bar Facing Burpees\nSC: 10 Synchro Up-Downs\nINI: 8 Synchro Up-Downs\nRX+ e INI são sugestões adicionais.",
+          "path": "media/ec9cfd18db6a587ae1d2e0a09cf2eca2b7d8eb137b5d0210a2e0e2eb4458a8f6.jpg"
+        },
+        {
+          "id": "20261112-crossfit-acessorios",
+          "title": "Acessórios opcionais",
+          "text": "3–4 SETS\n15 Banded Glute Bridges or Hip Thrusts\n12 Seated Russian Twists (each side, light)\nRest 1:00 between sets\nNo Measure",
+          "path": "media/a7d7975aa7327f25965f76e83da9c9542b636d21b5d902d0835e2e9557d77d9f.jpg"
+        }
+      ]
     }
   }
 }
