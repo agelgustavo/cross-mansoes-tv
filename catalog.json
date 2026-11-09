@@ -477,6 +477,28 @@
           "text": "3-4 Sets\n12 Dual Dumbbell Bicep Curls (Moderate)\n15 Banded Overhead Tricep Extensions\nRest 1:00 Between Sets\nNo Measure."
         }
       ]
+    },
+    "2026-11-10/hybrid": {
+      "date": "2026-11-10",
+      "mode": "hybrid",
+      "title": "Far Far Away",
+      "revision": "20261109-far-far-away-v1",
+      "approvedAt": "2026-11-09T21:37:28.937Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261110-hybrid-wod",
+          "title": "WOD — Far Far Away",
+          "text": "FOR TIME\n2.000 m Run\n40 Russian Kettlebell Swings | PSE 8-9\n1.000 m Run\n40 Jumping Squats\n2.000 m Run\n75/60 Cal Bike\nTIME CAP: 60'\nSCORE: Tempo total",
+          "path": "media/6f662def9ec2068889a3cd2af121b84bf33f772737845c593f313e456aa889c7.jpg"
+        },
+        {
+          "id": "20261110-hybrid-adaptacoes",
+          "title": "Adaptações — Far Far Away",
+          "text": "RUN 1 E RUN 3\nRX: 2.000 m\nINT: 1.600 m\nSC: 1.000 m\nRUN 2\nRX: 1.000 m\nINT: 800 m\nSC: 600 m\nBIKE\nRX: 75/60 Cal\nINT: 60/48 Cal\nSC: 45/36 Cal\nKETTLEBELL SWING\nRX: 40 Russian KBS (PSE 8-9)\nINT: 40 Russian KBS (moderado)\nSC: 40 Russian KBS (leve)\nJUMPING SQUATS\nRX: 40 Jumping Squats\nINT: 40 Jumping Squats\nSC: 40 Air Squats",
+          "path": "media/d7837e2ab0a501673295821077d72df67f9f20e6185185bc82bbd42fbde28cdc.jpg"
+        }
+      ]
     }
   }
 }
