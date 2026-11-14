@@ -521,6 +521,28 @@
           "path": "media/ccf8e46e7978890cb65ca33aafa19767455cfaa419e1610284ba4228ffab185b.jpg"
         }
       ]
+    },
+    "2026-11-14/crossfit": {
+      "date": "2026-11-14",
+      "mode": "crossfit",
+      "title": "Já Estou Indo Elisabeth",
+      "revision": "20261114-crossfit-elisabeth-v1",
+      "approvedAt": "2026-11-14T00:00:00Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261114-crossfit-wod",
+          "title": "WOD — Já Estou Indo Elisabeth",
+          "text": "Teams of 3 | For Time | 10 Rounds Alternating | Time Cap 65' | Score Tempo total do trio. Ímpares: 12 Gymnastics Complexes (2 Pull-Ups + 1 BMU), 15 Box Jump Overs, 18 Barbell + DB Complexes (Squat Snatch + Overhead Squat). Pares: 12 Inversion Complexes (Wall Walk + Wall Facing HSPU), 15 Box Jump Overs, 18 Front Rack Lunges. Sync 1, Sync 2 e Relay Sync 2.",
+          "path": "media/20261114-elisabeth-wod.svg"
+        },
+        {
+          "id": "20261114-crossfit-adaptacoes",
+          "title": "Adaptações — Já Estou Indo Elisabeth",
+          "text": "Adaptações RX+, RX, INT, SC e INI para Gymnastics Complex, Box Jump Overs, Barbell + DB Complex, Inversion Complex e Front Rack Lunges.",
+          "path": "media/20261114-elisabeth-adaptacoes.svg"
+        }
+      ]
     }
   }
 }
