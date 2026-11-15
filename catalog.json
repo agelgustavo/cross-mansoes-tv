@@ -543,6 +543,28 @@
           "path": "media/20261114-elisabeth-adaptacoes.jpeg"
         }
       ]
+    },
+    "2026-11-15/hybrid": {
+      "date": "2026-11-15",
+      "mode": "hybrid",
+      "title": "Horst, Dieter, Heimlich e Lobo",
+      "revision": "20261115-hybrid-horst-dieter-heimlich-lobo-v1",
+      "approvedAt": "2026-11-14T23:59:00Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261115-hybrid-wod",
+          "title": "WOD — Horst, Dieter, Heimlich e Lobo",
+          "path": "media/20261115-horst-dieter-heimlich-lobo-wod.svg",
+          "text": "Teams of 4 | 4 blocos de 10 minutos | 2 minutos de descanso | Bloco 1: 200 Wall Balls, 100 m Sled Push 150/100 kg ou PSE 9-10. Bloco 2: 400 m Weighted Walking Lunges PSE 6-7, 800 m Row. Bloco 3: 300 m Burpee Broad Jump e 1.600 m Run Sync 3. Bloco 4: 200 Sit-Ups Sync 4. Cap 46'. Score: trabalho concluído por bloco."
+        },
+        {
+          "id": "20261115-hybrid-adaptacoes",
+          "title": "Adaptações — Horst, Dieter, Heimlich e Lobo",
+          "path": "media/20261115-horst-dieter-heimlich-lobo-adaptacoes.svg",
+          "text": "Wall Balls RX 200 20/14 lb, INT 160 20/14 lb, SC 120 14/10 lb. Sled Push RX 100 m 150/100 kg ou PSE 9-10, INT 100 m PSE 7-8, SC 80 m PSE 6-7. Lunges RX 400 m, INT 300 m, SC 200 m. Row RX 800 m, INT 700 m, SC 600 m. Burpee Broad Jump RX 300 m, INT 240 m, SC 180 m. Run Sync 3 RX 1600 m, INT 1200 m, SC 800 m. Sit-Ups Sync 4 RX 200, INT 160, SC 120."
+        }
+      ]
     }
   }
 }
