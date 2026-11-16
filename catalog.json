@@ -599,6 +599,40 @@
           "text": "Cardio\nRX+: 500/450 m Row | 25/20 Cal Bike | 400 m Run\nRX: 500/450 m Row | 25/20 Cal Bike | 400 m Run\nINT: 25/20 Cal Bike | 400 m Run | 500/450 m Row\nSC: 20/16 Cal Bike | 300 m Run | 400/350 m Row\nINI: 200 m Run | 10/8 Cal Bike | 250/200 m Row\nAs opções estão em ordem de prioridade de utilização.\nStrict Handstand Push-Ups\nRX+: 15 Strict HSPU\nRX: 10 Strict HSPU\nINT: 10 HSPU\nSC: 10 DB Strict Press (15/10 kg)\nINI: 10 DB Strict Press (10/8 kg)\nGoblet Step Back Alternating Lunges\nRX+: 20 KB Goblet Lunges (32/24 kg)\nRX: 20 DB Goblet Lunges (22,5/15 kg)\nINT: 20 DB Goblet Lunges (20/18 kg)\nSC: 12 DB Goblet Lunges (15/10 kg)\nINI: 12 DB Goblet Lunges (10/8 kg)\nOPTIONAL ACCESSORY\n3-4 SETS\n15 Banded Face Pulls\n15 Banded Pull-Aparts\n:45-:60 Plank (Elbows)\nRest 1:00 b/t Sets\n(No Measure)"
         }
       ]
+    },
+    "2026-11-17/crossfit": {
+      "date": "2026-11-17",
+      "mode": "crossfit",
+      "title": "Tony Stark",
+      "revision": "tony-stark-20261117-1794789097078",
+      "approvedAt": "2026-11-16T00:31:37.078Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "tony-stark-1",
+          "title": "Aquecimento",
+          "path": "media/596523da60337a7d030dfe464a65d69a9045acde7dee4a4014963a1e05386490.png",
+          "text": "200m Run\nThen Into...\n2 ROUNDS\n5 World’s Greatest Stretch (each side)\n10 PVC Pass Throughs\n10 PVC Good Mornings\n10 Pogo Hops\nThen Into...\n1 ROUND WITH AN EMPTY BARBELL\n5 Down and Ups\n5 Elbows High and Outside\n5 Muscle Cleans\n5 Power Cleans\n5 Push Jerks"
+        },
+        {
+          "id": "tony-stark-2",
+          "title": "Força / Técnica",
+          "path": "media/d6b405d35d7e51b112d5aa851b6d2e0f8e1b9184f518c631548ec563ff44018f.png",
+          "text": "Power Clean and Jerks\nEVERY 2:00 (5 SETS)\n5 Power Clean and Jerks\n1 Rep = 1 PC + 1 Jerk.\nAll 5 Reps must be Touch and Go.\nStart Moderate and Build to Moderate-Heavy (RPE 8).\nScore: Heaviest Set"
+        },
+        {
+          "id": "tony-stark-3",
+          "title": "WOD",
+          "path": "media/30773f50c871e6a459dd4eeadfc9fe2f4ead35712e27a8537c1367e2673e1670.png",
+          "text": "FOR TIME\n10 Box Jumps\n50 Deadlifts\n10 Box Jumps\n40 Hang Power Cleans\n10 Box Jumps\n30 Shoulder to Overhead\n10 Box Jumps\n20 Power Clean and Jerks\n10 Box Jumps\nTime Cap: 23'\nScore: Tempo total"
+        },
+        {
+          "id": "tony-stark-4",
+          "title": "Adaptações + Optional Accessory",
+          "path": "media/11339c171c321a8e50c79bf08cd1b2606ce0f3d9ee7193ed36daeaa2781dcb5a.png",
+          "text": "1. Box Jumps\nRX+: 10 Box Jumps (30/24”)\nRX: 10 Box Jumps (30/24”)\nINT: 10 Box Jumps (24/20”)\nSC: 10 Box Step-Ups (caixa baixa)\nINI: 10 Box Step-Ups (caixa baixa)\n2. Deadlifts\nRX+: 50 Deadlifts (60/43 kg)\nRX: 50 Deadlifts (52,5/35 kg)\nINT: 50 Deadlifts (42,5/30 kg)\nSC: 30 DB Deadlifts (leve)\nINI: 30 DB Deadlifts (leve)\n3. Hang Power Cleans\nRX+: 40 Hang Power Cleans (60/43 kg)\nRX: 40 Hang Power Cleans (52,5/35 kg)\nINT: 40 Hang Power Cleans (42,5/30 kg)\nSC: 25 DB Hang Power Cleans (leve)\nINI: 25 DB Hang Power Cleans (leve)\n4. Shoulder to Overhead\nRX+: 30 Shoulder to Overhead (60/43 kg)\nRX: 30 Shoulder to Overhead (52,5/35 kg)\nINT: 30 Shoulder to Overhead (42,5/30 kg)\nSC: 20 DB Push Press (leve)\nINI: 20 DB Push Press (leve)\n5. Power Clean and Jerk\nRX+: 20 Power Clean and Jerks (60/43 kg)\nRX: 20 Power Clean and Jerks (52,5/35 kg)\nINT: 20 Power Clean and Jerks (42,5/30 kg)\nSC: 15 DB Power Clean and Push Press (leve)\nINI: 15 DB Power Clean and Push Press (leve)\nOPTIONAL ACCESSORY\n10:00 EMOM\nMIN 1 - :50 Easy Run\nMIN 2 - :50 Banded Pass-Throughs (slow)\n(No Measure)"
+        }
+      ]
     }
   }
 }
