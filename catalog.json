@@ -565,6 +565,40 @@
           "text": "Wall Balls RX 200 20/14 lb, INT 160 20/14 lb, SC 120 14/10 lb. Sled Push RX 100 m 150/100 kg ou PSE 9-10, INT 100 m PSE 7-8, SC 80 m PSE 6-7. Lunges RX 400 m, INT 300 m, SC 200 m. Row RX 800 m, INT 700 m, SC 600 m. Burpee Broad Jump RX 300 m, INT 240 m, SC 180 m. Run Sync 3 RX 1600 m, INT 1200 m, SC 800 m. Sit-Ups Sync 4 RX 200, INT 160, SC 120."
         }
       ]
+    },
+    "2026-11-16/crossfit": {
+      "date": "2026-11-16",
+      "mode": "crossfit",
+      "title": "Peter Quill",
+      "revision": "20261116-crossfit-peter-quill-v1",
+      "approvedAt": "2026-11-16T00:12:12.595Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261116-crossfit-1",
+          "title": "Aquecimento",
+          "path": "media/1ed48db3e70f8d647ac8404bc18ac2146f64360d5c672e3a8e1ff2ba53b9f237.png",
+          "text": "2:00 Easy Cardio\n5 Kang Squats\n10 Alternating Step Back Lunges\n10 Alternating Plank Shoulder Taps\n10 Light DB Strict Press\n5 Empty Barbell Back Squats"
+        },
+        {
+          "id": "20261116-crossfit-2",
+          "title": "Força / Técnica",
+          "path": "media/5115514df5f4bcbeceb6364b2f3ed7fafc65bc99defc9029cebd36f30ec7abca.png",
+          "text": "Back Squats\nEVERY 2:00 (5 SETS)\n6 Back Squats @ RPE 7\nUse a weight that’s challenging, but can be completed in 30 seconds. Same weight for all 5 sets.\nScore: Carga utilizada"
+        },
+        {
+          "id": "20261116-crossfit-3",
+          "title": "WOD",
+          "path": "media/bfa24e6dcc5c3b394045dbf24b3a28ecd5dd6d0744b9d9f2e08da58baf310fd3.png",
+          "text": "4 ROUNDS FOR TIME\nCardio\nHSPU\nDB Goblet Step Back Alternating Lunges\nTime Cap: 20’\nScore: Tempo total"
+        },
+        {
+          "id": "20261116-crossfit-0",
+          "title": "Adaptações e acessório opcional",
+          "path": "media/3b865c4402c101a0d52ba863e326ae1d3d12112109a189be44d4424977dbc971.png",
+          "text": "Cardio\nRX+: 500/450 m Row | 25/20 Cal Bike | 400 m Run\nRX: 500/450 m Row | 25/20 Cal Bike | 400 m Run\nINT: 25/20 Cal Bike | 400 m Run | 500/450 m Row\nSC: 20/16 Cal Bike | 300 m Run | 400/350 m Row\nINI: 200 m Run | 10/8 Cal Bike | 250/200 m Row\nAs opções estão em ordem de prioridade de utilização.\nStrict Handstand Push-Ups\nRX+: 15 Strict HSPU\nRX: 10 Strict HSPU\nINT: 10 HSPU\nSC: 10 DB Strict Press (15/10 kg)\nINI: 10 DB Strict Press (10/8 kg)\nGoblet Step Back Alternating Lunges\nRX+: 20 KB Goblet Lunges (32/24 kg)\nRX: 20 DB Goblet Lunges (22,5/15 kg)\nINT: 20 DB Goblet Lunges (20/18 kg)\nSC: 12 DB Goblet Lunges (15/10 kg)\nINI: 12 DB Goblet Lunges (10/8 kg)\nOPTIONAL ACCESSORY\n3-4 SETS\n15 Banded Face Pulls\n15 Banded Pull-Aparts\n:45-:60 Plank (Elbows)\nRest 1:00 b/t Sets\n(No Measure)"
+        }
+      ]
     }
   }
 }
