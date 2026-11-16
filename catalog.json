@@ -633,6 +633,46 @@
           "text": "1. Box Jumps\nRX+: 10 Box Jumps (30/24”)\nRX: 10 Box Jumps (30/24”)\nINT: 10 Box Jumps (24/20”)\nSC: 10 Box Step-Ups (caixa baixa)\nINI: 10 Box Step-Ups (caixa baixa)\n2. Deadlifts\nRX+: 50 Deadlifts (60/43 kg)\nRX: 50 Deadlifts (52,5/35 kg)\nINT: 50 Deadlifts (42,5/30 kg)\nSC: 30 DB Deadlifts (leve)\nINI: 30 DB Deadlifts (leve)\n3. Hang Power Cleans\nRX+: 40 Hang Power Cleans (60/43 kg)\nRX: 40 Hang Power Cleans (52,5/35 kg)\nINT: 40 Hang Power Cleans (42,5/30 kg)\nSC: 25 DB Hang Power Cleans (leve)\nINI: 25 DB Hang Power Cleans (leve)\n4. Shoulder to Overhead\nRX+: 30 Shoulder to Overhead (60/43 kg)\nRX: 30 Shoulder to Overhead (52,5/35 kg)\nINT: 30 Shoulder to Overhead (42,5/30 kg)\nSC: 20 DB Push Press (leve)\nINI: 20 DB Push Press (leve)\n5. Power Clean and Jerk\nRX+: 20 Power Clean and Jerks (60/43 kg)\nRX: 20 Power Clean and Jerks (52,5/35 kg)\nINT: 20 Power Clean and Jerks (42,5/30 kg)\nSC: 15 DB Power Clean and Push Press (leve)\nINI: 15 DB Power Clean and Push Press (leve)\nOPTIONAL ACCESSORY\n10:00 EMOM\nMIN 1 - :50 Easy Run\nMIN 2 - :50 Banded Pass-Throughs (slow)\n(No Measure)"
         }
       ]
+    },
+    "2026-11-18/crossfit": {
+      "date": "2026-11-18",
+      "mode": "crossfit",
+      "title": "BARBARA Romanoff",
+      "revision": "barbara-20261118-v1",
+      "approvedAt": "2026-11-16T02:39:06.488Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "barbara-0",
+          "title": "Aquecimento",
+          "path": "media/025e0e141f5b23b102e229b6e588d4c1af5b9a464812dac21080e1f7c4cfa957.png",
+          "text": "2:00 Easy Bike or Jog\nBanded 7s\n10 Hip Halos (each direction)\n:20 Hollow Hold\n:20 Superman Hold"
+        },
+        {
+          "id": "barbara-1",
+          "title": "WOD — BARBARA Romanoff",
+          "path": "media/deb31e140c436b3a366c9737b8d6bffafebfb9def20c85b7baf50b6147422127.png",
+          "text": "BARBARA Romanoff\n5 Sets For Time\n20 Pull-Ups\n30 Push-Ups\n40 Sit-Ups\n50 Air Squats\nRest: 3’ entre os sets\nTime Cap sugerido: 45’\nScore: Tempo do set mais lento"
+        },
+        {
+          "id": "barbara-2",
+          "title": "Adaptações — Pull-Ups e Push-Ups",
+          "path": "media/aa83ce932a92ca6aa6240e82d5a4e8eb97fe146fe7527001db4243e64677ae72.png",
+          "text": "1. Pull-Ups\nRX+: 20 Pull-Ups\nRX: 20 Pull-Ups\nINT: 15 Pull-Ups\nSC: 15 Ring Rows\nINI: 15 Ring Rows\n2. Push-Ups\nRX+: 30 Push-Ups\nRX: 30 Push-Ups\nINT: 20 Push-Ups\nSC: 20 Knee Push-Ups\nINI: 20 Knee Push-Ups"
+        },
+        {
+          "id": "barbara-3",
+          "title": "Adaptações — Sit-Ups e Air Squats",
+          "path": "media/7fe76d791935ea019d36c41d5fcd1f67fa2f0dbf8502eee509d1755d597337ed.png",
+          "text": "3. Sit-Ups\nRX+: 40 Sit-Ups\nRX: 40 Sit-Ups\nINT: 30 Sit-Ups\nSC: 25 Sit-Ups\nINI: 25 Sit-Ups\n4. Air Squats\nRX+: 50 Air Squats\nRX: 50 Air Squats\nINT: 40 Air Squats\nSC: 30 Air Squats\nINI: 30 Air Squats"
+        },
+        {
+          "id": "barbara-4",
+          "title": "Acessório opcional",
+          "path": "media/bd22e55956dc5be18a32d867433cda21221a4ddd39bf91a73863a32d6491d9f9.png",
+          "text": "OPTIONAL ACCESSORY\n3-4 SETS\n12-15 Dumbbell Hammer Curls\n15-20 Banded Tricep Pushdowns\nRest 1:00 b/t Sets\n(No Measure)"
+        }
+      ]
     }
   }
 }
