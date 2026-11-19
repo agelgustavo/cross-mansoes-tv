@@ -677,34 +677,34 @@
     "2026-11-19/crossfit": {
       "date": "2026-11-19",
       "mode": "crossfit",
-      "title": "Steve Rogers & Bucky Barnes — CrossFit",
-      "revision": "rogers-barnes-20261119-v2",
-      "approvedAt": "2026-11-19T05:55:49.518Z",
+      "title": "Steve Rogers & Bucky Barnes",
+      "revision": "rogers-barnes-20261119-v3",
+      "approvedAt": "2026-11-19T06:01:02.105Z",
       "approvedBy": "agelgustavo",
       "pages": [
         {
           "id": "rogers-barnes-0",
           "title": "Aquecimento",
-          "path": "media/e72417d40044d04c0b4ea45796e00a328412e8465762b1c64d314e589d32176d.png",
+          "path": "media/46a4150c82710f14bcd16c38848b9668f2387fa16d019642ac38752601c69d43.png",
           "text": "19-nov.\n2 ROUNDS\n10 Air Squats\n5/Side Worlds Greatest Stretch\n10 PVC or Banded Good Mornings\n5 Push Up into Downward Dog\n10 Scapular Pull Ups (slow and controlled)"
         },
         {
           "id": "rogers-barnes-1",
           "title": "Deadlifts",
-          "path": "media/98777e0e1c597eaba8de3c97fe3fc87eee9301770e9d5546413d694ea9c4684c.png",
+          "path": "media/e6117aec40eb80e77f528d38807894b92b948c981f5c1e9086ef6f2c8e07ae4c.png",
           "text": "Deadlifts (10’)\n3 SETS\n8 Deadlifts*\n*Start Mod-Heavy and Build to Heavy\n-Rest as Needed b/t Sets-\n(Score is Heaviest Weight)"
         },
         {
           "id": "rogers-barnes-2",
           "title": "WOD",
-          "path": "media/d21207cb8a5d6a7a0f382457548c52ef0fa0c1768cd7e2f4a7e911a1e8781a9c.png",
-          "text": "Teams of 2 | 4 Rounds For Time: 4 Rope Climbs, 20 Lateral Burpees Over DB, 30 DB Alternating Snatches, 40 Wall Balls. Sync 1. Time Cap 25'. Score tempo total."
+          "path": "media/e50a371cc1073af9d1c1cd543b6605a0f03aa7944214b34150e183adbeb46f0e.png",
+          "text": "Teams of 2 | 4 Rounds For Time\n4 Rope Climbs\n20 Lateral Burpees Over DB\n30 DB Alternating Snatches\n40 Wall Balls\nTime Cap: 25 minutos\nScore: Tempo total da dupla\nSync 1: um atleta por vez. Repetições compartilhadas, divisão livre. Alternar braços no DB Snatch. Obrigatório usar EVA. Não soltar o DB no chão."
         },
         {
           "id": "rogers-barnes-3",
           "title": "Adaptações",
-          "path": "media/9a799d9091387f033b057c5b602fda016c8e39e93b461cb09783d0b31f273c85.png",
-          "text": "Adaptações RX+, RX, INT, SC e INI para Rope Climbs, Lateral Burpee Over DB, DB Alternating Snatch e Wall Balls. EVA obrigatório; não soltar halteres."
+          "path": "media/ec3c24c1adbb09885b04c4a5164b9ded03254c8fa46634a7512f4e2939a01aa2.png",
+          "text": "Rope Climbs\nRX+: M: 4 Legless | F: 2 Legless OU 4 Half Legless + Half Rope Climbs (combinação = 1 rep)\nRX: 4 Rope Climbs\nINT: 3 Rope Climbs ou 16 Strict Pull-Ups\nSC: 4 Zombie Rope Climbs ou 20 Jumping Pull-Ups\nINI: 20 Ring Rows\nLateral Burpee Over DB\nRX+, RX, INT: 20 Lateral Burpees Over DB\nSC, INI: 20 Up-Downs\nDB Alternating Snatch: 30 repetições, alternar braços\nRX+: 35/24 kg\nRX: 24/20 kg\nINT: 22,5/15 kg\nSC: 15/10 kg\nINI: 10/8 kg\nWall Balls: 40 repetições\nRX+: 30/20 lb\nRX, INT: 20/14 lb\nSC, INI: Wall Ball Thrusters (leve)\nObrigatório usar EVA. Proibido soltar ou jogar o DB no chão. Apoiar o halter de forma controlada."
         }
       ]
     },
