@@ -677,9 +677,9 @@
     "2026-11-19/crossfit": {
       "date": "2026-11-19",
       "mode": "crossfit",
-      "title": "Steve Rogers & James “Bucky” Barnes",
-      "revision": "rogers-barnes-20261119-v1",
-      "approvedAt": "2026-11-16T16:51:24.373Z",
+      "title": "Steve Rogers & Bucky Barnes — CrossFit",
+      "revision": "rogers-barnes-20261119-v2",
+      "approvedAt": "2026-11-19T05:55:49.518Z",
       "approvedBy": "agelgustavo",
       "pages": [
         {
@@ -697,14 +697,14 @@
         {
           "id": "rogers-barnes-2",
           "title": "WOD",
-          "path": "media/5103dec9b52869dac8a033be223d9d82e82bc70cddae9a73ea73f1c78fa77687.png",
-          "text": "Steve Rogers & James “Bucky” Barnes\nTEAMS OF 2\n4 ROUNDS FOR TIME\n4 Rope Climbs\n40 Wall Balls\n400 m Run (Together)\nTime Cap: 30’\nScore: Tempo total"
+          "path": "media/d21207cb8a5d6a7a0f382457548c52ef0fa0c1768cd7e2f4a7e911a1e8781a9c.png",
+          "text": "Teams of 2 | 4 Rounds For Time: 4 Rope Climbs, 20 Lateral Burpees Over DB, 30 DB Alternating Snatches, 40 Wall Balls. Sync 1. Time Cap 25'. Score tempo total."
         },
         {
           "id": "rogers-barnes-3",
-          "title": "Run e acessórios",
-          "path": "media/fb0bdd5c0b12884e93520b9fae8ba9d4f2e155ab3cb28c9c5ae9e0aeb65a01db.png",
-          "text": "3. Run\nRX+: 400 m Run (Together)\nRX: 400 m Run (Together)\nINT: 400 m Run (Together)\nSC: 300 m Run (Together)\nINI: 300 m Run (Together)\n3-4 SETS\n15-20 Standing Calf Raises\n(Farmer’s Hold or Bodyweight)\n15-20 Banded Chest Flys\n:30-:45 Hollow Body Hold\n-Rest 1:00 b/t Sets-"
+          "title": "Adaptações",
+          "path": "media/9a799d9091387f033b057c5b602fda016c8e39e93b461cb09783d0b31f273c85.png",
+          "text": "Adaptações RX+, RX, INT, SC e INI para Rope Climbs, Lateral Burpee Over DB, DB Alternating Snatch e Wall Balls. EVA obrigatório; não soltar halteres."
         }
       ]
     },
