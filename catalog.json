@@ -779,6 +779,28 @@
           "text": "POWER CLEAN\nRX+: 90/63 kg\nRX: 80/56 kg\nINT: 70/49 kg\nSC: 60/42 kg\nINI: 40/28 kg\n\nTOES-TO-BAR\nRX+: Toes-to-Bar | Sync 3\nRX e INT: Toes-to-Bar | Sync 2\nSC: Hanging Knee Raises ou V-Ups | Sync 2\nINI: AbMat Sit-Ups | Sync 2\n\nRUN\nRX+, RX e INT: distância completa\nSC: 80% da distância\nINI: 60% da distância"
         }
       ]
+    },
+    "2026-11-21/crossfit": {
+      "date": "2026-11-21",
+      "mode": "crossfit",
+      "title": "Fantastic 4",
+      "revision": "fantastic-4-20261121-v1",
+      "approvedAt": "2026-11-20T23:50:39.806Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "title": "Treino completo",
+          "id": "fantastic-4-1",
+          "path": "media/de3b3c33a9ab185270b0aed6f974e9abb9cb7fd0e2854ab606a5e8c8e214d0f1.jpeg",
+          "text": "For Time | 2 rounds. Buy-in e buy-out: 300 Double Unders + 300 Single Unders. Último movimento de cada round: 120 Reverse Lunge com KTB (Sync 1). Time cap: 70 min. Score: tempo total da equipe."
+        },
+        {
+          "title": "Adaptações e explicações",
+          "id": "fantastic-4-2",
+          "path": "media/83472fe0ab9a10f816cf6b7ce0f338023de08fa92b84fe114c91cfc97beb8f59.jpeg",
+          "text": "Equipes de 1 RX + 1 INT + 1 SC + 1 INI. Barra 45/32 kg. Kettlebell Swings Sync 4: RX 32/24 kg, INT 24/16 kg, SC 16/12 kg, INI 12/8 kg."
+        }
+      ]
     }
   }
 }
