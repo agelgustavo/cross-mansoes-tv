@@ -762,21 +762,21 @@
       "date": "2026-11-20",
       "mode": "crossfit",
       "title": "Spider Man",
-      "revision": "spider-man-20261120-v2",
-      "approvedAt": "2026-11-20T10:58:24.602Z",
+      "revision": "spider-man-20261120-v3",
+      "approvedAt": "2026-11-20T11:17:25.260Z",
       "approvedBy": "agelgustavo",
       "pages": [
         {
           "id": "spider-man-wod",
           "title": "WOD principal",
-          "path": "media/7e9bb32eb618d371600d61579d5a031707dcfcc0887e637bc07807d8a8129b44.jpeg",
-          "text": "TEAMS OF 3 | FOR TIME | 6 BLOCOS\nBLOCO 1: 200 m Run + 9 Power Cleans + 9 Toes-to-Bar | Sync 2\nBLOCO 2: 400 m Run + 18 Power Cleans + 18 Toes-to-Bar | Sync 2\nBLOCO 3: 600 m Run + 18 Power Cleans + 18 Toes-to-Bar | Sync 2\nBLOCO 4: 800 m Run + 24 Power Cleans + 24 Toes-to-Bar | Sync 2\nBLOCO 5: 1.000 m Run + 30 Power Cleans + 30 Toes-to-Bar | Sync 2\nBLOCO 6: 1.200 m Run + 36 Power Cleans + 36 Toes-to-Bar | Sync 2\nTIME CAP: 55’\nSCORE: Tempo total da equipe"
+          "path": "media/5d9faf9bbddb688ac160f8fef1a0985120f5b4e532f06d040b6028e40189dc8f.jpeg",
+          "text": "TEAMS OF 3 | FOR TIME | 6 BLOCOS\nBLOCO 1: 200 m Run + 6 Power Cleans + 6 Toes-to-Bar | Sync 2\nBLOCO 2: 400 m Run + 12 Power Cleans + 12 Toes-to-Bar | Sync 2\nBLOCO 3: 600 m Run + 18 Power Cleans + 18 Toes-to-Bar | Sync 2\nBLOCO 4: 800 m Run + 24 Power Cleans + 24 Toes-to-Bar | Sync 2\nBLOCO 5: 1.000 m Run + 30 Power Cleans + 30 Toes-to-Bar | Sync 2\nBLOCO 6: 1.200 m Run + 36 Power Cleans + 36 Toes-to-Bar | Sync 2\nTIME CAP: 55’\nSCORE: Tempo total da equipe"
         },
         {
           "id": "spider-man-adaptacoes",
           "title": "Adaptações",
-          "path": "media/73f198abb92af614d445f751043df76caed079020284815cc9b5e432f4bc2875.jpeg",
-          "text": "RUN\nRX+: 200 / 400 / 600 / 800 / 1.000 / 1.200 m\nRX: 200 / 400 / 600 / 800 / 1.000 / 1.200 m\nINT: 200 / 400 / 600 / 800 / 1.000 / 1.200 m\nSC: 200 / 400 / 400 / 600 / 600 / 800 m\nINI: 100 / 200 / 300 / 400 / 500 / 600 m\n\nPOWER CLEAN\nRX+: 80 / 56 kg\nRX: 70 / 49 kg\nINT: 60 / 42 kg\nSC: 50 / 35 kg\nINI: 40 / 28 kg\n\nTOES-TO-BAR\nRX+: Toes-to-Bar | Sync 3\nRX: Toes-to-Bar | Sync 2\nINT: Toes-to-Bar | Sync 1\nSC: Hanging Knee Raises ou V-Ups | Sync 1\nINI: AbMat Sit-Ups | Sync 1"
+          "path": "media/b621fba1e90f091ebfdf7177e98444258c7b090148d60b0d7b7c872559c3a98e.jpeg",
+          "text": "POWER CLEAN\nRX+: 90/63 kg\nRX: 80/56 kg\nINT: 70/49 kg\nSC: 60/42 kg\nINI: 40/28 kg\n\nTOES-TO-BAR\nRX+: Toes-to-Bar | Sync 3\nRX e INT: Toes-to-Bar | Sync 2\nSC: Hanging Knee Raises ou V-Ups | Sync 2\nINI: AbMat Sit-Ups | Sync 2\n\nRUN\nRX+, RX e INT: distância completa\nSC: 80% da distância\nINI: 60% da distância"
         }
       ]
     }
