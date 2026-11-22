@@ -925,6 +925,40 @@
           "text": "BACK SQUATS\nRX+: 7 | 120/85 kg\nRX: 7 | 102,5/70 kg\nINT: 7 | 85/58 kg\nSC: 10 DB Goblet Squats | 20/12,5 kg\nINI: 10 Goblet Squats | 12/8 kg\n\nBOX JUMP OVERS\nRX+: 14 | 24/20″\nRX: 14 | 20″\nINT: 14 | 20″\nSC: 14 Box Step Overs | Caixa baixa\nINI: 14 Box Step Overs | Caixa baixa\n\nTOES-TO-BAR\nRX+: 21 Toes-to-Bar\nRX: 21 Toes-to-Bar\nINT: 15 Toes-to-Bar\nSC: 18 Hanging Knee Raises\nINI: 15 Sit-Ups\n\nOPTIONAL ACCESSORY\nAcumular 3:00 Deadhang na barra ou argolas\nTABATA 8 sets | 4:00 total\n20s Supermans / 10s Rest\nNo Measure"
         }
       ]
+    },
+    "2026-11-26/crossfit": {
+      "date": "2026-11-26",
+      "mode": "crossfit",
+      "title": "Barney Stinson — Murphing Prep",
+      "revision": "20261126-crossfit-barney-v1",
+      "approvedAt": "2026-11-22T21:49:14.223Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261126-crossfit-0",
+          "title": "Aquecimento",
+          "text": "3 ROUNDS\n100 m Run\nBanded 7s\n5 Ring Rows\n5 Push-Ups (nível do atleta)",
+          "path": "media/b506011a4dc92f38c3beacd0db1281e3d8c7b807838ae38dbeaf7e9b244ed531.jpg"
+        },
+        {
+          "id": "20261126-crossfit-1",
+          "title": "WOD — Murphing Prep",
+          "text": "FOR TIME\n1.600 m Run\n50 Strict Pull-Ups\n100 Push-Ups\n1.600 m Run\nTIME CAP: 45 min\nSCORE: Tempo total",
+          "path": "media/76e68642c7e9be876ad78e7365f8a409393b587ae7bd94e86f49efc7084164b8.jpg"
+        },
+        {
+          "id": "20261126-crossfit-2",
+          "title": "Adaptações + Acessório",
+          "text": "RUN (INICIAL E FINAL)\nRX+: 1.600 m com colete\nRX: 1.600 m\nINT: 1.600 m\nSC: 1.200 m\nINI: 800 m Run ou 1.200 m Walk\n\nPULL-UPS\nRX+: 50 Strict (M) / 50 Pull-Ups (F), com colete\nRX: 50 Strict (M) / 50 Pull-Ups (F)\nINT: 40 Strict (M) / 40 Pull-Ups (F)\nSC: 40 Jumping Pull-Ups\nINI: 50 Ring Rows (mais vertical)\n\nPUSH-UPS\nRX+: 100 com colete\nRX: 100\nINT: 100 (M) / 70 (F)\nSC: 70 (M) / 70 Knee (F)\nINI: 60 Knee\n\nOPTIONAL ACCESSORY — 3 ROUNDS (NOT FOR TIME)\n500 m Easy Row ou 1.000 m Bike Erg\n10 Cossack Squats cada lado\n10 Cat-Cows lentos",
+          "path": "media/749cb9bb5f109f60eb5bbf607dc18afcdb954e294bd718d91f065ec1aa7087cf.jpg"
+        },
+        {
+          "id": "20261126-crossfit-3",
+          "title": "Regras do WOD",
+          "text": "RX+: Colete obrigatório durante todo o treino.\nRX+ e RX: Seguir a ordem; não é permitido particionar.\nINT, SC e INI: Podem particionar Pull-Ups e Push-Ups livremente, respeitando o volume.\nTODOS: Completar corrida inicial antes dos movimentos e finalizar com segunda corrida.\nSCORE: Tempo total; no Time Cap, registrar trabalho restante.\nTIME CAP: 45 min",
+          "path": "media/3dcdb3e54616523354f42c7f69402a1e044698433111c234b8f1a4b7d65b0e93.jpg"
+        }
+      ]
     }
   }
 }
