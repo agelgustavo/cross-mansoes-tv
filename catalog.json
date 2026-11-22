@@ -857,6 +857,40 @@
           "text": "HANDSTAND WALK\nRX+: 15 m HSW + 1 Pirouette\nRX: 15 m HSW\nINT: 10 m HSW ou 3 Wall Walks\nSC: 2 Wall Walks\nINI: 3 Inchworms\n\nWALL BALLS\nRX+: 12 | 30/20 lb\nRX: 12 | 20/14 lb\nINT: 12 | 20/14 lb\nSC: 12 | 14/10 lb\nINI: 12 Wall Ball Thrusters (leve)\n\nBURPEES TO TARGET\nRX+: 10 Burpees to Target\nRX: 10 Burpees to Target\nINT: 10 Burpees to Target\nSC: 10 Burpees\nINI: 10 Up-Downs\n\nOPTIONAL ACCESSORY | 3–4 SETS\n10 Evil Wheels (ou Ab Rollouts)\n10 Suitcase Sit-Ups (cada lado)\n15 Seated DB Calf Raises | RPE 7–8\nRest: 1' entre sets"
         }
       ]
+    },
+    "2026-11-24/crossfit": {
+      "date": "2026-11-24",
+      "mode": "crossfit",
+      "title": "Ted \"Evelyn\" Mosby",
+      "revision": "20261124-crossfit-ted-mosby-1",
+      "approvedAt": "2026-11-22T20:13:05.493Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261124-crossfit-0",
+          "title": "Aquecimento",
+          "text": "2:00 Jump Rope (easy singles, mixing in doubles)\n2 ROUNDS\n5 Inchworms with a Push-Up\n10 PVC Pass Throughs\n10 PVC Good Mornings\n5 Hanging Knee Raises\nEMPTY BARBELL\n5 Muscle Cleans\n5 Push Presses\n5 Push Jerks",
+          "path": "media/3c83f8798f13e3f32fa37f68f618dbfea64bd37a865c0691af16b0c14d7eb824.png"
+        },
+        {
+          "id": "20261124-crossfit-1",
+          "title": "Técnica — Power Clean and Jerk",
+          "text": "POWER CLEAN AND JERK\nEVERY 1:00 (5:00): 5 Power Clean and Jerks (leve)\nEVERY 1:00 (5:00): 3 Power Clean and Jerks (moderada)\nEVERY :30 (5:00): 1 Power Clean and Jerk (pesada)\nTouch and go em todas as repetições. Mesma carga dentro de cada bloco, aumentar entre blocos.\nSCORE: Maior carga",
+          "path": "media/d7f47bddfd19a470c78959bfc11b6da8db75a47715f443cd418748bd2245813c.png"
+        },
+        {
+          "id": "20261124-crossfit-2",
+          "title": "WOD — Ted \"Evelyn\" Mosby",
+          "text": "TED \"EVELYN\" MOSBY\nAMRAP 9:00\n36 Double Unders\n12 Push Press | 53/35 kg\n9 Toes-to-Bar\nSCORE: Rounds + Reps\nTIME CAP: 9 minutos",
+          "path": "media/d1ac6be7fb6d5500ff4d43779ed58548cea550e8a16c1ec4535bd264373e83a0.png"
+        },
+        {
+          "id": "20261124-crossfit-3",
+          "title": "Adaptações + Optional Accessory",
+          "text": "DOUBLE UNDERS\nRX+: 36 Unbroken Double Unders\nRX: 36 Double Unders\nINT: 36 Double Unders\nSC: 36 Single Unders\nINI: 30 Single Unders\nPUSH PRESS\nRX+: 12 Unbroken | 53/35 kg\nRX: 12 | 53/35 kg\nINT: 12 | 43/30 kg\nSC: 12 DB | 15/10 kg\nINI: 12 DB | 10/7 kg\nTOES-TO-BAR\nRX+: 9 Unbroken\nRX: 9\nINT: 9\nSC: 9 Hanging Knee Raises\nINI: 9 Sit-Ups\nRX+: Se interromper uma série, reiniciar as repetições do movimento.\nDemais categorias: divisão livre.\nOPTIONAL ACCESSORY | 3 ROUNDS | NOT FOR TIME\n500 m Easy Row ou 1000 m Bike Erg (recovery pace)\n10 Cossack Squats (cada lado)\n10 Cat-Cows (lento, com respiração)\nSCORE: No Measure",
+          "path": "media/c86b6eeb73ae51ca46c8f2d0ece7312a727cfda0ae5173052b64263d9f353213.png"
+        }
+      ]
     }
   }
 }
