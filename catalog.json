@@ -959,6 +959,40 @@
           "path": "media/749cb9bb5f109f60eb5bbf607dc18afcdb954e294bd718d91f065ec1aa7087cf.jpg"
         }
       ]
+    },
+    "2026-11-27/crossfit": {
+      "date": "2026-11-27",
+      "mode": "crossfit",
+      "title": "Robin Scherbatsky — Snatch & Bench Press",
+      "revision": "20261127-crossfit-robin-v1",
+      "approvedAt": "2026-11-22T22:06:44.079Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261127-crossfit-0",
+          "title": "Aquecimento",
+          "text": "3 ROUNDS\n100 m Run\n10 Roll and Reach\n5 Inchworms\n3 Empty Bar Muscle Snatches / Power / Squat",
+          "path": "media/a7629a5c41c2cecb5bb91c01aeeb6de177721ffc0a84ac51f64c132d1f45200f.png"
+        },
+        {
+          "id": "20261127-crossfit-1",
+          "title": "WOD — Robin Scherbatsky",
+          "text": "5 ROUNDS | EVERY 4:00\n3 MINUTOS DE TRABALHO\n200 m Run\nMax Snatches | Athlete Choice\n1 MINUTO DE DESCANSO\nTIME CAP: 20 min\nSCORE: Total de Snatches nos 5 rounds × carga",
+          "path": "media/2d8f59129f4015433268c77853264f517181b5fcf5f14c7a0e71f0a4f6e196c0.png"
+        },
+        {
+          "id": "20261127-crossfit-2",
+          "title": "Técnica — Max Bench Press (pós-WOD)",
+          "text": "TEAMS OF 3 | AMRAP 12:00\nMax Bench Press\nSCORE: Total de repetições × carga\nO trio usa a mesma carga do WOD.\nRevezamento livre durante os 12 minutos.",
+          "path": "media/1791012c44cda52d5540ac5fe6286c6b693050eaee357eae59945ff17e68345e.png"
+        },
+        {
+          "id": "20261127-crossfit-3",
+          "title": "Adaptações + Optional Accessory",
+          "text": "RUN\nRX+: 200 m\nRX: 200 m\nINT: 200 m\nSC: 150 m\nINI: 100 m\n\nSNATCH\nTodas as categorias: carga livre, escolhida pelo atleta, sem alterar entre rounds.\nAcumular o máximo de repetições.\n\nOPTIONAL ACCESSORY\n3–4 SETS\n8 Double DB Z-Press (Moderate) @ RPE 7–8\n12 DB Hammer Curls (Moderate) @ RPE 7–8\nRest 1:00–1:30 entre sets\nNo Measure",
+          "path": "media/428cf20168c80170be2e892a11ad1e44622520097f6720d00554189024af2226.png"
+        }
+      ]
     }
   }
 }
