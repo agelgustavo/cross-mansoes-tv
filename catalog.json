@@ -1021,6 +1021,28 @@
           "path": "media/39520349178ca7ab516775880ce473de0fa3976f22c2d7bf09627442bea84f40.jpg"
         }
       ]
+    },
+    "2026-11-24/hybrid": {
+      "date": "2026-11-24",
+      "mode": "hybrid",
+      "title": "Hybrid Run | Terça-feira",
+      "revision": "20261124-hybrid-ted-mosby-1",
+      "approvedAt": "2026-11-22T23:05:06.015Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261124-hybrid-0",
+          "title": "WOD principal",
+          "path": "media/6d1382bfb7ad0a2b1b38708597e4c4db79c7f8590536540017b4e7abeb6123ea.png",
+          "text": "FOR TIME\n1.000 m Run\n100 Wall Balls\n1.000 m Run\n100 Burpees\n1.000 m Run\n100 Weighted Walking Lunges | PSE 7–8\n1.000 m Run\nTime Cap: 50 minutos\nScore: Tempo total"
+        },
+        {
+          "id": "20261124-hybrid-1",
+          "title": "Adaptações",
+          "path": "media/f02d09620d478f90200e0bb1a785ea1b176affdfdcd6fc94549a1f02c6c8597b.png",
+          "text": "RUN (cada trecho)\nRX: 1.000 m Run\nINT: 800 m Run\nSC: 600 m Run\nWALL BALLS\nRX: 100 | 20/14 lb\nINT: 80 | 20/14 lb\nSC: 60 | 14/10 lb\nBURPEES\nRX: 100\nINT: 80\nSC: 60\nWEIGHTED WALKING LUNGES\nRX: 100 | PSE 7–8\nINT: 100 | PSE 6–7\nSC: 100 | Peso leve ou sem carga\nScore: Tempo total\nTime Cap: 50 minutos"
+        }
+      ]
     }
   }
 }
