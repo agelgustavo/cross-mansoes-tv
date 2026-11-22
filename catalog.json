@@ -891,6 +891,40 @@
           "path": "media/c86b6eeb73ae51ca46c8f2d0ece7312a727cfda0ae5173052b64263d9f353213.png"
         }
       ]
+    },
+    "2026-11-25/crossfit": {
+      "date": "2026-11-25",
+      "mode": "crossfit",
+      "title": "Lilypad e Marshmallow",
+      "revision": "20261125-crossfit-lilypad-marshmallow-v1",
+      "approvedAt": "2026-11-22T20:00:00.000Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261125-crossfit-0",
+          "title": "Aquecimento",
+          "path": "media/51529812f0b3d4c766c684ff0b34945978cc096500dd5087d221dfcf35dfa6f1.png",
+          "text": "2 ROUNDS\n10 Air Squats\n10 Good Mornings\n10 Box Step-Ups (5/lado)\n10 Glute Bridges\n10 Dead Bugs (5/lado)\n5 Broad Jumps (reset entre reps)"
+        },
+        {
+          "id": "20261125-crossfit-1",
+          "title": "Técnica — Back Squat",
+          "path": "media/51db6c466c7e50e6ca40fcd7984d727b2f67ec4e3bdc67d958f9b76ac6cc0013.png",
+          "text": "Back Squat\nON A 12:00 CLOCK\nBuild up to a Heavy 1-Rep Back Squat\nScore: Maior carga"
+        },
+        {
+          "id": "20261125-crossfit-2",
+          "title": "WOD — Lilypad e Marshmallow",
+          "path": "media/dccba160ee2c19c2fe5e88ff3c9da81e06e20848dd8c0ecf1d0ae4326983ddc6.png",
+          "text": "TEAMS OF 2\n10 Rounds | 5 sets cada | 1:1\n7 Back Squats | 102,5/70 kg\n14 Box Jump Overs | 20″\n21 Toes-to-Bar\nScore: Tempo total da dupla\nTime Cap: 33 min"
+        },
+        {
+          "id": "20261125-crossfit-3",
+          "title": "Adaptações + Accessory",
+          "path": "media/f5329684d196f3c7e1040a9fcfba7d98399f650f854866a2f8f226de9c3d5a12.png",
+          "text": "BACK SQUATS\nRX+: 7 | 120/85 kg\nRX: 7 | 102,5/70 kg\nINT: 7 | 85/58 kg\nSC: 10 DB Goblet Squats | 20/12,5 kg\nINI: 10 Goblet Squats | 12/8 kg\n\nBOX JUMP OVERS\nRX+: 14 | 24/20″\nRX: 14 | 20″\nINT: 14 | 20″\nSC: 14 Box Step Overs | Caixa baixa\nINI: 14 Box Step Overs | Caixa baixa\n\nTOES-TO-BAR\nRX+: 21 Toes-to-Bar\nRX: 21 Toes-to-Bar\nINT: 15 Toes-to-Bar\nSC: 18 Hanging Knee Raises\nINI: 15 Sit-Ups\n\nOPTIONAL ACCESSORY\nAcumular 3:00 Deadhang na barra ou argolas\nTABATA 8 sets | 4:00 total\n20s Supermans / 10s Rest\nNo Measure"
+        }
+      ]
     }
   }
 }
