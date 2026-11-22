@@ -801,6 +801,28 @@
           "text": "Equipes de 1 RX + 1 INT + 1 SC + 1 INI. Barra 45/32 kg. Kettlebell Swings Sync 4: RX 32/24 kg, INT 24/16 kg, SC 16/12 kg, INI 12/8 kg."
         }
       ]
+    },
+    "2026-11-22/hybrid": {
+      "date": "2026-11-22",
+      "mode": "hybrid",
+      "title": "Hybrid Run | Domingo",
+      "revision": "20261122-hybrid-v1",
+      "approvedAt": "2026-11-22T00:45:44.732Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "hybrid-20261122-1",
+          "title": "WOD principal | RX",
+          "path": "media/6befaead6bea135d6ffc0bca525e8c31c8faa8a8a6d6bd73616993396077cd59.jpeg",
+          "text": "A. Buy-in ou cash-out: 120/96 Cal Bike ou 200 Cal Row, no início ou no final do treino.\nB. Split as you want: 120 m Sled Pull | 100/70 kg; 150 Wall Balls | 20/14 lb; 180 m Farmer Carry | Sync 2 | PSE 9–10; 2.100 m Run | Sync 2 | sprints de 300 m; 270 m Burpee Broad Jump; 300 Sit-Ups.\nTime cap sugerido: 80 min. Score: tempo total da equipe."
+        },
+        {
+          "id": "hybrid-20261122-2",
+          "title": "Adaptações | RX / INT / SC",
+          "path": "media/0d29209e36d86fad16acb59d581a6bdbc72e1e741bd1e678d82dcc1622b475f4.jpeg",
+          "text": "RX / INT / SC\nBike: 120/96, 100/80 ou 80/64 Cal. Row: 200, 160 ou 120 Cal.\nSled Pull: 120 m (100/70 kg), 100 m (80/55 kg), 80 m (60/40 kg).\nWall Balls: 150 (20/14 lb), 120 (20/14 lb), 90 (14/10 lb).\nFarmer Carry Sync 2: 180 m PSE 9–10, 150 m PSE 8, 120 m PSE 6–7.\nRun Sync 2: 7, 6 ou 5 sprints de 300 m.\nBurpee Broad Jump: 270, 210 ou 150 m.\nSit-Ups: 300, 240 ou 180 reps."
+        }
+      ]
     }
   }
 }
