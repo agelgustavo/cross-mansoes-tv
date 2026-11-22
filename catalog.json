@@ -993,6 +993,34 @@
           "path": "media/01076ec34227d61f70222f84d1309b096275667da373412e5b6ba8892c21e3f3.jpg"
         }
       ]
+    },
+    "2026-11-26/hybrid": {
+      "date": "2026-11-26",
+      "mode": "hybrid",
+      "title": "Barney Stinson — Hybrid Run",
+      "revision": "20261126-hybrid-barney-v1",
+      "approvedAt": "2026-11-22T22:57:42.833Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261126-hybrid-0",
+          "title": "WOD — Barney Stinson",
+          "text": "TEAMS OF 2 | 4 BLOCOS\n10 MINUTOS POR BLOCO | REST 1 MIN\nBLOCO 1\n400 m KTB Farmer Carry | PSE 9–10\n1.000 m Run\nBLOCO 2\n100 Cal Erg\nMax Sled Push | PSE 7–8\nBLOCO 3\n200 Sit-Ups\nBLOCO 4\n100 Push-Ups\nMax KTB Russian Swings | PSE 9–10\nTIME CAP: 43 min\nSCORE: Trabalho total concluído nos 4 blocos.",
+          "path": "media/4adae40188606f59cfd215d951aa6dd7d7304fd7b873aba554c2318bcc391f13.jpg"
+        },
+        {
+          "id": "20261126-hybrid-1",
+          "title": "Regras do WOD",
+          "text": "Formato: Duplas, 4 blocos de 10 minutos.\nDescanso: 1 minuto entre blocos.\nDivisão: Repetições e distâncias livres entre atletas (Sync 1).\nBlocos 2 e 4: Após concluir trabalho inicial, máximo possível de Sled Push ou KTB Russian Swings.\nBlocos 1 e 3: Descansar caso concluam antes dos 10 minutos.\nScore: Trabalho concluído em cada bloco, incluindo distância de Sled Push e reps de KTB Russian Swings.\nTIME CAP: 43 minutos.",
+          "path": "media/75ab4f6825781986459b5f5f8b617a67510c2a10dd0cff5aa8ef93489c1ca1aa.jpg"
+        },
+        {
+          "id": "20261126-hybrid-2",
+          "title": "Adaptações",
+          "text": "KTB FARMER CARRY\nRX: 400 m | 24/16 kg | PSE 9–10\nINT: 300 m | 20/12 kg | PSE 7–8\nSC: 200 m | 16/12 kg | PSE 6–7\nRUN\nRX: 1.000 m\nINT: 800 m\nSC: 600 m\nERG\nRX: 100 Cal\nINT: 80 Cal\nSC: 60 Cal\nSLED PUSH\nRX: Max distância | PSE 7–8\nINT: Max distância | PSE 6–7\nSC: Max distância | PSE 5–6\nSIT-UPS\nRX: 200\nINT: 160\nSC: 120\nPUSH-UPS\nRX: 100\nINT: 80\nSC: 60 Knee ou Incline\nKTB RUSSIAN SWINGS\nRX: Max Reps | 24/16 kg\nINT: Max Reps | 20/12 kg\nSC: Max Reps | 16/12 kg",
+          "path": "media/39520349178ca7ab516775880ce473de0fa3976f22c2d7bf09627442bea84f40.jpg"
+        }
+      ]
     }
   }
 }
