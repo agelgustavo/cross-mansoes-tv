@@ -823,6 +823,40 @@
           "text": "RX / INT / SC\nBike: 120/96, 100/80 ou 80/64 Cal. Row: 200, 160 ou 120 Cal.\nSled Pull: 120 m (100/70 kg), 100 m (80/55 kg), 80 m (60/40 kg).\nWall Balls: 150 (20/14 lb), 120 (20/14 lb), 90 (14/10 lb).\nFarmer Carry Sync 2: 180 m PSE 9–10, 150 m PSE 8, 120 m PSE 6–7.\nRun Sync 2: 7, 6 ou 5 sprints de 300 m.\nBurpee Broad Jump: 270, 210 ou 150 m.\nSit-Ups: 300, 240 ou 180 reps."
         }
       ]
+    },
+    "2026-11-23/crossfit": {
+      "date": "2026-11-23",
+      "mode": "crossfit",
+      "title": "Marshall Eriksen",
+      "revision": "20261123-crossfit-v1",
+      "approvedAt": "2026-11-22T19:33:52.828Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "crossfit-20261123-1",
+          "title": "Aquecimento",
+          "path": "media/545ba6675fa3af1d9843c4aa4a5ca63f102fc18331b76334681afe51d8091e74.png",
+          "text": "AMRAP 5'\n20 Jumping Jacks\n10 Air Squats\n8 Wall Ball Thrusters (leve)\n6 Up-Downs\n4 Inchworms\n20s Handstand Hold (parede ou livre)\n\n5 MINUTES\nBuild Weight to Skill: 2–3 reps"
+        },
+        {
+          "id": "crossfit-20261123-2",
+          "title": "Técnica — Deadlift & Holding JT",
+          "path": "media/2073e80b904585abcbe1aeb04b97c942f6bb67128846efe48f67291d61b23024.png",
+          "text": "3 SETS (10')\n6 Deadlifts\nComeçar moderado-pesado e subir até pesado\nDescansar conforme necessário\nScore: maior carga\n\nHOLDING JT (10')\nAcumular 1:30 / 1:00 / 0:30\nHandstand Hold\nPlank Hold (cotovelos)\nTop of Ring Dip Hold\nCompletar em ordem. Quebrar conforme necessário.\nSem score"
+        },
+        {
+          "id": "crossfit-20261123-3",
+          "title": "WOD — Marshall Eriksen",
+          "path": "media/50b9bcb0595cccb66838f6a6d6fe76d0378ed7b04258b329bf6d0eba4ed9973b.png",
+          "text": "AMRAP 13:00\n15 m Handstand Walk\n12 Wall Balls\n10 Burpees to Target\nTime Cap: 15'\nScore: Rounds + Reps"
+        },
+        {
+          "id": "crossfit-20261123-4",
+          "title": "Adaptações + Optional Accessory",
+          "path": "media/5ea3f83aad666a3a9be5e302b4f468d98b3c5d8290d6f4fe01b8de1990a04d2e.png",
+          "text": "HANDSTAND WALK\nRX+: 15 m HSW + 1 Pirouette\nRX: 15 m HSW\nINT: 10 m HSW ou 3 Wall Walks\nSC: 2 Wall Walks\nINI: 3 Inchworms\n\nWALL BALLS\nRX+: 12 | 30/20 lb\nRX: 12 | 20/14 lb\nINT: 12 | 20/14 lb\nSC: 12 | 14/10 lb\nINI: 12 Wall Ball Thrusters (leve)\n\nBURPEES TO TARGET\nRX+: 10 Burpees to Target\nRX: 10 Burpees to Target\nINT: 10 Burpees to Target\nSC: 10 Burpees\nINI: 10 Up-Downs\n\nOPTIONAL ACCESSORY | 3–4 SETS\n10 Evil Wheels (ou Ab Rollouts)\n10 Suitcase Sit-Ups (cada lado)\n15 Seated DB Calf Raises | RPE 7–8\nRest: 1' entre sets"
+        }
+      ]
     }
   }
 }
