@@ -430,8 +430,8 @@
       "date": "2026-11-25",
       "mode": "crossfit",
       "title": "Lilypad e Marshmallow",
-      "revision": "20261125-crossfit-lilypad-marshmallow-v1",
-      "approvedAt": "2026-11-22T20:00:00.000Z",
+      "revision": "20261125-crossfit-lilypad-marshmallow-v2-front-squat",
+      "approvedAt": "2026-11-25T00:26:18.872Z",
       "approvedBy": "agelgustavo",
       "pages": [
         {
@@ -449,14 +449,14 @@
         {
           "id": "20261125-crossfit-2",
           "title": "WOD — Lilypad e Marshmallow",
-          "path": "media/dccba160ee2c19c2fe5e88ff3c9da81e06e20848dd8c0ecf1d0ae4326983ddc6.png",
-          "text": "TEAMS OF 2\n10 Rounds | 5 sets cada | 1:1\n7 Back Squats | 102,5/70 kg\n14 Box Jump Overs | 20″\n21 Toes-to-Bar\nScore: Tempo total da dupla\nTime Cap: 33 min"
+          "path": "media/14a46de48fc99f26caa6ea250b7c221b6f58eeac6423131527edc30bb4db248d.png",
+          "text": "TEAMS OF 2\n10 Rounds | 5 sets cada | 1:1\n7 Front Squats | 84/57 kg\n14 Box Jump Overs | 20″\n21 Toes-to-Bar\nScore: Tempo total da dupla\nTime Cap: 33 min"
         },
         {
           "id": "20261125-crossfit-3",
           "title": "Adaptações + Accessory",
-          "path": "media/f5329684d196f3c7e1040a9fcfba7d98399f650f854866a2f8f226de9c3d5a12.png",
-          "text": "BACK SQUATS\nRX+: 7 | 120/85 kg\nRX: 7 | 102,5/70 kg\nINT: 7 | 85/58 kg\nSC: 10 DB Goblet Squats | 20/12,5 kg\nINI: 10 Goblet Squats | 12/8 kg\n\nBOX JUMP OVERS\nRX+: 14 | 24/20″\nRX: 14 | 20″\nINT: 14 | 20″\nSC: 14 Box Step Overs | Caixa baixa\nINI: 14 Box Step Overs | Caixa baixa\n\nTOES-TO-BAR\nRX+: 21 Toes-to-Bar\nRX: 21 Toes-to-Bar\nINT: 15 Toes-to-Bar\nSC: 18 Hanging Knee Raises\nINI: 15 Sit-Ups\n\nOPTIONAL ACCESSORY\nAcumular 3:00 Deadhang na barra ou argolas\nTABATA 8 sets | 4:00 total\n20s Supermans / 10s Rest\nNo Measure"
+          "path": "media/493f5621bb42fc326b5b4a14d011d44dc57a8e58003737f9597c63ae6db93002.png",
+          "text": "FRONT SQUATS\nRX+: 7 | 102/73 kg\nRX: 7 | 84/57 kg\nINT: 7 | 70/48 kg\nSC: 7 | 53/36 kg\nINI: 7 | 33/24 kg\n\nBOX JUMP OVERS\nRX+: 14 | 24/20″\nRX: 14 | 20″\nINT: 14 | 20″\nSC: 14 Box Step Overs | Caixa baixa\nINI: 14 Box Step Overs | Caixa baixa\n\nTOES-TO-BAR\nRX+: 21 Toes-to-Bar\nRX: 21 Toes-to-Bar\nINT: 15 Toes-to-Bar\nSC: 18 Hanging Knee Raises\nINI: 15 Sit-Ups\n\nOPTIONAL ACCESSORY\nAcumular 3:00 Deadhang na barra ou argolas\nTABATA 8 sets | 4:00 total\n20s Supermans / 10s Rest\nNo Measure"
         }
       ]
     }
