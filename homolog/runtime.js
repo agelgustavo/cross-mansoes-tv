@@ -5,6 +5,16 @@ window.MansoesConfig = CONFIG;
 const cacheKey = `${CONFIG.environment}-catalog`;
 const store = new GitHubStore();
 let catalog = { workouts: {} };
+async function refreshCatalog() {
+  try {
+    catalog = (await store.read("catalog.json")).data || { workouts: {} };
+    localStorage.setItem(cacheKey, JSON.stringify(catalog));
+  } catch {
+    try {
+      catalog = JSON.parse(localStorage.getItem(cacheKey)) || catalog;
+    } catch {}
+  }
+}
 async function base(path) {
   const r = await fetch(CONFIG.siteURL + "data/" + path + "?v=" + Date.now(), {
     cache: "no-store",
@@ -20,18 +30,12 @@ async function base(path) {
 window.HomologContent = {
   async index() {
     const initial = await base("index.json");
-    try {
-      catalog = (await store.read("catalog.json")).data || { workouts: {} };
-      localStorage.setItem(cacheKey, JSON.stringify(catalog));
-    } catch {
-      try {
-        catalog =
-          JSON.parse(localStorage.getItem(cacheKey)) || catalog;
-      } catch {}
-    }
+    await refreshCatalog();
     return mergeDays(initial, catalog);
   },
   async day(date) {
+    // Refresh can be called on an open workout without revisiting the calendar.
+    await refreshCatalog();
     const d = await base(date + ".json");
     for (const mode of ["crossfit", "hybrid"]) {
       const w = catalogWorkout(catalog, date, mode, rawURL);
