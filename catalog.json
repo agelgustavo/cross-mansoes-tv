@@ -1071,6 +1071,28 @@
           "path": "media/a04330b5a58c95cfe97c2bc1e5410b7530526b33739757e256a4e05546486be1.jpg"
         }
       ]
+    },
+    "2026-11-29/hybrid": {
+      "date": "2026-11-29",
+      "mode": "hybrid",
+      "title": "Hybrid Run em trios",
+      "revision": "20261129-hybrid-d969efd0",
+      "approvedAt": "2026-11-28T09:52:27.742Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261129-hybrid-0",
+          "title": "WOD principal",
+          "text": "8.000 m Run em segmentos de 1.000 m. Durante a corrida, AMRAP de 2.000 m Row ou 150/120 Cal Bike, 300 m Burpee Broad Jump e 200 Air Squats. Cap de 50 minutos.",
+          "path": "media/d969efd008a4fc93b338af8d866ec6a30c88cdeef9f6709eb345f38cf8559226.jpg"
+        },
+        {
+          "id": "20261129-hybrid-1",
+          "title": "Adaptações e regras",
+          "text": "RX, INT e SC. Um atleta corre por vez e os outros dois dividem o AMRAP em Sync 1.",
+          "path": "media/8ddb7d01808c0938f4f08d2003fefd300cdaa194e2143423aaff0df0fdf036ab.jpg"
+        }
+      ]
     }
   }
 }
