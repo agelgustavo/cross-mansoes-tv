@@ -1043,6 +1043,34 @@
           "text": "RUN (cada trecho)\nRX: 1.000 m Run\nINT: 800 m Run\nSC: 600 m Run\nWALL BALLS\nRX: 100 | 20/14 lb\nINT: 80 | 20/14 lb\nSC: 60 | 14/10 lb\nBURPEES\nRX: 100\nINT: 80\nSC: 60\nWEIGHTED WALKING LUNGES\nRX: 100 | PSE 7–8\nINT: 100 | PSE 6–7\nSC: 100 | Peso leve ou sem carga\nScore: Tempo total\nTime Cap: 50 minutos"
         }
       ]
+    },
+    "2026-11-28/crossfit": {
+      "date": "2026-11-28",
+      "mode": "crossfit",
+      "title": "WOD em duplas",
+      "revision": "20261128-crossfit-bro-code-1",
+      "approvedAt": "2026-11-28T00:37:43.908Z",
+      "approvedBy": "agelgustavo",
+      "pages": [
+        {
+          "id": "20261128-crossfit-0",
+          "title": "WOD",
+          "text": "For time em duplas. Buy-in: 400 m KTB Carry. 3 rounds: 100 Double Unders + 100 Single Unders, 20 Bar Muscle-Ups, 20 Clusters, 20 Burpee Box Jump Overs (relay). Buy-out: 400 m KTB Carry. A cada 5:00: 20 Wall Balls (ping-pong). Cap: 50 min. Score: tempo total.",
+          "path": "media/4212d2edac9d8521c26a1d80c044ce3ea9727b1d6b919781529ca6cf96a008df.jpg"
+        },
+        {
+          "id": "20261128-crossfit-1",
+          "title": "Regras",
+          "text": "Durante o buy-in e o buy-out a dupla está isenta dos Wall Balls, sem acumular repetições. KTB Carry: Sync 2, juntos durante todo o percurso. DU, SU, BMU e Clusters: Sync 1, divisão livre. Burpee Box Jump Overs em relay e Wall Balls em ping-pong, alternando a cada repetição. A cada 5 minutos, a partir dos 5:00, interromper o WOD, fazer 20 Wall Balls e retomar de onde parou, respeitando a regra do Carry. Relógio contínuo.",
+          "path": "media/6364d93d0d2b7f284bc5f3e7be1a89ca67d41fb524f4ad49ee45c6207f2ccf22.jpg"
+        },
+        {
+          "id": "20261128-crossfit-2",
+          "title": "Adaptações",
+          "text": "Ordem: RX+, RX, INT, SC, INI. KTB Carry: 400 m 32/24 kg mix (front rack + suitcase), 400 m 24/16 kg, 400 m 20/12 kg, 300 m 16/12 kg, 200 m 12/8 kg. RX a INI: farmer carry. Corda: 100 DU + 100 SU, 100 DU + 100 SU, 80 DU + 100 SU, 200 SU, 150 SU. Ginástica: 20 BMU, 20 BMU, 14 BMU, 20 Pull-Ups, 20 Ring Rows. Clusters: 70/49, 60/42, 50/35, 40/28, 30/20 kg. Burpee Box Jump Overs: RX+ a INT 24/20″, SC Burpee Box Step Over, INI Up-Down Box Step Over em caixa baixa. Wall Balls: 30/20, 20/14, 20/14, 14/10, 10/6 lb.",
+          "path": "media/a04330b5a58c95cfe97c2bc1e5410b7530526b33739757e256a4e05546486be1.jpg"
+        }
+      ]
     }
   }
 }
